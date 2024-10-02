@@ -11,8 +11,10 @@ import { Component } from '@angular/core';
 export class ProjectsComponent {
   // Hover-Status für das "Join"-Element
   isHoveredJoin: boolean = false;
-  // Hover-Status für das "El Pollo Loco"-Element
   isHoveredPollo: boolean = false;
+
+  // Status des modalen Fensters
+  isModalOpen: boolean = false;
 
   // Methoden für "Join"
   onMouseEnterJoin() {
@@ -30,5 +32,15 @@ export class ProjectsComponent {
 
   onMouseLeavePollo() {
     this.isHoveredPollo = false;
+  }
+
+  // Methode, um das Modal zu öffnen
+  openModal() {
+    this.isModalOpen = true;
+  }
+
+  // Methode, um das Modal zu schließen
+  closeModal() {
+    this.isModalOpen = false;
   }
 }

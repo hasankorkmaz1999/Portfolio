@@ -8,8 +8,10 @@
     <span class="spanne">Explore a selection of my work here  -  Interact with <br> projects to see my skills in action.</span>
 
 
-    <div class="join" (mouseenter)="onMouseEnterJoin()" 
-    (mouseleave)="onMouseLeaveJoin()">
+    <div class="join" 
+    (mouseenter)="onMouseEnterJoin()" 
+    (mouseleave)="onMouseLeaveJoin()"
+    (click)="openModal()">
 
 
         <div class="joiner">
@@ -78,5 +80,10 @@
         <!-- Bild für El Pollo Loco -->
         <img class="polloimg" src="/assets/img-projects/elpolloloco.png" alt="" [ngStyle]="{ 'opacity': isHoveredPollo ? '1' : '0' }">
     </div>
+
+
+   <div></div>
+
+
 
 </section>
