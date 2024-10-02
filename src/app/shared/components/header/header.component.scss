@@ -12,6 +12,14 @@
     align-items: center;
 }
 
+
+.namelogo img{
+    background-color: transparent; /* Sicherstellen, dass der Hintergrund des Images transparent ist */
+    border: none;
+    width: 50px; /* Optional, falls du das Bild skalieren möchtest */
+    /* Optional, falls du das Bild skalieren möchtest */
+  }
+
 .header-nav {
     font-family: "Fira Code", monospace;
     font-size: 20px;
@@ -192,7 +200,7 @@
 
     >img:hover {
         cursor: pointer;
-        filter: brightness(0) invert(1); /* Wandelt das Bild in Weiß um */
+        filter: brightness(0) invert(1); 
       }
   }
 
@@ -200,35 +208,35 @@
 // Leiste 
 
   .marquee-container {
-    width: 100%; /* Die Leiste nimmt die gesamte Breite ein */
-    background-color: rgba(255, 255, 255, 0.1); /* Transparenter schwarzer Hintergrund */
+    width: 100%; 
+    background-color: rgba(255, 255, 255, 0.1); 
     padding: 10px 0;
-    overflow: hidden; /* Verhindert, dass der Text außerhalb des Containers angezeigt wird */
+    overflow: hidden;
     position: absolute;
     top: 800px;
-    z-index: 100; /* Relatives Positionieren */
+    z-index: 100; 
 
   }
   
   .marquee {
     display: flex;
-    white-space: nowrap; /* Der Text bleibt in einer Zeile */
-    animation: marquee 15s linear infinite; /* Diashow-Animation */
+    white-space: nowrap; 
+    animation: marquee 15s linear infinite; 
   }
   
   .marquee span {
-    color: #3DCFB6; /* Textfarbe */
-    font-family: "Karla", sans-serif; /* Schriftart */
+    color: #3DCFB6; 
+    font-family: "Karla", sans-serif;
     font-size: 32px;
-    padding: 0 50px; /* Abstand zwischen den Textblöcken */
+    padding: 0 50px; 
   }
   
   @keyframes marquee {
     0% {
-      transform: translateX(0); /* Startet am Anfang */
+      transform: translateX(0);
     }
     100% {
-      transform: translateX(-100%); /* Bewegt sich nach links, bis der gesamte Text durchläuft */
+      transform: translateX(-100%); 
     }
   }
   

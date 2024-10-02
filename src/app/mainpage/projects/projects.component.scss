@@ -1,0 +1,188 @@
+section {
+    background-color: #1C1C1C;
+    height: 700px;
+    width: 100%;
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+
+
+}
+
+
+.featured-projects {
+    margin-left: 50px;
+   padding: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    >h2 {
+        font-family: "Karla", sans-serif;
+        color: #3DCFB6;
+        margin-top: 0;
+        font-size: 24px;
+        line-height: 28.06px;
+    }
+
+    >h1 {
+        font-family: "Fira Code", monospace;
+        font-size: 54px;
+        color: #3DCFB6;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    >span {
+        line-height: 21.6px;
+        color: white;
+        word-spacing: 4px;
+        font-size: 18px;
+        font-family: "Karla", sans-serif;
+        text-align: justify;
+        margin-bottom: 50px;
+    }
+}
+
+
+
+
+.join {
+    padding: 10px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 800px;
+    transition: 125ms;
+    border-top: 2px solid #3DCFB6; /* Obere Border */
+    border-bottom: 2px solid #3DCFB6; /* Untere Border */
+    border-left: none; /* Keine linke Border */
+    border-right: none; /* Keine rechte Border */
+   /* Notwendig für das Positionieren des Bildes */
+}
+
+.joiner {
+    display: flex;
+    align-items: center;
+
+    > p {
+        font-family: "Fira Code", monospace;
+        font-size: 24px;
+        color: white;
+    }
+
+    > img {
+        margin-left: 10px;
+        opacity: 0; /* Bild ist standardmäßig unsichtbar */
+        transition: opacity 0.3s ease; /* Sanfter Übergang beim Einblenden */
+    }
+}
+
+/* Hover-Effekt auf die gesamte .join-Klasse anwenden */
+.join:hover .joiner > img {
+    opacity: 1; /* Bild wird sichtbar beim Hover auf .join */
+}
+
+.join:hover {
+    background-color: rgb(39, 68, 63);
+    cursor: pointer; /* Stelle sicher, dass die Farbe korrekt ist */
+}
+
+.languages {
+
+    > span {
+        margin: 3px;
+        color: white; /* Die Wörter bleiben weiß */
+        font-family: "Karla", sans-serif;
+        font-size: 18px;
+    }
+
+    .separator {
+        color: #3DCFB6; /* Grüne Farbe für das | Symbol */
+    }
+}
+
+
+
+.el-pollo-loco {
+    padding: 10px;
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 800px;
+    transition: 125ms;
+   
+    border-bottom: 2px solid #3DCFB6; /* Untere Border */
+    border-left: none; /* Keine linke Border */
+    border-right: none; /* Keine rechte Border */
+   /* Notwendig für das Positionieren des Bildes */
+}
+
+.pollo {
+    display: flex;
+    align-items: center;
+
+    > p {
+        font-family: "Fira Code", monospace;
+        font-size: 24px;
+        color: white;
+    }
+
+    > img {
+        margin-left: 10px;
+        opacity: 0; /* Bild ist standardmäßig unsichtbar */
+        transition: opacity 0.3s ease; /* Sanfter Übergang beim Einblenden */
+    }
+}
+
+/* Hover-Effekt auf die gesamte .join-Klasse anwenden */
+.el-pollo-loco:hover .pollo 
+> img {
+    opacity: 1; /* Bild wird sichtbar beim Hover auf .join */
+}
+
+.el-pollo-loco:hover {
+    background-color: rgb(39, 68, 63);
+    cursor: pointer; /* Stelle sicher, dass die Farbe korrekt ist */
+}
+
+.languages {
+
+    > span {
+        margin: 3px;
+        color: white; /* Die Wörter bleiben weiß */
+        font-family: "Karla", sans-serif;
+        font-size: 18px;
+    }
+
+    .separator {
+        color: #3DCFB6; /* Grüne Farbe für das | Symbol */
+    }
+}
+
+
+.joinimg {
+    position: absolute;
+   margin-top: -10px;
+    
+    transition: opacity 0.3s ease; /* Sanfter Übergang */
+}
+
+
+.polloimg {
+    position: absolute;
+    margin-top: 50px;
+    
+    transition: opacity 0.3s ease; /* Sanfter Übergang */
+}
+
+
+
+
+
+
+
+
+

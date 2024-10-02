@@ -1,1 +1,82 @@
-<p>projects works!</p>
+<section>
+
+    <div class="featured-projects">
+
+
+    <h2>Portfolio</h2>
+    <h1>Featured Projects</h1>
+    <span class="spanne">Explore a selection of my work here  -  Interact with <br> projects to see my skills in action.</span>
+
+
+    <div class="join" (mouseenter)="onMouseEnterJoin()" 
+    (mouseleave)="onMouseLeaveJoin()">
+
+
+        <div class="joiner">
+        <p>Join  </p> <img src="/assets/img-projects/arrow_outward.png" alt="">
+        </div>
+
+
+        <div class="languages">
+       
+        <span>JavaScript</span> <span class="separator">|</span>
+        <span>HTML</span> <span class="separator">|</span>
+        <span>CSS</span> <span class="separator">|</span>
+        <span>Firebase</span>
+        </div>
+
+
+        
+        
+    </div>
+
+
+    <div class="el-pollo-loco"  (mouseenter)="onMouseEnterPollo()" 
+    (mouseleave)="onMouseLeavePollo()">
+    
+        <div class="pollo">
+        <p>El Pollo Loco </p> <img src="/assets/img-projects/arrow_outward.png" alt="">
+        </div>
+
+
+        <div class="languages">
+      
+        <span>HTML</span> <span class="separator">|</span>
+        <span>CSS</span> <span class="separator">|</span>
+        <span>JavaScript</span>
+        </div>
+
+    </div> 
+
+
+
+    <div class="el-pollo-loco">
+    
+        <div class="pollo">
+        <p>Test Projekt </p> <img src="/assets/img-projects/arrow_outward.png" alt="">
+        </div>
+
+
+        <div class="languages">
+      
+        <span>HTML</span> <span class="separator">|</span>
+        <span>CSS</span> <span class="separator">|</span>
+        <span>JavaScript</span>
+        </div>
+
+    </div> 
+
+
+
+
+    </div>
+
+
+    <div class="img-projects">
+        <!-- Bild für Join -->
+        <img class="joinimg" src="/assets/img-projects/join.png" alt="" [ngStyle]="{ 'opacity': isHoveredJoin ? '1' : '0' }">
+        <!-- Bild für El Pollo Loco -->
+        <img class="polloimg" src="/assets/img-projects/elpolloloco.png" alt="" [ngStyle]="{ 'opacity': isHoveredPollo ? '1' : '0' }">
+    </div>
+
+</section>
