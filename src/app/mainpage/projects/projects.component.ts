@@ -1,22 +1,22 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './projects.component.html',
-  styleUrl: './projects.component.scss'
+  styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent {
-  // Hover-Status für das "Join"-Element
   isHoveredJoin: boolean = false;
   isHoveredPollo: boolean = false;
-
-  // Status des modalen Fensters
   isModalOpen: boolean = false;
 
-  // Methoden für "Join"
+  // Variable, um das aktuelle Projekt zu speichern
+  activeProject: string | null = null;
+
+  // Methoden für Hover-Effekte
   onMouseEnterJoin() {
     this.isHoveredJoin = true;
   }
@@ -25,7 +25,6 @@ export class ProjectsComponent {
     this.isHoveredJoin = false;
   }
 
-  // Methoden für "El Pollo Loco"
   onMouseEnterPollo() {
     this.isHoveredPollo = true;
   }
@@ -34,13 +33,26 @@ export class ProjectsComponent {
     this.isHoveredPollo = false;
   }
 
-  // Methode, um das Modal zu öffnen
-  openModal() {
+  // Öffnet das Modal und setzt das aktive Projekt
+  openModal(project: string) {
     this.isModalOpen = true;
+    this.activeProject = project;
+    document.body.style.overflow = 'hidden'; // Scrollen verhindern
   }
 
-  // Methode, um das Modal zu schließen
+  // Schließt das Modal und setzt das aktive Projekt zurück
   closeModal() {
     this.isModalOpen = false;
+    this.activeProject = null;
+    document.body.style.overflow = 'auto'; // Scrollen wieder aktivieren
+  }
+
+  closeModalOnBackground(event: MouseEvent) {
+    const clickedElement = event.target as HTMLElement;
+
+    // Überprüfen, ob der Klick auf den Modal-Hintergrund erfolgt ist
+    if (clickedElement.classList.contains('modal')) {
+      this.closeModal();
+    }
   }
 }

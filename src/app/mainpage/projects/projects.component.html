@@ -11,7 +11,7 @@
     <div class="join" 
     (mouseenter)="onMouseEnterJoin()" 
     (mouseleave)="onMouseLeaveJoin()"
-    (click)="openModal()">
+    (click)="openModal('Join')">
 
 
         <div class="joiner">
@@ -33,8 +33,11 @@
     </div>
 
 
-    <div class="el-pollo-loco"  (mouseenter)="onMouseEnterPollo()" 
-    (mouseleave)="onMouseLeavePollo()">
+
+    <div class="el-pollo-loco" 
+    (mouseenter)="onMouseEnterPollo()" 
+    (mouseleave)="onMouseLeavePollo()"
+    (click)="openModal('El Pollo Loco')">
     
         <div class="pollo">
         <p>El Pollo Loco </p> <img src="/assets/img-projects/arrow_outward.png" alt="">
@@ -55,7 +58,7 @@
     <div class="el-pollo-loco">
     
         <div class="pollo">
-        <p>Test Projekt </p> <img src="/assets/img-projects/arrow_outward.png" alt="">
+        <p>Portfolio </p> <img src="/assets/img-projects/arrow_outward.png" alt="">
         </div>
 
 
@@ -82,8 +85,57 @@
     </div>
 
 
-   <div></div>
-
+    <!-- Modales Popup -->
+    <div *ngIf="isModalOpen" class="modal" (click)="closeModalOnBackground($event)">
+        <div class="modal-content" (click)="$event.stopPropagation()">
+  
+            <!-- Modal-Inhalt für Join -->
+            <div *ngIf="activeProject === 'Join'" class="left-modal">
+                <h1>01</h1>
+                <h2>Join</h2>
+                <h3>What is this project about?</h3>
+                <span>Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.</span>
+      
+                <div class="images-lang">
+                    <img src="/assets/img-projects/Property 1=Javascript(1).png" alt=""> <p>JavaScript</p>
+                    <img src="/assets/img-projects/Property 1=HTML(1).png" alt=""><p>HTML</p>
+                    <img src="/assets/img-projects/Property 1=CSS(1).png" alt=""><p>CSS</p>
+                    <img src="/assets/img-projects/Property 1=Firebase(1).png" alt=""><p>Firebase</p>
+                </div>
+      
+                <div class="button-container">
+                    <button class="button-name">GitHub <img src="/assets/img-projects/arrow_outward(1).png" alt=""></button>
+                    <button class="button-name">Live Test <img src="/assets/img-projects/arrow_outward(1).png" alt=""></button>
+                </div>
+            </div>
+  
+            <!-- Modal-Inhalt für El Pollo Loco -->
+            <div *ngIf="activeProject === 'El Pollo Loco'" class="left-modal">
+                <h1>02</h1>
+                <h2>El Pollo Loco</h2>
+                <h3>What is this project about?</h3>
+                <span>Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.</span>
+      
+                <div class="images-lang">
+                    <img src="/assets/img-projects/Property 1=Javascript(1).png" alt=""> <p>JavaScript</p>
+                    <img src="/assets/img-projects/Property 1=HTML(1).png" alt=""><p>HTML</p>
+                    <img src="/assets/img-projects/Property 1=CSS(1).png" alt=""><p>CSS</p>
+                </div>
+      
+                <div class="button-container">
+                    <button class="button-name">GitHub <img src="/assets/img-projects/arrow_outward(1).png" alt=""></button>
+                    <button class="button-name">Live Test <img src="/assets/img-projects/arrow_outward(1).png" alt=""></button>
+                </div>
+            </div>
+  
+            <div class="right-section">
+                <span class="close" (click)="closeModal()">&times;</span>
+                <!-- Dynamisches Bild basierend auf dem aktiven Projekt -->
+                <img *ngIf="activeProject === 'Join'" src="/assets/img-projects/join-popup.jpg" alt="">
+                <img *ngIf="activeProject === 'El Pollo Loco'" src="/assets/img-projects/el-pollo-loco-popup.jpg" alt="">
+            </div>
+        </div>
+    </div>
 
 
 </section>
