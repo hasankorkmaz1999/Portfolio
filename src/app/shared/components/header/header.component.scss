@@ -2,6 +2,7 @@
     background-image: url('/assets/img-first/1Background.svg');
     height: 900px;
     width: 100%;
+    max-width: 100vw; 
     background-size: cover; /* Optional, falls du möchtest, dass das Bild den gesamten Bereich abdeckt */
     background-position: center;
 }
@@ -10,14 +11,15 @@
     padding: 40px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 
 .namelogo img{
     background-color: transparent; /* Sicherstellen, dass der Hintergrund des Images transparent ist */
     border: none;
-    width: 50px; /* Optional, falls du das Bild skalieren möchtest */
-    /* Optional, falls du das Bild skalieren möchtest */
+    width: 100px; /* Optional, falls du das Bild skalieren möchtest */
+    height: 100px;/* Optional, falls du das Bild skalieren möchtest */
   }
 
 .header-nav {

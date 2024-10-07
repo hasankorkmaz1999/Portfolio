@@ -12,6 +12,56 @@
          <p>Need a Frontend developer? <span class="letstalk"> Let’s talk!</span></p>
         </div>
 
-    </div>
 
+        <div class="right-section">
+
+            <div class="first_section">
+              <div class="input-section"> 
+                <span>What's your name?</span>
+                <div class="textarea-wrapper">
+                  <textarea class="resizable-textarea" placeholder="Your name goes here" (input)="autoResize($event)"></textarea>
+                  <img *ngIf="showCheckmark" src="/assets/img-contact/check(1).png" class="checkmark" (click)="stopInput()" alt="Stop Input">
+                </div>
+              </div>
+            </div>
+          
+            <div class="second_section">
+              <div class="input-section"> 
+                <span>What's your email?</span>
+                <div class="textarea-wrapper">
+                  <textarea class="resizable-textarea" placeholder="youremail@email.com" (input)="autoResize($event)"></textarea>
+                  <img *ngIf="showCheckmark" src="/assets/img-contact/check(1).png" class="checkmark" (click)="stopInput()" alt="Stop Input">
+                </div>
+              </div>
+            </div>
+          
+            <div class="third_section">
+              <div class="input-section"> 
+                <span>How can I help you?</span>
+                <div class="textarea-wrapper">
+                  <textarea class="resizable-textarea" placeholder="Hello Hasan, I am interested in..." (input)="autoResize($event)"></textarea>
+                  <img *ngIf="showCheckmark" src="/assets/img-contact/check(1).png" class="checkmark" (click)="stopInput()" alt="Stop Input">
+                </div>
+              </div>
+            </div>
+
+
+
+
+            <div class="privacy-container">
+                <label class="checkbox-label">
+                    <input type="checkbox" id="privacy-checkbox">
+                    <span class="custom-checkbox"></span>
+                    I've read the <a href="#" class="privacy-link">privacy policy</a> and agree to the processing of my data as outlined.
+                </label>
+                <button class="submit-btn">Say Hello ;)</button>
+            </div>
+
+
+            
+          </div>
+
+        </div>
+          
 </section>
+
