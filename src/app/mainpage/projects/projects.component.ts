@@ -11,10 +11,15 @@ import { CommonModule } from '@angular/common';
 export class ProjectsComponent {
   isHoveredJoin: boolean = false;
   isHoveredPollo: boolean = false;
+  isHoveredPortfolio: boolean = false;
   isModalOpen: boolean = false;
 
   // Variable, um das aktuelle Projekt zu speichern
   activeProject: string | null = null;
+
+  // Liste der Projekte in einer Schleife
+  projects: string[] = ['Join', 'El Pollo Loco', 'Portfolio'];
+  currentProjectIndex: number = 0; // Um den aktuellen Index zu speichern
 
   // Methoden für Hover-Effekte
   onMouseEnterJoin() {
@@ -33,10 +38,19 @@ export class ProjectsComponent {
     this.isHoveredPollo = false;
   }
 
+  onMouseEnterPortfolio() {
+    this.isHoveredPortfolio = true;
+  }
+
+  onMouseLeavePortfolio() {
+    this.isHoveredPortfolio = false;
+  }
+
   // Öffnet das Modal und setzt das aktive Projekt
   openModal(project: string) {
     this.isModalOpen = true;
     this.activeProject = project;
+    this.currentProjectIndex = this.projects.indexOf(project); // Setzt den Index des Projekts
     document.body.style.overflow = 'hidden'; // Scrollen verhindern
   }
 
@@ -54,5 +68,12 @@ export class ProjectsComponent {
     if (clickedElement.classList.contains('modal')) {
       this.closeModal();
     }
+  }
+
+  // Zyklische Navigation durch die Projekte (nächstes Projekt)
+  nextProject() {
+    // Inkrementiere den Index und setze ihn wieder auf 0, wenn das Ende der Liste erreicht wird
+    this.currentProjectIndex = (this.currentProjectIndex + 1) % this.projects.length;
+    this.activeProject = this.projects[this.currentProjectIndex]; // Setzt das nächste Projekt
   }
 }

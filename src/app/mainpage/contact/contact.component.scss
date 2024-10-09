@@ -1,19 +1,21 @@
 
 section {
     background-color: #1C1C1C;
-    height: 700px;
-    width: 100%;
-    padding: 40px;
+    height: 900px;
+  width: 100%; /* Verwende 100% anstelle einer festen Breite */
+  max-width: 1920px; /* Optional, um eine maximale Breite festzulegen */
+ 
+  margin: 0 auto; /* Zentriert den Inhalt */
     
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
 .contact {
-    width: 1250px;
+   width: 1920px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -68,7 +70,7 @@ section {
 }
 
 
-.first_section, .second_section, .third_section {
+.first_section  {
     min-height: 131px; /* Standard-Mindesthöhe */
     width: 600px;
     border-top: 1px solid #3DCFB6; /* Obere Border (nur für die erste Sektion) */
@@ -80,6 +82,37 @@ section {
     align-items: flex-start;
     flex-direction: column;
     overflow: hidden; /* Verhindert, dass Inhalt überläuft */
+}
+
+
+.second_section {
+    min-height: 131px; /* Standard-Mindesthöhe */
+    width: 600px;
+    /* Obere Border (nur für die erste Sektion) */
+    border-bottom: 1px solid #3DCFB6; /* Untere Border */
+    border-left: none; /* Keine linke Border */
+    border-right: none; /* Keine rechte Border */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    overflow: hidden; /* Verhindert, dass Inhalt überläuft */
+}
+
+
+.third_section {
+    min-height: 131px; /* Standard-Mindesthöhe */
+    width: 600px;
+    /* Obere Border (nur für die erste Sektion) */
+    border-bottom: 1px solid #3DCFB6; /* Untere Border */
+    border-left: none; /* Keine linke Border */
+    border-right: none; /* Keine rechte Border */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    overflow: hidden;
+    margin-bottom: 50px; /* Verhindert, dass Inhalt überläuft */
 }
 
 
@@ -175,7 +208,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center; /* Text und Button links ausrichten */
-    margin-top: 20px;
+  
 }
 
 .checkbox-label {

@@ -1,21 +1,23 @@
 section {
     background-color: #1C1C1C;
-    height: 700px;
-    width: 100%;
+    height: 900px;
+    width: 100%; /* Verwende 100% anstelle einer festen Breite */
+    max-width: 1920px; /* Optional, um eine maximale Breite festzulegen */
+   
+    margin: 0 auto; /* Zentriert den Inhalt */
    display: flex;
-   justify-content: flex-start;
+   justify-content: space-around;
    align-items: center;
-
-
+  position: relative;
 }
 
 
 .featured-projects {
-    margin-left: 50px;
-   padding: 80px;
+ position: absolute;
+  left: 10%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+   
 
     >h2 {
         font-family: "Karla", sans-serif;
@@ -163,6 +165,83 @@ section {
 }
 
 
+
+
+
+
+.portfolio {
+    padding: 10px;
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 800px;
+    transition: 125ms;
+    
+    border-bottom: 2px solid #3DCFB6; /* Untere Border */
+    border-left: none; /* Keine linke Border */
+    border-right: none; /* Keine rechte Border */
+   /* Notwendig für das Positionieren des Bildes */
+}
+
+.port {
+    display: flex;
+    align-items: center;
+
+    > p {
+        font-family: "Fira Code", monospace;
+        font-size: 24px;
+        color: white;
+    }
+
+    > img {
+        margin-left: 10px;
+        opacity: 0; /* Bild ist standardmäßig unsichtbar */
+        transition: opacity 0.3s ease; /* Sanfter Übergang beim Einblenden */
+    }
+}
+
+/* Hover-Effekt auf die gesamte .join-Klasse anwenden */
+.portfolio:hover .port > img {
+    opacity: 1; /* Bild wird sichtbar beim Hover auf .join */
+}
+
+.portfolio:hover {
+    background-color: rgb(39, 68, 63);
+    cursor: pointer; /* Stelle sicher, dass die Farbe korrekt ist */
+}
+
+.languages {
+
+    > span {
+        margin: 3px;
+        color: white; /* Die Wörter bleiben weiß */
+        font-family: "Karla", sans-serif;
+        font-size: 18px;
+    }
+
+    .separator {
+        color: #3DCFB6; /* Grüne Farbe für das | Symbol */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.img-projects {
+    position: absolute;
+    left: 60%;
+}
+
+
 .joinimg {
     position: absolute;
    margin-top: -10px;
@@ -174,11 +253,48 @@ section {
 .polloimg {
     position: absolute;
     margin-top: 50px;
-    
+  
     transition: opacity 0.3s ease; /* Sanfter Übergang */
 }
 
 
+
+
+
+.portfolio-wrapper {
+    position: absolute;
+}
+
+.portfolio-background {
+    background-image: url('/assets/img-projects/Capa_1.png');
+    background-size: cover;
+    background-position: bottom right;
+    position: absolute;
+    height: 182px; /* Höhe des Hintergrundbildes */
+    width: 290px;  /* Breite des Hintergrundbildes */
+    border-radius: 16px;
+    opacity: 0; /* Unsichtbar, bis es sichtbar gemacht wird */
+    transition: opacity 0.3s ease; /* Sanfter Übergang */
+    z-index: 1;
+    margin-top: 160px;
+    margin-left: 26px;
+}
+
+.portfolioimg {
+    position: relative;
+    border: 1px solid rgb(78, 77, 77);
+    height: 192px;
+    width: 296px;
+    z-index: 2;
+    border-radius: 16px;
+    transition: opacity 0.3s ease;
+    margin-top: 130px;
+}
+
+/* Wenn das portfolioimg sichtbar ist, wird auch das Hintergrundbild eingeblendet */
+.portfolio-wrapper.is-visible .portfolio-background {
+    opacity: 1; /* Hintergrundbild wird eingeblendet */
+}
 
 // modal style
 
@@ -191,6 +307,7 @@ section {
     z-index: 1; 
     left: 0;
     top: 0;
+    
     width: 100%; 
     height: 100%; 
     background-color: rgba(0, 0, 0, 0.5); /* Hintergrund-Dim */
@@ -202,9 +319,11 @@ background-image: url('/assets/img-first/1Background.svg');
 background-repeat: no-repeat;
 background-size: cover;
     margin: auto;
-    padding: 50px;
+   padding: 50px;
     border: 1px solid #3DCFB6;
-    width: 90%;
+    width:  90%;
+    max-width: 1420px;
+   
     height: 600px;
     border-radius: 30px;
     display: flex;
@@ -328,6 +447,10 @@ background-size: cover;
     }
 }
 
+.portimg {
+    border: 1px solid #3DCFB6;
+}
+
 
 
 /* Schließen-Button */
@@ -348,6 +471,40 @@ background-size: cover;
     cursor: pointer;
 }
 
+.next-project {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    >span {
+       font-family: "Karla", sans-serif;
+        font-size: 18px;
+        margin-right: 10px;
+        color: #3DCFB6;
+        transition: transform 0.3s ease;
+    }
+
+    >img {
+        transition: transform 0.3s ease;
+    }
+
+
+  
+}
+
+
+.next-project:hover {
+
+    cursor: pointer;
+    >span {
+        color: white;
+    }
+
+
+    >img {
+        transform: translateX(10px); 
+    }
+}
 
 
 

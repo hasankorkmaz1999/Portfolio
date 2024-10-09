@@ -1,89 +1,69 @@
 <section>
 
     <div class="featured-projects">
+        <h2>Portfolio</h2>
+        <h1>Featured Projects</h1>
+        <span class="spanne">Explore a selection of my work here  -  Interact with <br> projects to see my skills in action.</span>
 
-
-    <h2>Portfolio</h2>
-    <h1>Featured Projects</h1>
-    <span class="spanne">Explore a selection of my work here  -  Interact with <br> projects to see my skills in action.</span>
-
-
-    <div class="join" 
-    (mouseenter)="onMouseEnterJoin()" 
-    (mouseleave)="onMouseLeaveJoin()"
-    (click)="openModal('Join')">
-
-
-        <div class="joiner">
-        <p>Join  </p> <img src="/assets/img-projects/arrow_outward.png" alt="">
+        <div class="join" 
+            (mouseenter)="onMouseEnterJoin()" 
+            (mouseleave)="onMouseLeaveJoin()"
+            (click)="openModal('Join')">
+            <div class="joiner">
+                <p>Join</p>
+                <img src="/assets/img-projects/arrow_outward.png" alt="">
+            </div>
+            <div class="languages">
+                <span>JavaScript</span> <span class="separator">|</span>
+                <span>HTML</span> <span class="separator">|</span>
+                <span>CSS</span> <span class="separator">|</span>
+                <span>Firebase</span>
+            </div>
         </div>
 
-
-        <div class="languages">
-       
-        <span>JavaScript</span> <span class="separator">|</span>
-        <span>HTML</span> <span class="separator">|</span>
-        <span>CSS</span> <span class="separator">|</span>
-        <span>Firebase</span>
+        <div class="el-pollo-loco" 
+            (mouseenter)="onMouseEnterPollo()" 
+            (mouseleave)="onMouseLeavePollo()"
+            (click)="openModal('El Pollo Loco')">
+            <div class="pollo">
+                <p>El Pollo Loco</p>
+                <img src="/assets/img-projects/arrow_outward.png" alt="">
+            </div>
+            <div class="languages">
+                <span>HTML</span> <span class="separator">|</span>
+                <span>CSS</span> <span class="separator">|</span>
+                <span>JavaScript</span>
+            </div>
         </div>
 
-
-        
-        
+        <div class="portfolio"
+            (mouseenter)="onMouseEnterPortfolio()" 
+            (mouseleave)="onMouseLeavePortfolio()"
+            (click)="openModal('Portfolio')">
+            <div class="port">
+                <p>Portfolio</p>
+                <img src="/assets/img-projects/arrow_outward.png" alt="">
+            </div>
+            <div class="languages">
+                <span>Angular</span> <span class="separator">|</span>
+                <span>HTML</span> <span class="separator">|</span>
+                <span>SCSS</span> <span class="separator">|</span>
+                <span>TypeScript</span>
+            </div>
+        </div>
     </div>
-
-
-
-    <div class="el-pollo-loco" 
-    (mouseenter)="onMouseEnterPollo()" 
-    (mouseleave)="onMouseLeavePollo()"
-    (click)="openModal('El Pollo Loco')">
-    
-        <div class="pollo">
-        <p>El Pollo Loco </p> <img src="/assets/img-projects/arrow_outward.png" alt="">
-        </div>
-
-
-        <div class="languages">
-      
-        <span>HTML</span> <span class="separator">|</span>
-        <span>CSS</span> <span class="separator">|</span>
-        <span>JavaScript</span>
-        </div>
-
-    </div> 
-
-
-
-    <div class="el-pollo-loco">
-    
-        <div class="pollo">
-        <p>Portfolio </p> <img src="/assets/img-projects/arrow_outward.png" alt="">
-        </div>
-
-
-        <div class="languages">
-      
-        <span>HTML</span> <span class="separator">|</span>
-        <span>CSS</span> <span class="separator">|</span>
-        <span>JavaScript</span>
-        </div>
-
-    </div> 
-
-
-
-
-    </div>
-
 
     <div class="img-projects">
         <!-- Bild für Join -->
         <img class="joinimg" src="/assets/img-projects/join.png" alt="" [ngStyle]="{ 'opacity': isHoveredJoin ? '1' : '0' }">
         <!-- Bild für El Pollo Loco -->
         <img class="polloimg" src="/assets/img-projects/elpolloloco.png" alt="" [ngStyle]="{ 'opacity': isHoveredPollo ? '1' : '0' }">
+        <!-- Bild für Portfolio -->
+        <div class="portfolio-wrapper" [ngClass]="{ 'is-visible': isHoveredPortfolio }">
+            <div class="portfolio-background"></div>
+            <img class="portfolioimg" src="/assets/img-projects/portfoliopopup.png" alt="" [ngStyle]="{ 'opacity': isHoveredPortfolio ? '1' : '0' }">
+        </div>
     </div>
-
 
     <!-- Modales Popup -->
     <div *ngIf="isModalOpen" class="modal" (click)="closeModalOnBackground($event)">
@@ -97,10 +77,14 @@
                 <span>Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.</span>
       
                 <div class="images-lang">
-                    <img src="/assets/img-projects/Property 1=Javascript(1).png" alt=""> <p>JavaScript</p>
-                    <img src="/assets/img-projects/Property 1=HTML(1).png" alt=""><p>HTML</p>
-                    <img src="/assets/img-projects/Property 1=CSS(1).png" alt=""><p>CSS</p>
-                    <img src="/assets/img-projects/Property 1=Firebase(1).png" alt=""><p>Firebase</p>
+                    <img src="/assets/img-projects/Property 1=Javascript(1).png" alt="">
+                    <p>JavaScript</p>
+                    <img src="/assets/img-projects/Property 1=HTML(1).png" alt="">
+                    <p>HTML</p>
+                    <img src="/assets/img-projects/Property 1=CSS(1).png" alt="">
+                    <p>CSS</p>
+                    <img src="/assets/img-projects/Property 1=Firebase(1).png" alt="">
+                    <p>Firebase</p>
                 </div>
       
                 <div class="button-container">
@@ -117,9 +101,36 @@
                 <span>Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.</span>
       
                 <div class="images-lang">
-                    <img src="/assets/img-projects/Property 1=Javascript(1).png" alt=""> <p>JavaScript</p>
-                    <img src="/assets/img-projects/Property 1=HTML(1).png" alt=""><p>HTML</p>
-                    <img src="/assets/img-projects/Property 1=CSS(1).png" alt=""><p>CSS</p>
+                    <img src="/assets/img-projects/Property 1=Javascript(1).png" alt="">
+                    <p>JavaScript</p>
+                    <img src="/assets/img-projects/Property 1=HTML(1).png" alt="">
+                    <p>HTML</p>
+                    <img src="/assets/img-projects/Property 1=CSS(1).png" alt="">
+                    <p>CSS</p>
+                </div>
+      
+                <div class="button-container">
+                    <button class="button-name">GitHub <img src="/assets/img-projects/arrow_outward(1).png" alt=""></button>
+                    <button class="button-name">Live Test <img src="/assets/img-projects/arrow_outward(1).png" alt=""></button>
+                </div>
+            </div>
+
+            <!-- Modal-Inhalt für Portfolio -->
+            <div *ngIf="activeProject === 'Portfolio'" class="left-modal">
+                <h1>03</h1>
+                <h2>Portfolio</h2>
+                <h3>What is this project about?</h3>
+                <span>A portfolio website showcasing web development skills using Angular, TypeScript, SCSS, and HTML.</span>
+      
+                <div class="images-lang">
+                    <img src="/assets/img-projects/Property 1=Angular(1).png" alt="">
+                    <p>Angular</p>
+                    <img src="/assets/img-projects/Property 1=HTML(1).png" alt="">
+                    <p>HTML</p>
+                    <img src="/assets/img-projects/Property 1=CSS(1).png" alt="">
+                    <p>SCSS</p>
+                    <img src="/assets/img-projects/Property 1=TypeScript(1).png" alt="">
+                    <p>TypeScript</p>
                 </div>
       
                 <div class="button-container">
@@ -128,14 +139,21 @@
                 </div>
             </div>
   
+            <!-- Dynamisches Bild basierend auf dem aktiven Projekt -->
             <div class="right-section">
                 <span class="close" (click)="closeModal()">&times;</span>
-                <!-- Dynamisches Bild basierend auf dem aktiven Projekt -->
                 <img *ngIf="activeProject === 'Join'" src="/assets/img-projects/join-popup.jpg" alt="">
                 <img *ngIf="activeProject === 'El Pollo Loco'" src="/assets/img-projects/el-pollo-loco-popup.jpg" alt="">
+                <img class="portimg" *ngIf="activeProject === 'Portfolio'" src="/assets/img-projects/portfoliopopup.png" alt="">
+
+                <div class="next-project" (click)="nextProject()">
+                   <span>Next project </span>
+                   <img src="/assets/img-projects/arrows(1).png" alt="">
+                  </div>
+
+
             </div>
         </div>
     </div>
-
 
 </section>

@@ -1,13 +1,17 @@
 .skill-set {
     background-image: url('/assets/img-skillset/19. Skill set Background.png');
-    height: 700px;
-    width: 100%;
+    height: 900px;
+  width: 100%; /* Verwende 100% anstelle einer festen Breite */
+  max-width: 1920px; /* Optional, um eine maximale Breite festzulegen */
+ 
+  margin: 0 auto; /* Zentriert den Inhalt */
     background-size: cover; /* Hintergrund wird vollständig angezeigt */
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
     justify-content: space-around;
     align-items: center;
+   
 }
 
 .left-section {
@@ -84,13 +88,15 @@
     font-family: "Karla", sans-serif;
     font-size: 18px;
     padding: 10px;
-    width: 122px;
+    width: 102px;
     border-radius: 100px;
     border: 1px solid white;
     background-color: transparent;
     color: #fff;
     transition: all 0.3s ease; /* Übergang für sanfte Animation */
     display: inline-block; 
+    text-decoration: none;
+    text-align: center;
 }
 
 .button-name:hover {
