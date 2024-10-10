@@ -16,7 +16,7 @@
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding-top: 50px; /* Ermöglicht das Umbruchverhalten bei kleineren Bildschirmen */
+  padding-top: 20px; /* Ermöglicht das Umbruchverhalten bei kleineren Bildschirmen */
   padding-right: 80px;
   padding-left: 80px;
 }
@@ -117,8 +117,8 @@
     }
 
     >h2 {
-        margin-top: 200px;
-        margin-bottom: 10px;
+        margin-top: 150px;
+        margin-bottom: 0;
         font-size: 40px;
         font-weight: 400;
         font-family: "Fira Code", monospace;
@@ -194,35 +194,56 @@
   }
 
 // rechter link 
-  .contact-bar {
-    position: absolute;
-    top: 493px;
-    right: 1%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 10; /* Niedriger als der marquee, damit sie vom marquee überlagert werden */
-   
-
-    >p {
-        color: white;
-        font-family: "Karla", sans-serif;
-        transform: rotate(270deg);
-        margin-bottom: 100px;
-        
-    }
-    >img {
-        margin-bottom: 10px;
-    }
-
-    
-
-    >img:hover {
-        cursor: pointer;
-        filter: brightness(0) invert(1); 
-      }
+.contact-bar {
+  position: absolute;
+  top: 493px;
+  right: 1%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;  
+  
+  .contact-icon {
+    display: none; /* Standardmäßig unsichtbar */
   }
+
+  >p {
+      color: white;
+      font-family: "Karla", sans-serif;
+      transform: rotate(270deg);
+      margin-bottom: 100px;
+  }
+
+  >p:hover {
+    color: #3DCFB6;
+  }
+
+  >img {
+      margin-bottom: 10px;
+      position: relative; /* Stellt sicher, dass das Pseudo-Element relativ zum Bild positioniert ist */
+  }
+
+  /* Füge das Pseudo-Element für den Punkt hinzu */
+  >img::after {
+      content: ''; /* Erzeugt das Pseudo-Element */
+      position: absolute;
+      right: 15px; /* Positioniert den Punkt rechts neben dem Bild */
+      top: 50%;
+      transform: translateY(-50%); /* Zentriert den Punkt vertikal */
+      width: 10px; /* Breite des Punktes */
+      height: 10px; /* Höhe des Punktes */
+      border-radius: 50%; /* Macht das Element zu einem Kreis */
+      background-color: #3DCFB6; /* Setzt die Farbe des Punktes */
+      opacity: 0; /* Punkt ist standardmäßig unsichtbar */
+      transition: opacity 0.3s ease; /* Sanfter Übergang beim Ein- und Ausblenden */
+  }
+
+  /* Sichtbar machen, wenn das Bild gehovt wird */
+  >img:hover::after {
+      opacity: 1; /* Punkt wird beim Hovern des Bildes sichtbar */
+  }
+}
 
 
  
@@ -246,13 +267,13 @@
   display: flex;
   white-space: nowrap; 
   /* Statt translateX(100%) -> Positioniert den Text direkt ohne Einfahren */
-  animation: marquee 15s linear infinite; 
+  animation: marquee 20s linear infinite; 
 }
 
 .marquee span {
   color: #3DCFB6; 
   font-family: "Karla", sans-serif;
-  font-size: 32px;
+  font-size: 28px;
   padding: 0 50px; 
 }
 
@@ -261,8 +282,408 @@
     transform: translateX(0); /* Text startet sofort sichtbar */
   }
   100% {
-    transform: translateX(-50%); /* Läuft nach links, bis es komplett verschwindet */
+    transform: translateX(-100%); /* Läuft nach links, bis es komplett verschwindet */
   }
 }
 
 
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 10px;
+}
+
+
+.hamburger span {
+  display: flex;
+  align-items: flex-start;
+  height: 2px;
+  width: 35px;
+  background-color: #3DCFB6;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+
+
+
+
+@media (max-width: 1150px) {
+  .contact-bar {
+    position: absolute;
+    top: 585px;
+    right: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    margin-right: 100px;
+
+    >p {
+    display: none;
+    }
+
+    .contact-icon {
+      display: block; /* Bild wird bei kleineren Bildschirmen angezeigt */
+    }
+  }
+
+
+  .name-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    >h1 {
+        margin-top: 0;
+        font-family: "Karla", sans-serif;
+        color:#D9D9D9;
+        font-weight: 700;
+        font-size: 98px;
+        line-height: 128px;
+        margin-bottom: 20px;
+    }
+
+    >h2 {
+        margin-top: 100px;
+        margin-bottom: 0;
+        font-size: 40px;
+        font-weight: 400;
+        font-family: "Fira Code", monospace;
+        color:#D9D9D9;
+    }
+
+   
+  }
+}
+
+
+@media (max-width: 910px) {
+  .name-container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    >h1 {
+        margin-top: 0;
+        font-family: "Karla", sans-serif;
+        color:#D9D9D9;
+        font-weight: 700;
+        font-size: 78px;
+        line-height: 128px;
+        margin-bottom: 20px;
+    }
+
+    >h2 {
+        margin-top: 100px;
+        margin-bottom: 0;
+        font-size: 30px;
+        font-weight: 400;
+        font-family: "Fira Code", monospace;
+        color:#D9D9D9;
+    }
+
+   
+  }
+}
+
+
+
+@media (max-width: 850px) {
+.header-left {
+ 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 20px; /* Ermöglicht das Umbruchverhalten bei kleineren Bildschirmen */
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+.contact-bar {
+  margin-right: 70px;
+}
+
+
+}
+
+.menu {
+  display: none;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 220px;
+  height: 250px;
+  background-image: url('/assets/img-first/1Background.svg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 30px;
+  border: 1px solid #3DCFB6;
+  position: absolute;
+  right: 5%;
+  top: 80px;
+
+ 
+ 
+
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.6); /* Über allem anzeigen */
+}
+
+.menu-pos {
+  display: none;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+
+  > a {
+    font-family: "Fira Code", monospace;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: start;
+    margin-left: 0;
+    text-decoration: none;
+    color: #FFFFFF;
+   
+    margin-bottom: 25px; /* Platz schaffen für den Punkt */
+  }
+}
+
+
+@media (max-width: 790px) {
+  .header-nav {
+    font-family: "Fira Code", monospace;
+    font-size: 20px;
+    display: none;
+    
+
+  }
+
+  .header-left {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .contact-bar {
+    margin-right: 35px;
+  }
+
+  .scroll-down {
+    left: -10px;
+  }
+  
+
+
+
+  .hamburger {
+    display: flex;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .menu{
+    display: flex;
+  }
+
+  .menu-pos {
+    display: flex;
+   }
+
+
+   .name-container {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    >h1 {
+        margin-top: 0;
+        font-family: "Karla", sans-serif;
+        color:#D9D9D9;
+        font-weight: 700;
+        font-size: 78px;
+        line-height: 128px;
+        margin-bottom: 20px;
+    }
+
+    >h2 {
+        margin-top: 100px;
+        margin-bottom: 0;
+        font-size: 30px;
+        font-weight: 400;
+        font-family: "Fira Code", monospace;
+        color:#D9D9D9;
+    }
+
+   
+  }
+}
+
+@media (max-width: 650px) {
+  .name-container {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    >h1 {
+        margin-top: 0;
+        font-family: "Karla", sans-serif;
+        color:#D9D9D9;
+        font-weight: 700;
+        font-size: 62px;
+        line-height: 128px;
+        margin-bottom: 20px;
+    }
+
+    >h2 {
+        margin-top: 100px;
+        margin-bottom: 0;
+        font-size: 24px;
+        font-weight: 400;
+        font-family: "Fira Code", monospace;
+        color:#D9D9D9;
+    }
+
+   
+  }
+
+  .menu {
+    right: 10%;
+  }
+
+
+  .marquee-container {
+    width: 100%;  /* Vermeide 'vw', um Probleme mit Scrollbalken zu verhindern */
+    background-color: rgba(255, 255, 255, 0.1); 
+    padding: 5px 0;
+    overflow: hidden;  /* Verhindert, dass der Inhalt außerhalb des Containers sichtbar wird */
+    position: absolute;
+    top: 800px;
+    z-index: 20; 
+    left: 0;
+    right: 0;
+    backdrop-filter: blur(2px);  /* Stelle sicher, dass das Element die gesamte Breite des Containers abdeckt */
+  }
+
+  .marquee {
+    display: flex;
+    white-space: nowrap; 
+    /* Statt translateX(100%) -> Positioniert den Text direkt ohne Einfahren */
+    animation: marquee 5s linear infinite; 
+  }
+  
+  .marquee span {
+    color: #3DCFB6; 
+    font-family: "Karla", sans-serif;
+    font-size: 22px;
+    padding: 0 50px; 
+  }
+
+
+
+}
+
+@media (max-width: 520px) {
+  .name-container {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    >h1 {
+        margin-top: 0;
+        font-family: "Karla", sans-serif;
+        color:#D9D9D9;
+        font-weight: 700;
+        font-size: 52px;
+        line-height: 128px;
+        margin-bottom: 20px;
+    }
+
+    >h2 {
+        margin-top: 100px;
+        margin-bottom: 0;
+        font-size: 24px;
+        font-weight: 400;
+        font-family: "Fira Code", monospace;
+        color:#D9D9D9;
+    }
+
+   
+  }
+}
+
+
+@media (max-width: 440px) {
+  .name-container {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    >h1 {
+        margin-top: 0;
+        font-family: "Karla", sans-serif;
+        color:#D9D9D9;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 70px;
+        margin-bottom: 20px;
+    }
+
+    >h2 {
+        margin-top: 100px;
+        margin-bottom: 0;
+        font-size: 20px;
+        font-weight: 400;
+        font-family: "Fira Code", monospace;
+        color:#D9D9D9;
+    }
+
+   
+  }
+
+  .menu {
+    right: 10%;
+    width: 200px;
+  }
+
+  .button-name {
+    font-family: "Karla", sans-serif;
+    font-size: 16px;
+    padding: 5px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .buttons-container {
+    display: flex;
+    justify-content: space-between;
+    width: 283px;
+  }
+}

@@ -2,7 +2,29 @@
 
     <div class="header-left">
        
-   
+    <!-- Hamburger Menü für mobile Ansicht -->
+    <div class="hamburger" (click)="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="menu-overlay" *ngIf="isMenuOpen" (click)="closeMenu()">
+      <!-- Menü selbst, das `stopPropagation()` verwendet, damit Klicks innerhalb des Menüs es nicht schließen -->
+      <div class="menu" (click)="$event.stopPropagation()">
+        <div class="menu-pos">
+          <a href="#aboutme" (click)="toggleMenu()">About me</a>
+          <a href="#skill" (click)="toggleMenu()">Skills</a>
+          <a href="#projects" (click)="toggleMenu()">Projects</a>
+    
+          <div class="lang-switch">
+            <button class="lang-button" [class.active]="currentLanguage === 'EN'" (click)="switchLanguage('EN')">EN</button>
+            <button class="lang-button" [class.active]="currentLanguage === 'DE'" (click)="switchLanguage('DE')">DE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
     <nav class="header-nav">
       
@@ -48,6 +70,7 @@
 
 <div class="contact-bar">
     <p>hasan.k1999&#64;outlook.de</p>
+    <img class="contact-icon" src="/assets/img-first/9.Contacticons.png" alt="" >
     <img src="/assets/img-first/GitHubIcon.png" alt="">
     <img src="/assets/img-first/LinkedinIcon.png" alt="">
     <img src="/assets/img-first/Vector 2.png" alt="">
