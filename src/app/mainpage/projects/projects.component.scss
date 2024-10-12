@@ -4,19 +4,19 @@ section {
     width: 100%; /* Verwende 100% anstelle einer festen Breite */
     max-width: 1920px; /* Optional, um eine maximale Breite festzulegen */
    
-    margin: 0 auto; /* Zentriert den Inhalt */
-   display: flex;
-   justify-content: space-around;
-   align-items: center;
-  position: relative;
+    margin: 0 auto; /* Zentriert den Inha justify-content: space-around;lt */
+  display: flex;
+ justify-content: flex-start;
+ align-items: center;
 }
 
 
 .featured-projects {
- position: absolute;
-  left: 10%;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    margin-left: 8vw;
+    
    
 
     >h2 {
@@ -228,32 +228,39 @@ section {
 
 
 
+.projects-div {
+    display: flex;
+    flex-direction: row;  /* Flexbox für horizontale Ausrichtung */
+    justify-content: space-between; /* Optional: Abstand zwischen den beiden Containern */
+    align-items: flex-start; /* Optional: Vertikale Ausrichtung */
+   /* Stelle sicher, dass die Breite 100% beträgt */
+}
 
-
-
-
-
-
-
+.all-projects {
+    display: flex;
+    flex-direction: column; /* Projekte sollen untereinander angeordnet werden */
+    /* Optional: Steuere die Breite des Containers */
+}
 
 .img-projects {
-    position: absolute;
-    left: 60%;
+    display: flex;
+    flex-direction: column; /* Bilder sollen untereinander angeordnet werden */
+  /* Optional: Steuere die Breite des Containers */
+    margin-left: 70px; /* Abstand zwischen den beiden Containern */
+   /* Ausrichtung von Inhalten am Anfang */
 }
 
 
 .joinimg {
-    position: absolute;
-   margin-top: -10px;
-    
+  position: absolute;
+  margin-top: 30px;
     transition: opacity 0.3s ease; /* Sanfter Übergang */
 }
 
 
 .polloimg {
-    position: absolute;
-    margin-top: 50px;
-  
+   position: absolute;
+   margin-top: 100px;
     transition: opacity 0.3s ease; /* Sanfter Übergang */
 }
 
@@ -262,7 +269,7 @@ section {
 
 
 .portfolio-wrapper {
-    position: absolute;
+   margin-top: 40px;
 }
 
 .portfolio-background {
@@ -328,9 +335,26 @@ background-size: cover;
     border-radius: 30px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
 
 }
+
+
+.contentinmodal {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+   
+  
+   
+    width: 100%;
+   
+    height: 600px;
+}
+
+
+
     .left-modal {
  width: 480px;
     >h1 {
@@ -506,6 +530,599 @@ background-size: cover;
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1320px) {
+
+    .right-section {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        >img {
+         
+            width: 420px;
+            height: 269px;
+            border-radius: 30px;
+            margin-bottom: 70px;
+        }
+    }
+
+    .contentinmodal {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin: auto;
+       
+       
+       
+        width: 100%;
+       
+        height: 500px;
+    }
+    
+
+
+
+    .left-modal {
+        width: 480px;
+           >h1 {
+               font-family: "Karla", sans-serif;
+               font-size: 108px;
+               margin: 0;
+               font-weight: 700;
+               color: #3DCFB6;
+           }
+       
+           >h2 {
+               margin: 0;
+               font-family: "Fira Code", monospace;
+               font-size: 54px;
+               color: white;
+               font-weight: 700;
+               margin-bottom: 20px;
+               white-space: nowrap;
+           }
+       
+           >h3 {
+               margin: 0;
+               font-family: "Fira Code", monospace;
+               font-size: 24px;
+               color: #3DCFB6;
+               font-weight: 700;
+               white-space: nowrap;
+               margin-bottom: 30px;
+           }
+       
+           >span {
+               font-family: "Karla", sans-serif;
+               font-size: 18px;
+               
+               font-weight: 400;
+               color: white;
+           }
+       }
+
+       .modal-content {
+        height: 500px;
+        width: 85%;
+       }
+       
+}
+
+
+@media (max-width: 1125px) {
+    .right-section {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        >img {
+         
+            width: 320px;
+            height: 240px;
+            border-radius: 30px;
+            margin-bottom: 70px;
+        }
+    }
+
+
+    .left-modal {
+        width: 480px;
+           >h1 {
+               font-family: "Karla", sans-serif;
+               font-size: 88px;
+               margin: 0;
+               font-weight: 700;
+               color: #3DCFB6;
+           }
+       
+           >h2 {
+               margin: 0;
+               font-family: "Fira Code", monospace;
+               font-size: 54px;
+               color: white;
+               font-weight: 700;
+               margin-bottom: 20px;
+               white-space: nowrap;
+           }
+       
+           >h3 {
+               margin: 0;
+               font-family: "Fira Code", monospace;
+               font-size: 24px;
+               color: #3DCFB6;
+               font-weight: 700;
+               white-space: nowrap;
+               margin-bottom: 30px;
+           }
+       
+           >span {
+               font-family: "Karla", sans-serif;
+               font-size: 16px;
+             
+               font-weight: 400;
+               color: white;
+           }
+       }
+
+      
+}
+
+
+@media (max-width: 980px) {
+.modal-content {
+    position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    height: 950px;
+    width: 60%;
+}
+
+.contentinmodal {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column-reverse;
+    margin: auto;
+   
+   
+   
+    width: 100%;
+   
+    height: 800px;
+}
+
+
+.right-section {
+    >img {
+        margin-bottom: 10px;
+        width: 470px;
+        height: 309px;
+        margin-top: 30px;
+    }
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+   
+}
+
+.next-project {
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+}
+
+
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+}
+
+
+
+@media (max-width: 710px) {
+    .modal-content{
+width: 80%;
+    }
+
+    .close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+       
+    }
+    
+    .next-project {
+        position: absolute;
+        bottom: 30px;
+        right: 20px;
+    }
+}
+
+
+@media (max-width: 590px) {
+
+
+
+    .modal-content{
+       
+width: 75%;
+    }
+
+    .right-section {
+        >img {
+            margin-bottom: 10px;
+            width: 470px;
+            height: 309px;
+            margin-top: 0px;
+        }
+    }
+}
+
+@media (max-width: 590px) {
+    .modal-content{
+width: 75%;
+
+    }
+
+    .right-section {
+        >img {
+            margin-bottom: 10px;
+            width: 370px;
+            height: 259px;
+            margin-top: 0px;
+        }
+    }
+    
+    .left-modal {
+        width: 370px;
+
+        >h2 {
+            font-size: 44px;
+        }
+    }
+
+}
+
+@media (max-width: 490px) {
+
+    .left-modal {
+        
+           >h1 {
+               font-family: "Karla", sans-serif;
+               font-size: 88px;
+               margin: 0;
+               font-weight: 700;
+               color: #3DCFB6;
+           }
+       
+           >h2 {
+               margin: 0;
+               font-family: "Fira Code", monospace;
+               font-size: 44px;
+               color: white;
+               font-weight: 700;
+               margin-bottom: 20px;
+               white-space: nowrap;
+           }
+       
+           >h3 {
+               margin: 0;
+               font-family: "Fira Code", monospace;
+               font-size: 20px;
+               color: #3DCFB6;
+               font-weight: 700;
+               white-space: nowrap;
+               margin-bottom: 30px;
+           }
+       
+           >span {
+               font-family: "Karla", sans-serif;
+               font-size: 16px;
+             
+               font-weight: 400;
+               color: white;
+           }
+       }
+
+
+       .images-lang {
+        width: 300px;
+        flex-wrap: wrap;
+       }
+}
+
+
+@media (max-width: 458px) {
+    .modal-content{
+width: 65%;
+
+    } 
+
+    .right-section {
+        >img {
+            margin-bottom: 10px;
+            width: 320px;
+            height: 259px;
+            margin-top: 0px;
+        }
+    }
+
+    .left-modal {
+        width: 320px;
+
+
+        >h2 {
+            font-size: 34px;
+        }
+    }
+
+
+    .close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+       
+    }
+
+    .button-name {
+        flex-wrap: nowrap;
+    }
+
+    .button-container {
+        width: 340px;
+    }
+    
+    
+}
+
+
+@media (max-width: 380px) {
+    .left-modal {
+        width: 290px;
+        >h3 {
+            font-size: 18px;
+        }
+    }
+
+    .right-section {
+        >img {
+            width: 300px;
+            height: 239px;
+        }
+    }
+
+    .button-name {
+        flex-wrap: nowrap;
+        padding: 5px;
+    }
+
+    .button-container {
+        width: 310px;
+    }
+}
+
+
+@media (max-width: 360px) {
+
+    .modal-content{
+        width: 62%;
+        
+            } 
+    .left-modal {
+        width: 270px;
+        >h3 {
+            width: 220px;
+            white-space: wrap;
+            font-size: 18px;
+        }
+    }
+
+    .right-section {
+        >img {
+            width: 270px;
+            height: 239px;
+        }
+    }
+
+    .button-name {
+        flex-wrap: nowrap;
+        padding: 5px;
+    }
+
+    .button-container {
+        width: 300px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1360px) {
+    .join, .el-pollo-loco, .portfolio {
+    width: 600px;
+    }
+}
+
+@media (max-width: 1210px) {
+    .join, .el-pollo-loco, .portfolio {
+    width: 700px;
+    }
+
+    .featured-projects {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+       margin-left: 0vw;
+    }    
+
+    .projects-div {
+        display: flex;
+        flex-direction: row;  /* Flexbox für horizontale Ausrichtung */
+        justify-content: space-between; /* Optional: Abstand zwischen den beiden Containern */
+        align-items: center; /* Optional: Vertikale Ausrichtung */
+       /* Stelle sicher, dass die Breite 100% beträgt */
+    }
+
+    section {
+        background-color: #1C1C1C;
+        height: 700px;
+        width: 100%; /* Verwende 100% anstelle einer festen Breite */
+        max-width: 1920px; /* Optional, um eine maximale Breite festzulegen */
+       
+        margin: 0 auto; /* Zentriert den Inha justify-content: space-around;lt */
+      display: flex;
+     justify-content: center;
+     align-items: center;
+    }
+
+    .img-projects {
+        display: none;
+    }
+}
+
+@media (max-width: 820px) {
+    .join, .el-pollo-loco, .portfolio {
+        width: 530px;
+        }
+}
+
+@media (max-width: 605px) {
+
+    section {
+        background-color: #1C1C1C;
+        height: 800px;
+    }
+
+
+    .join, .el-pollo-loco, .portfolio {
+        padding-left: 0px;
+        width: 330px;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+      
+        }
+
+        .joiner, .pollo, .port  {
+            display: flex;
+            align-items: center;
+        
+            > p {
+                margin-top: 0px;
+                margin-bottom: 5px;
+                font-family: "Fira Code", monospace;
+                font-size: 24px;
+                color: white;
+            }
+        }
+
+
+
+        .featured-projects {
+           >h1 {
+                  width: 200px;
+                }
+
+                >h2 {
+                    margin-bottom: 1px;
+                }
+
+
+           > span {
+               width: 300px;
+               line-height: 25px;
+               color: white;
+               word-spacing: 3px;
+               font-size: 18px;
+               font-family: "Karla", sans-serif;
+              
+               margin-bottom: 50px;
+           }
+           
+                
+        }
+
+        .spanne {
+            word-spacing: 0px;
+        }
+
+       
+        
+}
+
+
+@media (max-width: 435px) {
+    .join, .el-pollo-loco, .portfolio {
+        padding-left: 0px;
+        width: 250px;
+        height: 100px;
+    }
+
+    .featured-projects {
+        width: 250px;
+        >h1 {
+            font-size: 44px;
+               width: 200px;
+             }
+
+
+        > span {
+            width: 250px;
+            line-height: 25px;
+            color: white;
+            word-spacing: 3px;
+            font-size: 16px;
+            font-family: "Karla", sans-serif;
+           
+            margin-bottom: 20px;
+        }
+    }
+
+    .languages {
+        >span {
+            font-size: 15px;
+            
+        }
+    }
+
+    section {
+        background-color: #1C1C1C;
+        height: 800px;
+    }
+        
+}
 
 
 

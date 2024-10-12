@@ -12,10 +12,12 @@ section {
     align-items: center;
 }
 
+
+
 .contact {
-   width: 1920px;
+   width: 1620px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -45,18 +47,26 @@ section {
         color: #3DCFB6;
     }
 
-    >span {
-        color: white;
-        font-family: "Karla", sans-serif;
-        white-space: nowrap;
-
-    }
+   
 
     >p {
         color: white;
         font-family: "Karla", sans-serif;
     }
 }
+
+.spancontact {
+    color: white;
+    font-family: "Karla", sans-serif;
+    white-space: normal; /* Erlaubt normalen Zeilenumbruch */
+    word-wrap: break-word; /* Zeilenumbruch für lange Wörter */
+    word-break: break-word; /* Erzwingt den Umbruch bei langen Wörtern */
+    max-width: 450px; /* Maximalbreite des span */
+    display: block; /* Block-Layout, um die Breite zu respektieren */
+    line-height: 1.5; /* Zeilenhöhe, damit der Text gut lesbar ist */
+    height: auto; /* Entferne die feste Höhe */
+}
+
 
 .letstalk {
     color:  rgba(61, 207, 182, 1);
@@ -204,33 +214,7 @@ section {
     opacity: 1;
 }
 
-.privacy-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Text und Button links ausrichten */
-  
-}
 
-.checkbox-label {
-    display: flex;
-    align-items: center;
-    font-family: "Karla", sans-serif;
-    font-size: 16px;
-    color: #fff;
-    cursor: pointer;
-    margin-bottom: 20px;
-}
-
-.privacy-link {
-    color: #3DCFB6;
-    text-decoration: none;
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-.privacy-link:hover {
-   color: white;
-}
 
 /* Custom Checkbox Styling */
 .checkbox-label input[type="checkbox"] {
@@ -257,8 +241,14 @@ section {
     position: absolute;
 }
 
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
 /* Submit Button */
 .submit-btn {
+    width: 150px;
     margin-top: 20px;
     font-family: "Karla", sans-serif;
     font-size: 18px;
@@ -277,3 +267,266 @@ section {
     transform: translateY(-2px);
     border: 1px solid #3DCFB6;
 }
+
+
+.privacy-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Text und Button links ausrichten */
+  
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    font-family: "Karla", sans-serif;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.privacy-link {
+    color: #3DCFB6;
+    text-decoration: none;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.privacy-link:hover {
+   color: white;
+}
+
+@media (max-width: 1920px) {
+    .contact {
+        width: 1920px;
+         display: flex;
+         justify-content: space-around;
+         align-items: center;
+     }
+}
+
+
+@media (max-width: 1220px ) {
+
+section {
+    height: 1200px;
+}
+
+
+
+    .contact {
+        width: 520px;
+         display: flex;
+         justify-content: space-around;
+         align-items: center;
+         flex-direction: column;
+         height: 1000px;
+     }
+}
+
+
+@media (max-width: 720px ) {
+
+    .button-container {
+        margin-top: 20px;
+        width: 450px;
+    }
+
+    .resizable-textarea {
+        width: 440px;
+    }
+
+.contact {
+    margin-left: 5vw;
+}
+     
+    .first_section, .second_section, .third_section{
+
+       width: 500px;
+    }
+
+    .right-section{
+        width: 550px;
+      
+    }
+
+    .left-section {
+        align-items: flex-start;
+        width: 550px;
+        margin-bottom: 20px;
+        
+    }
+
+    .input-section {
+        margin-left: 10px;
+    }
+
+    section {
+        height: 1200px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .privacy-top {
+        margin-bottom: 5px;
+    }
+
+    .privacy-text {
+        display: flex;
+        flex-direction: column;
+       
+    }
+
+    .spancontact {
+        max-width: 550px; /* Passe die Breite für kleinere Bildschirme an */
+    }
+
+
+  
+
+    .privacy-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .checkbox-label {
+        white-space: pre-wrap;
+    }
+
+    .submit-btn {
+        margin-top: 20px;
+    }
+
+}
+
+
+
+@media (max-width: 605px ) {
+    section {
+        height: 1300px;
+    }
+    
+
+    .first_section, .second_section, .third_section{
+
+        width: 340px;
+     }
+     .spancontact {
+        max-width: 330px; /* Passe die Breite für kleinere Bildschirme an */
+    }
+
+    .contact {
+        width: 520px;
+    }
+
+    .right-section{
+        width: 390px;
+        margin-bottom: 20px;
+    }
+
+    .left-section{
+        width: 390px;
+        margin-bottom: 40px;
+        >h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        >h3 {
+            font-size: 20px;
+        }
+    }
+
+    .resizable-textarea {
+        width: 280px;
+    }
+
+    .button-container {
+        margin-top: 20px;
+        width: 350px;
+    }
+
+
+}
+
+
+@media (max-width: 435px ) {
+
+    section {
+        height: 1300px;
+    }
+    
+    .first_section, .second_section, .third_section{
+
+        width: 260px;
+     }
+
+     .input-section {
+        display: flex;
+        flex-direction: column;
+        margin-left: 2px;
+    
+        >span {
+            font-size: 20px;
+    
+        }
+}
+
+.right-section{
+    width: 280px;
+    margin-bottom: 20px;
+}
+
+
+.resizable-textarea {
+    width: 210px;
+    font-size: 16px;
+    margin-bottom: 0;
+    margin-top: 20px;
+}
+
+.left-section{
+    width: 280px;
+    margin-bottom: 40px;
+    >h1 {
+        font-size: 38px;
+        margin-bottom: 20px;
+    }
+
+    >h3 {
+        font-size: 18px;
+    }
+
+    >p {
+        white-space: wrap;
+        width: 240px;
+    }
+}
+
+.spancontact {
+    max-width: 250px; /* Passe die Breite für kleinere Bildschirme an */
+}
+
+
+.checkmark {
+    bottom: 10px;
+}
+
+.privacy-container {
+    width: 240px;
+}
+
+.custom-checkbox {
+    width: 25px;
+    height: 15px; 
+}
+
+.button-container {
+    margin-top: 20px;
+    width: 250px;
+}
+
+}
+

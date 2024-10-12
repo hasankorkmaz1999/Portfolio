@@ -3,72 +3,71 @@
     <div class="featured-projects">
         <h2>Portfolio</h2>
         <h1>Featured Projects</h1>
-        <span class="spanne">Explore a selection of my work here  -  Interact with <br> projects to see my skills in action.</span>
+        <span class="spanne">
+            Explore a selection of my work here - Interact with <br> projects to see my skills in action.
+        </span>
 
-        <div class="join" 
-            (mouseenter)="onMouseEnterJoin()" 
-            (mouseleave)="onMouseLeaveJoin()"
-            (click)="openModal('Join')">
-            <div class="joiner">
-                <p>Join</p>
-                <img src="/assets/img-projects/arrow_outward.png" alt="">
-            </div>
-            <div class="languages">
-                <span>JavaScript</span> <span class="separator">|</span>
-                <span>HTML</span> <span class="separator">|</span>
-                <span>CSS</span> <span class="separator">|</span>
-                <span>Firebase</span>
-            </div>
-        </div>
+        <div class="projects-div">
+            <!-- All Projects -->
+            <div class="all-projects">
+                <div class="join" (mouseenter)="onMouseEnterJoin()" (mouseleave)="onMouseLeaveJoin()" (click)="openModal('Join')">
+                    <div class="joiner">
+                        <p>Join</p>
+                        <img src="/assets/img-projects/arrow_outward.png" alt="">
+                    </div>
+                    <div class="languages">
+                        <span>JavaScript</span> <span class="separator">|</span>
+                        <span>HTML</span> <span class="separator">|</span>
+                        <span>CSS</span> <span class="separator">|</span>
+                        <span>Firebase</span>
+                    </div>
+                </div>
 
-        <div class="el-pollo-loco" 
-            (mouseenter)="onMouseEnterPollo()" 
-            (mouseleave)="onMouseLeavePollo()"
-            (click)="openModal('El Pollo Loco')">
-            <div class="pollo">
-                <p>El Pollo Loco</p>
-                <img src="/assets/img-projects/arrow_outward.png" alt="">
-            </div>
-            <div class="languages">
-                <span>HTML</span> <span class="separator">|</span>
-                <span>CSS</span> <span class="separator">|</span>
-                <span>JavaScript</span>
-            </div>
-        </div>
+                <div class="el-pollo-loco" (mouseenter)="onMouseEnterPollo()" (mouseleave)="onMouseLeavePollo()" (click)="openModal('El Pollo Loco')">
+                    <div class="pollo">
+                        <p>El Pollo Loco</p>
+                        <img src="/assets/img-projects/arrow_outward.png" alt="">
+                    </div>
+                    <div class="languages">
+                        <span>HTML</span> <span class="separator">|</span>
+                        <span>CSS</span> <span class="separator">|</span>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
 
-        <div class="portfolio"
-            (mouseenter)="onMouseEnterPortfolio()" 
-            (mouseleave)="onMouseLeavePortfolio()"
-            (click)="openModal('Portfolio')">
-            <div class="port">
-                <p>Portfolio</p>
-                <img src="/assets/img-projects/arrow_outward.png" alt="">
+                <div class="portfolio" (mouseenter)="onMouseEnterPortfolio()" (mouseleave)="onMouseLeavePortfolio()" (click)="openModal('Portfolio')">
+                    <div class="port">
+                        <p>Portfolio</p>
+                        <img src="/assets/img-projects/arrow_outward.png" alt="">
+                    </div>
+                    <div class="languages">
+                        <span>Angular</span> <span class="separator">|</span>
+                        <span>HTML</span> <span class="separator">|</span>
+                        <span>SCSS</span> <span class="separator">|</span>
+                        <span>TypeScript</span>
+                    </div>
+                </div>
             </div>
-            <div class="languages">
-                <span>Angular</span> <span class="separator">|</span>
-                <span>HTML</span> <span class="separator">|</span>
-                <span>SCSS</span> <span class="separator">|</span>
-                <span>TypeScript</span>
-            </div>
-        </div>
-    </div>
 
-    <div class="img-projects">
-        <!-- Bild für Join -->
-        <img class="joinimg" src="/assets/img-projects/join.png" alt="" [ngStyle]="{ 'opacity': isHoveredJoin ? '1' : '0' }">
-        <!-- Bild für El Pollo Loco -->
-        <img class="polloimg" src="/assets/img-projects/elpolloloco.png" alt="" [ngStyle]="{ 'opacity': isHoveredPollo ? '1' : '0' }">
-        <!-- Bild für Portfolio -->
-        <div class="portfolio-wrapper" [ngClass]="{ 'is-visible': isHoveredPortfolio }">
-            <div class="portfolio-background"></div>
-            <img class="portfolioimg" src="/assets/img-projects/portfoliopopup.png" alt="" [ngStyle]="{ 'opacity': isHoveredPortfolio ? '1' : '0' }">
+            <!-- Img Projects -->
+            <div class="img-projects">
+                <img class="joinimg" src="/assets/img-projects/join.png" alt="" [ngStyle]="{ 'opacity': isHoveredJoin ? '1' : '0' }">
+                <img class="polloimg" src="/assets/img-projects/elpolloloco.png" alt="" [ngStyle]="{ 'opacity': isHoveredPollo ? '1' : '0' }">
+                <div class="portfolio-wrapper" [ngClass]="{ 'is-visible': isHoveredPortfolio }">
+                    <div class="portfolio-background"></div>
+                    <img class="portfolioimg" src="/assets/img-projects/portfoliopopup.png" alt="" [ngStyle]="{ 'opacity': isHoveredPortfolio ? '1' : '0' }">
+                </div>
+            </div>
         </div>
     </div>
+
+
 
     <!-- Modales Popup -->
-    <div *ngIf="isModalOpen" class="modal" (click)="closeModalOnBackground($event)">
+    <div  *ngIf="isModalOpen" class="modal" (click)="closeModalOnBackground($event)">
         <div class="modal-content" (click)="$event.stopPropagation()">
   
+            <div class="contentinmodal">
             <!-- Modal-Inhalt für Join -->
             <div *ngIf="activeProject === 'Join'" class="left-modal">
                 <h1>01</h1>
@@ -155,5 +154,6 @@
             </div>
         </div>
     </div>
+</div>
 
 </section>
