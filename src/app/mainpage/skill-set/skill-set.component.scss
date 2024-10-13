@@ -28,7 +28,7 @@
 
 .technologies {
     padding: 20px;
-    height: 450px;
+    height: auto;
     width: 460px;
     background-color: rgba($color: #0e3931, $alpha: 0.6) ;
     border-radius: 20px;
@@ -47,6 +47,7 @@
         color: #3DCFB6;
         margin-top: 0;
         margin-bottom: 10px;
+        white-space: nowrap;
     }
 
     >p {
@@ -60,6 +61,8 @@
     >h2 {
         font-family: "Fira Code", monospace;
         font-size: 24px;
+        white-space: wrap;
+       width: 500px;
     }
 
 
@@ -78,7 +81,7 @@
 
 .white-text {
     color: white; /* Weiß für "You need" */
-    margin-right: 20px;
+    margin-right: 10px;
 }
 
 .green-text {
@@ -352,7 +355,7 @@ transition: 0.5s;
     .technologies {
         margin-bottom: 100px;
         width: 460px;
-        height: 470px;
+        height: auto;
 
     }
 
@@ -362,16 +365,28 @@ transition: 0.5s;
 
 @media (max-width: 550px) {
 
+    
+
 .right-section {
     width: 400px;
+
+   
 }
 
 
     .technologies {
         margin-bottom: 100px;
         width: 300px;
-        height: 640px;
+        height: auto;
 
+        >h1 {
+            font-size: 44px;
+        }
+
+        >h2 {
+            width: 300px;
+
+        }
     }
 
     .skills {
@@ -441,10 +456,18 @@ transition: 0.5s;
     .technologies {
         margin-bottom: 100px;
         width: 250px;
-        height: 690px;
+        height: auto;
 
         >span  {
             width: 250px;
+        }
+
+        >h1 {
+            font-size: 34px;
+        }
+
+        >h2 {
+            font-size: 20px;
         }
     }
 
@@ -470,10 +493,19 @@ transition: 0.5s;
     .technologies {
         margin-bottom: 100px;
         width: 210px;
-        height: 790px;
+        height: auto;
 
         >span  {
-            width: 250px;
+            width: 230px;
+        }
+
+        >h1 {
+            font-size: 30px;
+        }
+
+        >h2 {
+            font-size: 18px;
+            width: 200px;
         }
     }
 

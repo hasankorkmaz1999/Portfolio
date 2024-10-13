@@ -1,14 +1,21 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
+import { inject } from '@angular/core';
+import { TranslationService } from '../../translation.service';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent {
+
+  translate = inject(TranslationService);
+
+
   isHoveredJoin: boolean = false;
   isHoveredPollo: boolean = false;
   isHoveredPortfolio: boolean = false;

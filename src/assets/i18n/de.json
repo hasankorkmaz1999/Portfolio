@@ -1,0 +1,45 @@
+{
+    "ABOUT_ME": "Über mich",
+    "SKILLS": "Fähigkeiten",
+    "PROJECTS": "Projekte",
+    "CHECK_MY_WORK": "Projekte ansehen",
+    "CONTACT_ME": "Kontaktiere mich",
+    "FRONTEND_DEVELOPER": "Frontend Entwickler",
+    "HASAN_KORKMAZ": "Hasan Korkmaz",
+    "AVAILABLE_FOR_REMOTE_WORK": "Verfügbar für Remote-Arbeit",
+    "BASED_IN_AUGSBURG": "Ansässig in Augsburg",
+    "OPEN_TO_OPPORTUNITIES": "Offen für neue Möglichkeiten",
+
+
+    "WHO_I_AM": "Wer ich bin",
+    "ABOUT_ME_DESCRIPTION": "Hallo, ich bin ein deutschsprachiger Frontend-Entwickler aus Augsburg. Motiviert durch die grenzenlosen Möglichkeiten in der IT bin ich begeistert davon, visuell ansprechende und intuitive Webseiten und Anwendungen zu gestalten.",
+    "LOCATION_FLEXIBILITY": "Flexibel in Bezug auf Arbeitsumgebungen, ich kann sowohl vor Ort in Augsburg als auch remote effektiv arbeiten.",
+    "OPEN_MINDED": "Ich bin offen für neue Ideen und stets auf der Suche nach persönlichen Herausforderungen, um mein Wissen und meine Fähigkeiten kontinuierlich zu verbessern.",
+    "PROBLEM_SOLVING": "In meinem Beruf ist Programmieren nicht nur das Schreiben von Code; es ist eine kreative Art des Problemlösens. Ich bin stolz darauf, komplexe technische Herausforderungen in einfache, benutzerfreundliche Lösungen zu verwandeln. So helfe ich dir, deine Ziele zu erreichen und deine Visionen zum Leben zu erwecken.",
+
+
+    "TECHNOLOGIES": "Technologien",
+    "SKILL_SET": "Fähigkeiten",
+    "SKILL_SET_DESCRIPTION": "Auf meinem Weg habe ich an verschiedenen Projekten gearbeitet und eine Vielzahl von Frontend-Technologien und Konzepten verwendet. Ich bin offen dafür, neue Technologien und Methoden zu erlernen, um meine Fähigkeiten kontinuierlich zu verbessern und in der sich ständig weiterentwickelnden Welt der Webentwicklung immer einen Schritt voraus zu sein.",
+    "NEED_ANOTHER_SKILL_QUESTION": "Sie benötigen",
+    "ANOTHER_SKILL": "eine weitere Fähigkeit?",
+    "CONTACT_ME_PROMPT": "Zögern Sie nicht, mich zu kontaktieren. Ich freue mich darauf, mein Wissen zu erweitern.",
+    "LETS_TALK": "Melde dich ",
+
+    "FEATURED_PROJECTS": "Ausgewählte Projekte",
+    "EXPLORE_WORK": "Entdecke hier eine Auswahl meiner Arbeit - Interagiere mit den Projekten, um meine Fähigkeiten in Aktion zu sehen.",
+
+    "JOIN_DESCRIPTION": "Worum geht es bei diesem Projekt?",
+    "JOIN_DETAILS": "Task-Manager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-Drop-Funktionen, weise Benutzer und Kategorien zu.",
+    
+    "POLLO_DESCRIPTION": "Worum geht es bei diesem Projekt?",
+    "POLLO_DETAILS": "Spring-, Lauf- und Wurfspiel auf Basis eines objektorientierten Ansatzes. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen.",
+  
+    "PORTFOLIO_DESCRIPTION": "Worum geht es bei diesem Projekt?",
+    "PORTFOLIO_DETAILS": "Eine Portfolio-Website, die Webentwicklungsfähigkeiten mit Angular, TypeScript, SCSS und HTML zeigt.",
+  
+    "NEXT_PROJECT": "Nächstes Projekt"
+  
+
+  }
+  

@@ -2,10 +2,10 @@
 
     <div class="featured-projects">
         <h2>Portfolio</h2>
-        <h1>Featured Projects</h1>
-        <span class="spanne">
-            Explore a selection of my work here - Interact with <br> projects to see my skills in action.
-        </span>
+        <h1>{{ 'FEATURED_PROJECTS' | translate }}</h1>
+    <span class="spanne">
+        {{ 'EXPLORE_WORK' | translate }}
+    </span>
 
         <div class="projects-div">
             <!-- All Projects -->
@@ -72,9 +72,10 @@
             <div *ngIf="activeProject === 'Join'" class="left-modal">
                 <h1>01</h1>
                 <h2>Join</h2>
-                <h3>What is this project about?</h3>
-                <span>Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.</span>
-      
+                <h3>{{ 'JOIN_DESCRIPTION' | translate }}</h3>
+                <span>{{ 'JOIN_DETAILS' | translate }}</span>
+
+
                 <div class="images-lang">
                     <img src="/assets/img-projects/Property 1=Javascript(1).png" alt="">
                     <p>JavaScript</p>
@@ -96,9 +97,10 @@
             <div *ngIf="activeProject === 'El Pollo Loco'" class="left-modal">
                 <h1>02</h1>
                 <h2>El Pollo Loco</h2>
-                <h3>What is this project about?</h3>
-                <span>Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.</span>
-      
+                  <h3>{{ 'POLLO_DESCRIPTION' | translate }}</h3>
+                  <span>{{ 'POLLO_DETAILS' | translate }}</span>
+
+
                 <div class="images-lang">
                     <img src="/assets/img-projects/Property 1=Javascript(1).png" alt="">
                     <p>JavaScript</p>
@@ -118,10 +120,11 @@
             <div *ngIf="activeProject === 'Portfolio'" class="left-modal">
                 <h1>03</h1>
                 <h2>Portfolio</h2>
-                <h3>What is this project about?</h3>
-                <span>A portfolio website showcasing web development skills using Angular, TypeScript, SCSS, and HTML.</span>
-      
-                <div class="images-lang">
+                <h3>{{ 'PORTFOLIO_DESCRIPTION' | translate }}</h3>
+                <span>{{ 'PORTFOLIO_DETAILS' | translate }}</span>
+
+
+                 <div class="images-lang">
                     <img src="/assets/img-projects/Property 1=Angular(1).png" alt="">
                     <p>Angular</p>
                     <img src="/assets/img-projects/Property 1=HTML(1).png" alt="">
@@ -146,7 +149,7 @@
                 <img class="portimg" *ngIf="activeProject === 'Portfolio'" src="/assets/img-projects/portfoliopopup.png" alt="">
 
                 <div class="next-project" (click)="nextProject()">
-                   <span>Next project </span>
+                    <span>{{ 'NEXT_PROJECT' | translate }}</span>
                    <img src="/assets/img-projects/arrows(1).png" alt="">
                   </div>
 

@@ -13,13 +13,12 @@
       <!-- Menü selbst, das `stopPropagation()` verwendet, damit Klicks innerhalb des Menüs es nicht schließen -->
       <div class="menu" (click)="$event.stopPropagation()">
         <div class="menu-pos">
-          <a href="#aboutme" (click)="toggleMenu()">About me</a>
-          <a href="#skill" (click)="toggleMenu()">Skills</a>
-          <a href="#projects" (click)="toggleMenu()">Projects</a>
-    
+          <a href="#aboutme" (click)="toggleMenu()">{{ 'ABOUT_ME' | translate }}</a>
+          <a href="#skill" (click)="toggleMenu()">{{ 'SKILLS' | translate }}</a>
+          <a href="#projects" (click)="toggleMenu()">{{ 'PROJECTS' | translate }}</a>
           <div class="lang-switch">
-            <button class="lang-button" [class.active]="currentLanguage === 'EN'" (click)="switchLanguage('EN')">EN</button>
-            <button class="lang-button" [class.active]="currentLanguage === 'DE'" (click)="switchLanguage('DE')">DE</button>
+            <button class="lang-button" [class.active]="currentLanguage === 'en'" (click)="translate.switchLanguage('en')">EN</button>
+            <button class="lang-button" [class.active]="currentLanguage === 'de'" (click)="translate.switchLanguage('de')">DE</button>
           </div>
         </div>
       </div>
@@ -29,16 +28,16 @@
     <nav class="header-nav">
       
       <div class="lang-switch">
-        <button class="lang-button" [class.active]="currentLanguage === 'EN'" (click)="switchLanguage('EN')">EN</button>
-        <button class="lang-button" [class.active]="currentLanguage === 'DE'" (click)="switchLanguage('DE')">DE</button>
+        <button class="lang-button" [class.active]="currentLanguage === 'en'" (click)="translate.switchLanguage('en')">EN</button>
+        <button class="lang-button" [class.active]="currentLanguage === 'de'" (click)="translate.switchLanguage('de')">DE</button>
       </div>
 
 
 
 
-        <a href="#aboutme">About me</a>
-        <a href="#skill">Skills</a>
-        <a href="#projects">Projects</a>
+        <a href="#aboutme">{{ 'ABOUT_ME' | translate }}</a>
+        <a href="#skill">{{ 'SKILLS' | translate }}</a>
+        <a href="#projects">{{ 'PROJECTS' | translate }}</a>
       
     </nav>
 
@@ -52,11 +51,11 @@
 
 
   <div class="name-container">
-    <h2>Frontend Developer</h2>
-    <h1>Hasan Korkmaz</h1>
+    <h2>{{ 'FRONTEND_DEVELOPER' | translate }}</h2>
+    <h1>{{ 'HASAN_KORKMAZ' | translate }}</h1>
     <div class="buttons-container">
-      <a href="#projects" class="button-name">Check my work</a>
-      <a href="#contact" class="button-name">Contact me</a>
+      <a href="#projects" class="button-name">{{ 'CHECK_MY_WORK' | translate }}</a>
+      <a href="#contact" class="button-name">{{ 'CONTACT_ME' | translate }}</a>
     </div>
     </div>
 
@@ -69,33 +68,47 @@
 
 
 <div class="contact-bar">
-    <p>hasan.k1999&#64;outlook.de</p>
-    <img class="contact-icon" src="/assets/img-first/9.Contacticons.png" alt="" >
-    <img src="/assets/img-first/GitHubIcon.png" alt="">
-    <img src="/assets/img-first/LinkedinIcon.png" alt="">
-    <img src="/assets/img-first/Vector 2.png" alt="">
+  <p>hasan.k1999&#64;outlook.de</p>
+
+  <!-- Verwende einen Container um das Bild -->
+  <div class="img-container">
+      <img class="contact-icon" src="/assets/img-first/9.Contacticons.png" alt="">
+  </div>
+  <div class="img-container">
+      <img src="/assets/img-first/GitHubIcon.png" alt="">
+  </div>
+  <div class="img-container">
+      <img src="/assets/img-first/LinkedinIcon.png" alt="">
+  </div>
+  <div class="img-container">
+      <img src="/assets/img-first/Vector 2.png" alt="">
+  </div>
 </div>
 
 
 
 <div class="marquee-container">
     <div class="marquee">
-      <span>• Available for remote work •</span>
-      <span>• Frontend Developer •</span>
-      <span>• Based in Augsburg •</span>
-      <span>• Open to opportunities •</span>
-      <span>• Available for remote work •</span>
-      <span>• Frontend Developer •</span>
-      <span>• Based in Augsburg •</span>
-      <span>• Open to opportunities •</span>
-      <span>• Available for remote work •</span>
-      <span>• Frontend Developer •</span>
-      <span>• Based in Augsburg •</span>
-      <span>• Open to opportunities •</span>
-      <span>• Available for remote work •</span>
-      <span>• Frontend Developer •</span>
-      <span>• Based in Augsburg •</span>
-      <span>• Open to opportunities •</span>
+      <span>• {{ 'AVAILABLE_FOR_REMOTE_WORK' | translate }} •</span>
+      <span>• {{ 'FRONTEND_DEVELOPER' | translate }} •</span>
+      <span>• {{ 'BASED_IN_AUGSBURG' | translate }} •</span>
+      <span>• {{ 'OPEN_TO_OPPORTUNITIES' | translate }} •</span>
+      <span>• {{ 'AVAILABLE_FOR_REMOTE_WORK' | translate }} •</span>
+      <span>• {{ 'FRONTEND_DEVELOPER' | translate }} •</span>
+      <span>• {{ 'BASED_IN_AUGSBURG' | translate }} •</span>
+      <span>• {{ 'OPEN_TO_OPPORTUNITIES' | translate }} •</span>
+      <span>• {{ 'AVAILABLE_FOR_REMOTE_WORK' | translate }} •</span>
+      <span>• {{ 'FRONTEND_DEVELOPER' | translate }} •</span>
+      <span>• {{ 'BASED_IN_AUGSBURG' | translate }} •</span>
+      <span>• {{ 'OPEN_TO_OPPORTUNITIES' | translate }} •</span>
+      <span>• {{ 'AVAILABLE_FOR_REMOTE_WORK' | translate }} •</span>
+      <span>• {{ 'FRONTEND_DEVELOPER' | translate }} •</span>
+      <span>• {{ 'BASED_IN_AUGSBURG' | translate }} •</span>
+      <span>• {{ 'OPEN_TO_OPPORTUNITIES' | translate }} •</span>
+      <span>• {{ 'AVAILABLE_FOR_REMOTE_WORK' | translate }} •</span>
+      <span>• {{ 'FRONTEND_DEVELOPER' | translate }} •</span>
+      <span>• {{ 'BASED_IN_AUGSBURG' | translate }} •</span>
+      <span>• {{ 'OPEN_TO_OPPORTUNITIES' | translate }} •</span>
     </div>
   </div>
   

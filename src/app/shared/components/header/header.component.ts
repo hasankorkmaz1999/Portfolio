@@ -1,17 +1,21 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { TranslateModule} from '@ngx-translate/core';
+import { TranslationService } from '../../../translation.service';
+import { inject } from '@angular/core';
+
 
 @Component({
   selector: 'app-header',
   standalone: true, 
-  imports: [RouterModule, CommonModule],
+  imports: [RouterModule, CommonModule,TranslateModule, ],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
   isMenuOpen = false; // Menü ist standardmäßig geschlossen
-  currentLanguage = 'EN'; // Standardmäßig ist die Sprache auf EN gesetzt
+ 
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen; // Menü umschalten
@@ -21,8 +25,10 @@ export class HeaderComponent {
     this.isMenuOpen = false; // Menü schließen, wenn auf Overlay geklickt wird
   }
 
-  switchLanguage(language: string) {
-    this.currentLanguage = language; // Sprache umschalten
-    console.log(`Sprache umgeschaltet auf: ${language}`);
+  get currentLanguage() {
+    return this.translate.currentLanguage; // Greift auf die aktuelle Sprache aus dem Service zu
   }
+ 
+
+  translate = inject(TranslationService);
 }
