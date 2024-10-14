@@ -116,6 +116,7 @@ padding-bottom: 40px;
 
 @media (max-width: 420px ) {
 .left-div {
+
     >img {
         height: 110px;
         width: 110px;
@@ -123,6 +124,8 @@ padding-bottom: 40px;
 
     >span {
         padding-left: 17px;
+        width: 50px;
+        white-space: wrap;
     }
 }
 

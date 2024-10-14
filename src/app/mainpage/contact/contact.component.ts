@@ -1,14 +1,20 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
+import { inject } from '@angular/core';
+import { TranslationService } from '../../translation.service';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
+
+
+  translate = inject(TranslationService);
 
   showCheckmark: boolean = false; // Zustand für die Sichtbarkeit des Häkchens
   isInputStopped: boolean = false; // Zustand, ob die Eingabe gestoppt wurde

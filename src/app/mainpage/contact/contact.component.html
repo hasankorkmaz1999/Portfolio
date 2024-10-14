@@ -1,72 +1,59 @@
 <section>
+  <div class="contact">
+    <div class="left-section">
+      <h2>{{ 'CONTACT_ME' | translate }}</h2>
+      <h1>{{ 'LETS_WORK_TOGETHER' | translate }}</h1>
+      <h3>{{ 'PROBLEM_TO_SOLVE' | translate }}</h3>
+      <span class="spancontact">{{ 'CONTACT_ME_FORM' | translate }}</span>
+      <p>{{ 'NEED_FRONTEND_DEVELOPER' | translate }} <span class="letstalk">{{ 'LETS_TALK' | translate }}</span></p>
+    </div>
 
-    <div class="contact">
-
-        <div class="left-section">
-         <h2>Contact me</h2>
-         <h1>Let's work <br> together</h1>
-         <h3>Got a problem to solve?</h3>
-         <span class="spancontact"> 
-            Contact me through this form, I am interested in hearing from you, knowing  your ideas and contributing to your projects with my work.
-         </span>
-         <p>Need a Frontend developer ? <span class="letstalk"> Let’s talk!</span></p>
-        </div>
-
-
-        <div class="right-section">
-
-            <div class="first_section">
-              <div class="input-section"> 
-                <span>What's your name?</span>
-                <div class="textarea-wrapper">
-                  <textarea class="resizable-textarea" placeholder="Your name goes here" (input)="autoResize($event)"></textarea>
-                  <img *ngIf="showCheckmark" src="/assets/img-contact/check(1).png" class="checkmark" (click)="stopInput()" alt="Stop Input">
-                </div>
-              </div>
-            </div>
-          
-            <div class="second_section">
-              <div class="input-section"> 
-                <span>What's your email?</span>
-                <div class="textarea-wrapper">
-                  <textarea class="resizable-textarea" placeholder="youremail@email.com" (input)="autoResize($event)"></textarea>
-                  <img *ngIf="showCheckmark" src="/assets/img-contact/check(1).png" class="checkmark" (click)="stopInput()" alt="Stop Input">
-                </div>
-              </div>
-            </div>
-          
-            <div class="third_section">
-              <div class="input-section"> 
-                <span>How can I help you?</span>
-                <div class="textarea-wrapper">
-                  <textarea class="resizable-textarea" placeholder="Hello Hasan, I am interested in..." (input)="autoResize($event)"></textarea>
-                  <img *ngIf="showCheckmark" src="/assets/img-contact/check(1).png" class="checkmark" (click)="stopInput()" alt="Stop Input">
-                </div>
-              </div>
-            </div>
-
-
-
-
-            <div class="privacy-container">
-                <label class="checkbox-label">
-                    <input type="checkbox" id="privacy-checkbox">
-                    <span class="custom-checkbox"></span>
-
-                   <span class="privacy-text"> <span class="privacy-top"> I've read the <a href="#" class="privacy-link">privacy policy</a> </span>and agree to the processing of my data as outlined.</span>
-                </label>
-               
-            </div>
-
-            <div class="button-container">
-
-            <button class="submit-btn">Say Hello ;)</button>
+    <div class="right-section">
+      <div class="first_section">
+        <div class="input-section">
+          <span>{{ 'WHAT_NAME' | translate }}</span>
+          <div class="textarea-wrapper">
+            <textarea class="resizable-textarea" placeholder="{{ 'NAME_PLACEHOLDER' | translate }}" (input)="autoResize($event)"></textarea>
+            <img *ngIf="showCheckmark" src="/assets/img-contact/check(1).png" class="checkmark" (click)="stopInput()" alt="Stop Input">
           </div>
-
-            
-          </div>
-
         </div>
-          
+      </div>
+
+      <div class="second_section">
+        <div class="input-section">
+          <span>{{ 'WHAT_EMAIL' | translate }}</span>
+          <div class="textarea-wrapper">
+            <textarea class="resizable-textarea" placeholder="{{ 'EMAIL_PLACEHOLDER' | translate }}" (input)="autoResize($event)"></textarea>
+            <img *ngIf="showCheckmark" src="/assets/img-contact/check(1).png" class="checkmark" (click)="stopInput()" alt="Stop Input">
+          </div>
+        </div>
+      </div>
+
+      <div class="third_section">
+        <div class="input-section">
+          <span>{{ 'HOW_CAN_HELP' | translate }}</span>
+          <div class="textarea-wrapper">
+            <textarea class="resizable-textarea" placeholder="{{ 'MESSAGE_PLACEHOLDER' | translate }}" (input)="autoResize($event)"></textarea>
+            <img *ngIf="showCheckmark" src="/assets/img-contact/check(1).png" class="checkmark" (click)="stopInput()" alt="Stop Input">
+          </div>
+        </div>
+      </div>
+
+      <div class="privacy-container">
+        <label class="checkbox-label">
+          <input type="checkbox" id="privacy-checkbox">
+          <span class="custom-checkbox"></span>
+          <span class="privacy-text">
+            <span class="privacy-top">{{ 'PRIVACY_POLICY' | translate }} 
+              <a href="#" class="privacy-link">{{ 'PRIVACY_LINK' | translate }}</a>
+            </span> {{ 'AGREE_PROCESSING' | translate }}
+          </span>
+        </label>
+      </div>
+
+      <div class="button-container">
+        <button class="submit-btn">{{ 'SAY_HELLO' | translate }}</button>
+      </div>
+    </div>
+  </div>
 </section>
-

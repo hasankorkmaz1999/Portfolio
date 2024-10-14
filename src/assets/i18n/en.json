@@ -38,7 +38,29 @@
     "PORTFOLIO_DESCRIPTION": "What is this project about?",
     "PORTFOLIO_DETAILS": "A portfolio website showcasing web development skills using Angular, TypeScript, SCSS, and HTML.",
   
-    "NEXT_PROJECT": "Next project"
+    "NEXT_PROJECT": "Next project",
+
+
+  
+  "LETS_WORK_TOGETHER": "Let's work together",
+  "PROBLEM_TO_SOLVE": "Got a problem to solve?",
+  "CONTACT_ME_FORM": "Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.",
+  "NEED_FRONTEND_DEVELOPER": "Need a Frontend developer?",
+ 
+  "WHAT_NAME": "What's your name?",
+  "NAME_PLACEHOLDER": "Your name goes here",
+  "WHAT_EMAIL": "What's your email?",
+  "EMAIL_PLACEHOLDER": "youremail@email.com",
+  "HOW_CAN_HELP": "How can I help you?",
+  "MESSAGE_PLACEHOLDER": "Hello Hasan, I am interested in...",
+  "PRIVACY_POLICY": "I've read the",
+  "PRIVACY_LINK": "privacy policy",
+  "AGREE_PROCESSING": "and agree to the processing of my data as outlined.",
+  "SAY_HELLO": "Say Hello ;)",
+
+  "WEB_DEVELOPER": "Web Developer",
+  "LOCATION": "Augsburg Germany",
+  "LEGAL_NOTICE": "Legal Notice"
   
 }
   

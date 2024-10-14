@@ -38,7 +38,28 @@
     "PORTFOLIO_DESCRIPTION": "Worum geht es bei diesem Projekt?",
     "PORTFOLIO_DETAILS": "Eine Portfolio-Website, die Webentwicklungsfähigkeiten mit Angular, TypeScript, SCSS und HTML zeigt.",
   
-    "NEXT_PROJECT": "Nächstes Projekt"
+    "NEXT_PROJECT": "Nächstes Projekt",
+
+
+   
+    "LETS_WORK_TOGETHER": "Arbeiten wir zusammen",
+    "PROBLEM_TO_SOLVE": "Hast du ein Problem zu lösen?",
+    "CONTACT_ME_FORM": "Kontaktiere mich über dieses Formular. Ich bin daran interessiert, von dir zu hören, deine Ideen zu kennen und zu deinen Projekten mit meiner Arbeit beizutragen.",
+    "NEED_FRONTEND_DEVELOPER": "Brauchst du einen Frontend-Entwickler?",
+    "WHAT_NAME": "Wie heißt du?",
+    "NAME_PLACEHOLDER": "Dein Name kommt hier hin",
+    "WHAT_EMAIL": "Wie lautet deine E-Mail?",
+    "EMAIL_PLACEHOLDER": "deinemail@email.com",
+    "HOW_CAN_HELP": "Wie kann ich dir helfen?",
+    "MESSAGE_PLACEHOLDER": "Hallo Hasan, ich bin interessiert an...",
+    "PRIVACY_POLICY": "Ich habe die",
+    "PRIVACY_LINK": "Datenschutzrichtlinie",
+    "AGREE_PROCESSING": "gelesen und stimme der Verarbeitung meiner Daten zu.",
+    "SAY_HELLO": "Sag Hallo ;)",
+
+    "WEB_DEVELOPER": "Web-Entwickler",
+    "LOCATION": "Augsburg Deutschland",
+    "LEGAL_NOTICE": "Impressum"
   
 
   }

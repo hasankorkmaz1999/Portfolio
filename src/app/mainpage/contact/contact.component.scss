@@ -38,7 +38,7 @@ section {
         color: #3DCFB6;
         margin-top: 20px;
         line-height: 64px;
-        white-space: nowrap;
+       margin-bottom: 10px;
     }
 
     >h3 {
@@ -226,7 +226,7 @@ section {
     height: 15px;
     border: 2px solid #3DCFB6;
     border-radius: 4px;
-    margin-right: 10px;
+   margin-left: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -273,7 +273,13 @@ section {
     display: flex;
     flex-direction: row;
     align-items: center; /* Text und Button links ausrichten */
-  
+    width: 600px;
+    text-align: start;
+}
+
+.privacy-text {
+   margin-left: 10px;
+   
 }
 
 .checkbox-label {
@@ -289,8 +295,7 @@ section {
 .privacy-link {
     color: #3DCFB6;
     text-decoration: none;
-    margin-left: 5px;
-    margin-right: 5px;
+   
 }
 
 .privacy-link:hover {
@@ -323,6 +328,10 @@ section {
          flex-direction: column;
          height: 1000px;
      }
+
+     .spancontact {
+        max-width: 550px; /* Passe die Breite für kleinere Bildschirme an */
+    }
 }
 
 
@@ -335,6 +344,7 @@ section {
 
     .resizable-textarea {
         width: 440px;
+       
     }
 
 .contact {
@@ -376,11 +386,13 @@ section {
     .privacy-text {
         display: flex;
         flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
        
     }
 
     .spancontact {
-        max-width: 550px; /* Passe die Breite für kleinere Bildschirme an */
+        max-width: 450px; /* Passe die Breite für kleinere Bildschirme an */
     }
 
 
@@ -404,6 +416,9 @@ section {
 
 
 @media (max-width: 605px ) {
+    
+
+
     section {
         height: 1300px;
     }
@@ -427,15 +442,16 @@ section {
     }
 
     .left-section{
-        width: 390px;
+        width: 370px;
         margin-bottom: 40px;
         >h1 {
-            font-size: 50px;
+            font-size: 40px;
             margin-bottom: 20px;
+            line-height: 44px;
         }
 
         >h3 {
-            font-size: 20px;
+            font-size: 18px;
         }
     }
 
@@ -446,6 +462,10 @@ section {
     .button-container {
         margin-top: 20px;
         width: 350px;
+    }
+
+    .privacy-container {
+        width: 340px;
     }
 
 
@@ -482,7 +502,7 @@ section {
 
 .resizable-textarea {
     width: 210px;
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 0;
     margin-top: 20px;
 }
@@ -521,6 +541,7 @@ section {
 .custom-checkbox {
     width: 25px;
     height: 15px; 
+    margin-right: 0;
 }
 
 .button-container {
