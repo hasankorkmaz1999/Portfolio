@@ -12,6 +12,48 @@ section {
     align-items: center;
 }
 
+.confirmation-message {
+    position: fixed;
+    top: 50%;
+    right: -150%; /* Startet außerhalb des Bildschirms */
+    transform: translateY(-50%);
+    background-color: rgba(61, 207, 182, 0.9); /* Leicht transparente grüne Farbe */
+    color: white;
+    text-align: center;
+    padding: 15px 30px;
+    font-family: "Karla", sans-serif;
+    font-size: 16px;
+    border-radius: 5px;
+    z-index: 1000;
+    transition: right 0.5s ease-in-out; /* Animation für die Bewegung */
+  }
+  
+  .confirmation-message.show {
+    right: 50%; /* Bewegt die Nachricht zur Mitte des Bildschirms */
+    transform: translate(50%, -50%);
+  }
+
+.error {
+    >small {
+        color: rgba(236, 123, 123, 0.8);
+        
+        font-family: "Karla", sans-serif;
+        font-size: 16px;
+        margin-bottom: 10px;
+     
+    }
+}
+
+.error-privacy {
+    >small {
+    color: rgba(236, 123, 123, 0.8);
+        
+    font-family: "Karla", sans-serif;
+    font-size: 16px;
+    margin-left: 40px;
+    text-align: left;
+    }
+}
 
 
 .contact {
@@ -193,12 +235,13 @@ section {
 
 /* Das Häkchen-Bild */
 .checkmark {
-    position: absolute;
+    position: relative;
     bottom: 20px;
-    right: -40px;
+    right: -10px;
     width: 24px;
     height: 24px;
     cursor: pointer;
+   
     opacity: 0; /* Bild ist standardmäßig unsichtbar */
     transition: opacity 0.3s ease, filter 0.3s ease; /* Sanfter Übergang */
     filter: invert(80%) sepia(100%) saturate(500%) hue-rotate(145deg) brightness(90%);
@@ -267,6 +310,13 @@ section {
     transform: translateY(-2px);
     border: 1px solid #3DCFB6;
 }
+
+.submit-btn[disabled] {
+    background-color: #ccc;
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+  
 
 
 .privacy-container {
@@ -401,6 +451,7 @@ section {
     .privacy-container {
         flex-direction: column;
         align-items: flex-start;
+        width: 500px;
     }
 
     .checkbox-label {
@@ -411,13 +462,23 @@ section {
         margin-top: 20px;
     }
 
+    .custom-checkbox {
+        width: 20px;
+        height: 15px; 
+        margin-right: 0;
+    }
+
 }
 
 
 
 @media (max-width: 605px ) {
     
-
+    .custom-checkbox {
+        width: 30px;
+        height: 15px; 
+        margin-right: 0;
+    }
 
     section {
         height: 1300px;
@@ -468,14 +529,38 @@ section {
         width: 340px;
     }
 
+    .error-privacy {
+        >small {
+        color: rgba(236, 123, 123, 0.8);
+            
+        font-family: "Karla", sans-serif;
+        font-size: 16px;
+        margin-left: 0px;
+       width: 200px;
+       white-space: wrap;
+        }
+    }
+
 
 }
 
 
 @media (max-width: 435px ) {
 
+    .error-privacy {
+        >small {
+        color: rgba(236, 123, 123, 0.8);
+            
+        font-family: "Karla", sans-serif;
+        font-size: 16px;
+        margin-left: 0px;
+       width: 200px;
+       white-space: wrap;
+        }
+    }
+
     section {
-        height: 1300px;
+        height: 1350px;
     }
     
     .first_section, .second_section, .third_section{
@@ -511,7 +596,7 @@ section {
     width: 280px;
     margin-bottom: 40px;
     >h1 {
-        font-size: 38px;
+        font-size: 34px;
         margin-bottom: 20px;
     }
 
@@ -539,7 +624,7 @@ section {
 }
 
 .custom-checkbox {
-    width: 25px;
+    width: 35px;
     height: 15px; 
     margin-right: 0;
 }

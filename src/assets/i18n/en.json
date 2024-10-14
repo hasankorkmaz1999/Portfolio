@@ -48,19 +48,28 @@
   "NEED_FRONTEND_DEVELOPER": "Need a Frontend developer?",
  
   "WHAT_NAME": "What's your name?",
-  "NAME_PLACEHOLDER": "Your name goes here",
-  "WHAT_EMAIL": "What's your email?",
-  "EMAIL_PLACEHOLDER": "youremail@email.com",
-  "HOW_CAN_HELP": "How can I help you?",
-  "MESSAGE_PLACEHOLDER": "Hello Hasan, I am interested in...",
-  "PRIVACY_POLICY": "I've read the",
-  "PRIVACY_LINK": "privacy policy",
-  "AGREE_PROCESSING": "and agree to the processing of my data as outlined.",
-  "SAY_HELLO": "Say Hello ;)",
+    "NAME_PLACEHOLDER": "Your name goes here",
+    "NAME_REQUIRED": "Please enter your name.",
+    "NAME_MINLENGTH": "The name must be at least 2 characters long.",
+    "WHAT_EMAIL": "What's your email?",
+    "EMAIL_PLACEHOLDER": "youremail@email.com",
+    "EMAIL_REQUIRED": "Please enter your email address.",
+    "EMAIL_INVALID": "Please enter a valid email address.",
+    "HOW_CAN_HELP": "How can I help you?",
+    "MESSAGE_PLACEHOLDER": "Hello Hasan, I am interested in...",
+    "MESSAGE_REQUIRED": "Please enter a message.",
+    "MESSAGE_MINLENGTH": "The message must be at least 10 characters long.",
+    "PRIVACY_POLICY": "I've read the",
+    "PRIVACY_LINK": "privacy policy",
+    "AGREE_PROCESSING": "and agree to the processing of my data as outlined.",
+    "PRIVACY_REQUIRED": "You must agree to the privacy policy.",
+    "SAY_HELLO": "Say Hello ;)",
 
   "WEB_DEVELOPER": "Web Developer",
   "LOCATION": "Augsburg Germany",
-  "LEGAL_NOTICE": "Legal Notice"
+  "LEGAL_NOTICE": "Legal Notice",
+
+   "FORM_SUBMITTED": "Your message has been sent successfully!"
   
 }
   

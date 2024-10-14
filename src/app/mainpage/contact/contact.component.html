@@ -8,52 +8,106 @@
       <p>{{ 'NEED_FRONTEND_DEVELOPER' | translate }} <span class="letstalk">{{ 'LETS_TALK' | translate }}</span></p>
     </div>
 
-    <div class="right-section">
-      <div class="first_section">
-        <div class="input-section">
-          <span>{{ 'WHAT_NAME' | translate }}</span>
-          <div class="textarea-wrapper">
-            <textarea class="resizable-textarea" placeholder="{{ 'NAME_PLACEHOLDER' | translate }}" (input)="autoResize($event)"></textarea>
-            <img *ngIf="showCheckmark" src="/assets/img-contact/check(1).png" class="checkmark" (click)="stopInput()" alt="Stop Input">
+    <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+      <div class="right-section">
+        <div class="first_section">
+          <div class="input-section">
+            <span>{{ 'WHAT_NAME' | translate }}</span>
+            <div class="textarea-wrapper">
+              <textarea class="resizable-textarea" 
+                name="name" 
+                [(ngModel)]="formData.name" 
+                #name="ngModel"
+                placeholder="{{ 'NAME_PLACEHOLDER' | translate }}" 
+                required 
+                minlength="2"
+                (input)="autoResize($event)">
+              </textarea>
+              <img *ngIf="formData.name.trim().length > 0" src="/assets/img-contact/check(1).png" class="checkmark" (click)="validateInput(name)" alt="Checkmark">
+              <div *ngIf="name.invalid && nameChecked" class="error">
+                <small *ngIf="name.errors?.['required']">{{ 'NAME_REQUIRED' | translate }}</small>
+                <small *ngIf="name.errors?.['minlength']">{{ 'NAME_MINLENGTH' | translate }}</small>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="second_section">
-        <div class="input-section">
-          <span>{{ 'WHAT_EMAIL' | translate }}</span>
-          <div class="textarea-wrapper">
-            <textarea class="resizable-textarea" placeholder="{{ 'EMAIL_PLACEHOLDER' | translate }}" (input)="autoResize($event)"></textarea>
-            <img *ngIf="showCheckmark" src="/assets/img-contact/check(1).png" class="checkmark" (click)="stopInput()" alt="Stop Input">
+        <div class="second_section">
+          <div class="input-section">
+            <span>{{ 'WHAT_EMAIL' | translate }}</span>
+            <div class="textarea-wrapper">
+              <textarea class="resizable-textarea"
+                name="email" 
+                [(ngModel)]="formData.email"
+                #email="ngModel"
+                placeholder="{{ 'EMAIL_PLACEHOLDER' | translate }}" 
+                required 
+                email 
+                (input)="autoResize($event)">
+              </textarea>
+              <img *ngIf="formData.email.trim().length > 0" src="/assets/img-contact/check(1).png" class="checkmark" (click)="validateInput(email)" alt="Checkmark">
+              <div *ngIf="email.invalid && emailChecked" class="error">
+                <small *ngIf="email.errors?.['required']">{{ 'EMAIL_REQUIRED' | translate }}</small>
+                <small *ngIf="email.errors?.['email']">{{ 'EMAIL_INVALID' | translate }}</small>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="third_section">
-        <div class="input-section">
-          <span>{{ 'HOW_CAN_HELP' | translate }}</span>
-          <div class="textarea-wrapper">
-            <textarea class="resizable-textarea" placeholder="{{ 'MESSAGE_PLACEHOLDER' | translate }}" (input)="autoResize($event)"></textarea>
-            <img *ngIf="showCheckmark" src="/assets/img-contact/check(1).png" class="checkmark" (click)="stopInput()" alt="Stop Input">
+        <div class="third_section">
+          <div class="input-section">
+            <span>{{ 'HOW_CAN_HELP' | translate }}</span>
+            <div class="textarea-wrapper">
+              <textarea class="resizable-textarea" 
+                name="message" 
+                [(ngModel)]="formData.message"
+                #message="ngModel"
+                placeholder="{{ 'MESSAGE_PLACEHOLDER' | translate }}" 
+                required 
+                minlength="10"
+                (input)="autoResize($event)">
+              </textarea>
+              <img *ngIf="formData.message.trim().length > 0" src="/assets/img-contact/check(1).png" class="checkmark" (click)="validateInput(message)" alt="Checkmark">
+              <div *ngIf="message.invalid && messageChecked" class="error">
+                <small *ngIf="message.errors?.['required']">{{ 'MESSAGE_REQUIRED' | translate }}</small>
+                <small *ngIf="message.errors?.['minlength']">{{ 'MESSAGE_MINLENGTH' | translate }}</small>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="privacy-container">
-        <label class="checkbox-label">
-          <input type="checkbox" id="privacy-checkbox">
-          <span class="custom-checkbox"></span>
-          <span class="privacy-text">
-            <span class="privacy-top">{{ 'PRIVACY_POLICY' | translate }} 
-              <a href="#" class="privacy-link">{{ 'PRIVACY_LINK' | translate }}</a>
-            </span> {{ 'AGREE_PROCESSING' | translate }}
-          </span>
-        </label>
-      </div>
+        <div class="privacy-container">
+          <label class="checkbox-label">
+            <input type="checkbox" name="privacy" [(ngModel)]="formData.privacyAccepted" #privacy="ngModel" required>
+            <span class="custom-checkbox"></span>
+            <span class="privacy-text">
+              <span class="privacy-top">{{ 'PRIVACY_POLICY' | translate }} 
+                <a href="#" class="privacy-link">{{ 'PRIVACY_LINK' | translate }}</a>
+                <span> {{ 'AGREE_PROCESSING' | translate }}</span> 
+              </span> 
+            
+            </span>
+          </label>
+         
+        </div>
 
-      <div class="button-container">
-        <button class="submit-btn">{{ 'SAY_HELLO' | translate }}</button>
+
+        <div *ngIf="privacy.invalid && (privacy.dirty || privacy.touched)" class="error-privacy">
+          <small>{{ 'PRIVACY_REQUIRED' | translate }}</small>
+        </div>
+       
+       
+
+        <div class="button-container">
+          <button class="submit-btn" [disabled]="!contactForm.valid">{{ 'SAY_HELLO' | translate }}</button>
+        </div>
       </div>
-    </div>
+    </form>
   </div>
+
+    <!-- Bestätigungsmeldung -->
+    <div class="confirmation-message" [class.show]="confirmationVisible">
+      {{ 'FORM_SUBMITTED' | translate }}
+    </div>
+    
 </section>

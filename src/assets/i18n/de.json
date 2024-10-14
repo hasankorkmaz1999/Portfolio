@@ -47,19 +47,28 @@
     "CONTACT_ME_FORM": "Kontaktiere mich über dieses Formular. Ich bin daran interessiert, von dir zu hören, deine Ideen zu kennen und zu deinen Projekten mit meiner Arbeit beizutragen.",
     "NEED_FRONTEND_DEVELOPER": "Brauchst du einen Frontend-Entwickler?",
     "WHAT_NAME": "Wie heißt du?",
-    "NAME_PLACEHOLDER": "Dein Name kommt hier hin",
+    "NAME_PLACEHOLDER": "Name kommt hier hin",
+    "NAME_REQUIRED": "Bitte gib deinen Namen ein.",
+    "NAME_MINLENGTH": "Der Name muss mindestens 2 Zeichen lang sein.",
     "WHAT_EMAIL": "Wie lautet deine E-Mail?",
     "EMAIL_PLACEHOLDER": "deinemail@email.com",
+    "EMAIL_REQUIRED": "Bitte gib deine E-Mail-Adresse ein.",
+    "EMAIL_INVALID": "Bitte gib eine gültige E-Mail-Adresse ein.",
     "HOW_CAN_HELP": "Wie kann ich dir helfen?",
     "MESSAGE_PLACEHOLDER": "Hallo Hasan, ich bin interessiert an...",
+    "MESSAGE_REQUIRED": "Bitte gib eine Nachricht ein.",
+    "MESSAGE_MINLENGTH": "Die Nachricht muss mindestens 10 Zeichen lang sein.",
     "PRIVACY_POLICY": "Ich habe die",
     "PRIVACY_LINK": "Datenschutzrichtlinie",
     "AGREE_PROCESSING": "gelesen und stimme der Verarbeitung meiner Daten zu.",
+    "PRIVACY_REQUIRED": "Du musst der Datenschutzrichtlinie zustimmen.",
     "SAY_HELLO": "Sag Hallo ;)",
 
     "WEB_DEVELOPER": "Web-Entwickler",
     "LOCATION": "Augsburg Deutschland",
-    "LEGAL_NOTICE": "Impressum"
+    "LEGAL_NOTICE": "Impressum",
+
+    "FORM_SUBMITTED": "Ihre Nachricht wurde erfolgreich gesendet!"
   
 
   }
