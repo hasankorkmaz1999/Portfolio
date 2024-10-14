@@ -8,11 +8,21 @@ import { AboutMeComponent } from "./mainpage/about-me/about-me.component";
 import { SkillSetComponent } from "./mainpage/skill-set/skill-set.component";
 import { ProjectsComponent } from "./mainpage/projects/projects.component";
 import { ContactComponent } from "./mainpage/contact/contact.component";
+import { AbovethefoldComponent } from './mainpage/abovethefold/abovethefold.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, HeaderComponent, FooterComponent, MainpageComponent, AboutMeComponent, SkillSetComponent, ProjectsComponent, ContactComponent],
+  imports: [CommonModule,
+     RouterOutlet,
+      HeaderComponent,
+       FooterComponent,
+        MainpageComponent,
+         AboutMeComponent,
+     SkillSetComponent,
+      ProjectsComponent,
+       ContactComponent,
+        AbovethefoldComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

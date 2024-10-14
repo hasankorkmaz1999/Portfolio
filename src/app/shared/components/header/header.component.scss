@@ -1,13 +1,6 @@
 .header {
-  background-image: url('/assets/img-first/1Background.svg');
-  height: 900px;
-  width: 100%; /* Verwende 100% anstelle einer festen Breite */
-  max-width: 1920px; /* Optional, um eine maximale Breite festzulegen */
-  background-size: cover;
-  background-position: center;
-  margin: 0 auto; /* Zentriert den Inhalt */
-  position: relative;
-  scroll-behavior: smooth;
+ background-color: transparent;
+ 
 }
 
 .header-left {
@@ -100,205 +93,7 @@
   // Ende button
 
 
-  .name-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    
-    >h1 {
-        margin-top: 0;
-        font-family: "Karla", sans-serif;
-        color:#D9D9D9;
-        font-weight: 700;
-        font-size: 108px;
-        line-height: 128px;
-        margin-bottom: 20px;
-    }
-
-    >h2 {
-        margin-top: 150px;
-        margin-bottom: 0;
-        font-size: 40px;
-        font-weight: 400;
-        font-family: "Fira Code", monospace;
-        color:#D9D9D9;
-    }
-
-   
-  }
-
-
-  .buttons-container {
-    display: flex;
-    justify-content: space-between;
-    width: 383px;
-  }
-
-  .button-name {
-    font-family: "Karla", sans-serif;
-    font-size: 18px;
-    padding: 15px;
-    width: auto;
-    border-radius: 100px;
-    border: 1px solid white;
-    background-color: transparent;
-    color: #fff;
-    transition: all 0.3s ease; /* Übergang für sanfte Animation */
-    display: inline-block; 
-    text-align: center;
-    text-decoration: none;
-    white-space: nowrap;
-}
-
-.button-name:hover {
-    cursor: pointer;
-    border: 1px solid #3DCFB6;
-    color: #3DCFB6;
-    transform: translateY(-5px); 
-}
-
-.scroll-down {
-  position: absolute;
-  top: 580px;
-  left: 10px;
-    width: 150px;
-    height: 350px;
-    display: flex;
-  justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-   
-}
-
-.Rectangle {
-    margin-bottom: 30px;
-}
-
-.line {
-  margin-bottom: 30px;
-}
-
-.arrow-down {
-    position: absolute;
-    animation: bounce 2s infinite; /* Bounce-Animation über 2 Sekunden in einer Endlosschleife */
-  }
   
-  /* Definiere die keyframes für die wippende Bewegung */
-  @keyframes bounce {
-    0%, 100% {
-      transform: translateY(10px); /* Ausgangsposition */
-    }
-    50% {
-      transform: translateY(20px); /* Bewegung nach unten um 10px */
-    }
-  }
-
-// rechter link 
-.contact-bar {
-  position: absolute;
-  top: 476px;
-  right: 1%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  z-index: 10;  
-  
-  .contact-icon {
-    display: none; /* Standardmäßig unsichtbar */
-  }
-
-  >p {
-      color: white;
-      font-family: "Karla", sans-serif;
-      transform: rotate(270deg);
-      margin-bottom: 100px;
-  }
-
-  >p:hover {
-    color: #3DCFB6;
-  }
-
-  .img-container {
-      margin-bottom: 10px;
-      position: relative; 
-      display: inline-block; /* Ermöglicht das Hinzufügen von ::after */
-  }
-
-  > img {
-      transition: filter 0.3s ease; /* Sanfte Übergangsanimation für das Bild */
-  }
-
-  /* Bild wird beim Hover-Effekt weiß */
-  .img-container:hover img {
-    filter: brightness(0) invert(1); /* Bild invertieren, um es weiß zu machen */
-  }
-
-  /* Füge das Pseudo-Element für den Punkt rechts vom Bild hinzu */
-  .img-container::after {
-    content: ''; /* Leerer Inhalt für den Punkt */
-    position: absolute;
-    left: 100%; /* Positioniert den Punkt rechts vom Bild */
-    top: 45%; /* Zentriert den Punkt vertikal zum Bild */
-    transform: translateX(10px) translateY(-50%); /* Verschiebt den Punkt ein wenig nach rechts */
-    width: 5px; /* Breite des Punktes */
-    height: 5px; /* Höhe des Punktes */
-    border-radius: 50%; /* Runde Form, um einen Punkt zu erstellen */
-    background-color: #3DCFB6; /* Farbe des Punktes */
-    opacity: 0; /* Punkt ist standardmäßig unsichtbar */
-    transition: opacity 0.3s ease, transform 0.3s ease; /* Sanfte Animation für das Einblenden */
-  }
-
-  .img-container:hover::after {
-    opacity: 1; /* Punkt wird beim Hover sichtbar */
-    transform: translateX(10px) translateY(-50%); /* Bewegt den Punkt sanft nach rechts */
-  }
-}
-
-
-
-
- 
-
-// Leiste 
-
-.marquee-container {
-  width: 100%;  /* Vermeide 'vw', um Probleme mit Scrollbalken zu verhindern */
-  background-color: rgba(255, 255, 255, 0.1); 
-  padding: 10px 0;
-  overflow: hidden;  /* Verhindert, dass der Inhalt außerhalb des Containers sichtbar wird */
-  position: absolute;
-  top: 800px;
-  z-index: 20; 
-  left: 0;
-  right: 0;
-  backdrop-filter: blur(2px);  /* Stelle sicher, dass das Element die gesamte Breite des Containers abdeckt */
-}
-
-.marquee {
-  display: flex;
-  white-space: nowrap; 
-  /* Statt translateX(100%) -> Positioniert den Text direkt ohne Einfahren */
-  animation: marquee 20s linear infinite; 
-}
-
-.marquee span {
-  color: #3DCFB6; 
-  font-family: "Karla", sans-serif;
-  font-size: 28px;
-  padding: 0 50px; 
-}
-
-@keyframes marquee {
-  0% {
-    transform: translateX(0); /* Text startet sofort sichtbar */
-  }
-  100% {
-    transform: translateX(-100%); /* Läuft nach links, bis es komplett verschwindet */
-  }
-}
-
 
 .hamburger {
   display: none;
@@ -322,88 +117,7 @@
 
 
 
-@media (max-width: 1150px) {
-  .contact-bar {
-    position: absolute;
-    top: 585px;
-    right: 1%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 10;
-    margin-right: 100px;
 
-    >p {
-    display: none;
-    }
-
-    .contact-icon {
-      display: block; /* Bild wird bei kleineren Bildschirmen angezeigt */
-    }
-  }
-
-
-  .name-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    
-    >h1 {
-        margin-top: 0;
-        font-family: "Karla", sans-serif;
-        color:#D9D9D9;
-        font-weight: 700;
-        font-size: 98px;
-        line-height: 128px;
-        margin-bottom: 20px;
-    }
-
-    >h2 {
-        margin-top: 100px;
-        margin-bottom: 0;
-        font-size: 40px;
-        font-weight: 400;
-        font-family: "Fira Code", monospace;
-        color:#D9D9D9;
-    }
-
-   
-  }
-}
-
-
-@media (max-width: 910px) {
-  .name-container {
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    
-    >h1 {
-        margin-top: 0;
-        font-family: "Karla", sans-serif;
-        color:#D9D9D9;
-        font-weight: 700;
-        font-size: 78px;
-        line-height: 128px;
-        margin-bottom: 20px;
-    }
-
-    >h2 {
-        margin-top: 100px;
-        margin-bottom: 0;
-        font-size: 30px;
-        font-weight: 400;
-        font-family: "Fira Code", monospace;
-        color:#D9D9D9;
-    }
-
-   
-  }
-}
 
 
 
@@ -419,9 +133,7 @@
   padding-left: 50px;
 }
 
-.contact-bar {
-  margin-right: 70px;
-}
+
 
 
 }
@@ -493,14 +205,7 @@ align-items: flex-start;
     padding-right: 10px;
   }
 
-  .contact-bar {
-    margin-right: 35px;
-  }
-
-  .scroll-down {
-    left: -10px;
-  }
-  
+ 
 
 
 
@@ -520,183 +225,32 @@ align-items: flex-start;
    }
 
 
-   .name-container {
-    margin-top: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    
-    >h1 {
-        margin-top: 0;
-        font-family: "Karla", sans-serif;
-        color:#D9D9D9;
-        font-weight: 700;
-        font-size: 78px;
-        line-height: 128px;
-        margin-bottom: 20px;
-    }
-
-    >h2 {
-        margin-top: 100px;
-        margin-bottom: 0;
-        font-size: 30px;
-        font-weight: 400;
-        font-family: "Fira Code", monospace;
-        color:#D9D9D9;
-    }
-
    
-  }
 }
 
 @media (max-width: 650px) {
-  .name-container {
-    margin-top: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    
-    >h1 {
-        margin-top: 0;
-        font-family: "Karla", sans-serif;
-        color:#D9D9D9;
-        font-weight: 700;
-        font-size: 62px;
-        line-height: 128px;
-        margin-bottom: 20px;
-    }
-
-    >h2 {
-        margin-top: 100px;
-        margin-bottom: 0;
-        font-size: 24px;
-        font-weight: 400;
-        font-family: "Fira Code", monospace;
-        color:#D9D9D9;
-    }
-
-   
-  }
-
+  
   .menu {
     right: 10%;
   }
 
 
-  .marquee-container {
-    width: 100%;  /* Vermeide 'vw', um Probleme mit Scrollbalken zu verhindern */
-    background-color: rgba(255, 255, 255, 0.1); 
-    padding: 5px 0;
-    overflow: hidden;  /* Verhindert, dass der Inhalt außerhalb des Containers sichtbar wird */
-    position: absolute;
-    top: 800px;
-    z-index: 20; 
-    left: 0;
-    right: 0;
-    backdrop-filter: blur(2px);  /* Stelle sicher, dass das Element die gesamte Breite des Containers abdeckt */
-  }
-
-  .marquee {
-    display: flex;
-    white-space: nowrap; 
-    /* Statt translateX(100%) -> Positioniert den Text direkt ohne Einfahren */
-    animation: marquee 5s linear infinite; 
-  }
   
-  .marquee span {
-    color: #3DCFB6; 
-    font-family: "Karla", sans-serif;
-    font-size: 22px;
-    padding: 0 50px; 
-  }
-
-
 
 }
 
 @media (max-width: 520px) {
-  .name-container {
-    margin-top: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    
-    >h1 {
-        margin-top: 0;
-        font-family: "Karla", sans-serif;
-        color:#D9D9D9;
-        font-weight: 700;
-        font-size: 52px;
-        line-height: 128px;
-        margin-bottom: 20px;
-    }
-
-    >h2 {
-        margin-top: 100px;
-        margin-bottom: 0;
-        font-size: 24px;
-        font-weight: 400;
-        font-family: "Fira Code", monospace;
-        color:#D9D9D9;
-    }
-
-   
-  }
+  
 }
 
 
 @media (max-width: 440px) {
-  .name-container {
-    margin-top: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    
-    >h1 {
-        margin-top: 0;
-        font-family: "Karla", sans-serif;
-        color:#D9D9D9;
-        font-weight: 700;
-        font-size: 36px;
-        line-height: 70px;
-        margin-bottom: 20px;
-    }
-
-    >h2 {
-        margin-top: 100px;
-        margin-bottom: 0;
-        font-size: 20px;
-        font-weight: 400;
-        font-family: "Fira Code", monospace;
-        color:#D9D9D9;
-    }
-
-   
-  }
+ 
 
   .menu {
     right: 10%;
     width: 200px;
   }
 
-  .button-name {
-    font-family: "Karla", sans-serif;
-    font-size: 16px;
-    padding: 7px;
-    width: 120px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-  }
-
-  .buttons-container {
-    display: flex;
-    justify-content: space-between;
-    width: 283px;
-  }
+  
 }
