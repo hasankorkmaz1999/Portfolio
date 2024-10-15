@@ -80,16 +80,15 @@
           <label class="checkbox-label">
             <input type="checkbox" name="privacy" [(ngModel)]="formData.privacyAccepted" #privacy="ngModel" required>
             <span class="custom-checkbox"></span>
-            <span class="privacy-text">
-              <span class="privacy-top">{{ 'PRIVACY_POLICY' | translate }} 
-                <a href="#" class="privacy-link">{{ 'PRIVACY_LINK' | translate }}</a>
-                <span> {{ 'AGREE_PROCESSING' | translate }}</span> 
-              </span> 
-            
-            </span>
           </label>
-         
+          <span class="privacy-text">
+            <span class="privacy-top">{{ 'PRIVACY_POLICY' | translate }} 
+              <a routerLink="/privacy-policy" class="privacy-link">{{ 'PRIVACY_LINK' | translate }}</a>
+              <span> {{ 'AGREE_PROCESSING' | translate }}</span> 
+            </span>
+          </span>
         </div>
+        
 
 
         <div *ngIf="privacy.invalid && (privacy.dirty || privacy.touched)" class="error-privacy">
@@ -109,5 +108,5 @@
     <div class="confirmation-message" [class.show]="confirmationVisible">
       {{ 'FORM_SUBMITTED' | translate }}
     </div>
-    
+
 </section>

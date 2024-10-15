@@ -3,12 +3,12 @@ import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { TranslationService } from '../../../translation.service';
 import { inject } from '@angular/core';
-
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [CommonModule, TranslateModule],
+  imports: [CommonModule, TranslateModule, RouterModule],  // Entferne den LegalNoticeComponent Import
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })

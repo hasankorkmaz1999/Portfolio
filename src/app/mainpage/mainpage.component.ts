@@ -5,6 +5,7 @@ import { SkillSetComponent } from './skill-set/skill-set.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
 import { RouterModule } from '@angular/router';
+import { AbovethefoldComponent } from './abovethefold/abovethefold.component';
 
 @Component({
   selector: 'app-mainpage',
@@ -15,7 +16,8 @@ import { RouterModule } from '@angular/router';
     SkillSetComponent,
     ProjectsComponent,
     ContactComponent,
-    RouterModule
+    RouterModule, 
+    AbovethefoldComponent
   ],
   templateUrl: './mainpage.component.html',
   styleUrl: './mainpage.component.scss',

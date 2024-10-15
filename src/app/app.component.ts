@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { MainpageComponent } from './mainpage/mainpage.component';
@@ -19,6 +19,7 @@ import { AbovethefoldComponent } from './mainpage/abovethefold/abovethefold.comp
        FooterComponent,
         MainpageComponent,
          AboutMeComponent,
+         RouterModule,
      SkillSetComponent,
       ProjectsComponent,
        ContactComponent,

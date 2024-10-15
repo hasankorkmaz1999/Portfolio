@@ -260,6 +260,7 @@ section {
 
 
 /* Custom Checkbox Styling */
+/* Custom Checkbox Styling */
 .checkbox-label input[type="checkbox"] {
     display: none; /* Verstecke das Standard-Checkbox-Eingabefeld */
 }
@@ -269,11 +270,12 @@ section {
     height: 15px;
     border: 2px solid #3DCFB6;
     border-radius: 4px;
-   margin-left: 10px;
+    margin-left: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    cursor: pointer;
 }
 
 /* Checkbox checked state */
@@ -283,6 +285,50 @@ section {
     font-size: 14px;
     position: absolute;
 }
+
+.privacy-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; /* Text und Button links ausrichten */
+    width: 600px;
+    text-align: start;
+}
+
+.privacy-text {
+   margin-left: 10px;
+   color: #fff;
+   font-family: "Karla", sans-serif;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    font-family: "Karla", sans-serif;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.privacy-link {
+    color: #3DCFB6;
+    text-decoration: none;
+}
+
+.privacy-link:hover {
+    cursor: pointer;
+    color: white;
+}
+
+.privacy-container .privacy-text {
+    cursor: default; /* Der Text soll keinen Pointer-Cursor haben */
+}
+
+
+
+
+
+
 
 .button-container {
     display: flex;
@@ -316,41 +362,6 @@ section {
     cursor: not-allowed;
     opacity: 0.6;
   }
-  
-
-
-.privacy-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center; /* Text und Button links ausrichten */
-    width: 600px;
-    text-align: start;
-}
-
-.privacy-text {
-   margin-left: 10px;
-   
-}
-
-.checkbox-label {
-    display: flex;
-    align-items: center;
-    font-family: "Karla", sans-serif;
-    font-size: 16px;
-    color: #fff;
-    cursor: pointer;
-    margin-bottom: 20px;
-}
-
-.privacy-link {
-    color: #3DCFB6;
-    text-decoration: none;
-   
-}
-
-.privacy-link:hover {
-   color: white;
-}
 
 @media (max-width: 1920px) {
     .contact {
@@ -449,7 +460,7 @@ section {
   
 
     .privacy-container {
-        flex-direction: column;
+       
         align-items: flex-start;
         width: 500px;
     }
@@ -462,11 +473,7 @@ section {
         margin-top: 20px;
     }
 
-    .custom-checkbox {
-        width: 20px;
-        height: 15px; 
-        margin-right: 0;
-    }
+    
 
 }
 
@@ -474,11 +481,7 @@ section {
 
 @media (max-width: 605px ) {
     
-    .custom-checkbox {
-        width: 30px;
-        height: 15px; 
-        margin-right: 0;
-    }
+   
 
     section {
         height: 1300px;
@@ -623,11 +626,7 @@ section {
     width: 240px;
 }
 
-.custom-checkbox {
-    width: 35px;
-    height: 15px; 
-    margin-right: 0;
-}
+
 
 .button-container {
     margin-top: 20px;
