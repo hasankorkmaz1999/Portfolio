@@ -5,6 +5,7 @@ import { inject } from '@angular/core';
 import { TranslationService } from '../../translation.service';
 import { FormsModule, NgForm } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact',
@@ -24,20 +25,21 @@ export class ContactComponent {
   // Funktion, um das textarea automatisch zu vergrößern
   autoResize(event: Event): void {
     const textarea = event.target as HTMLTextAreaElement;
-    if (textarea) {
+    if (textarea && textarea.value) {
       // Nur die Höhe zurücksetzen, wenn die Zeilenumbruchgrenze erreicht ist
       if (textarea.scrollHeight > textarea.offsetHeight) {
         textarea.style.height = 'auto'; // Setze Höhe auf 'auto', um Neuberechnung zu ermöglichen
         textarea.style.height = textarea.scrollHeight + 'px'; // Setze Höhe auf die Scrollhöhe
       }
-
+  
       // Zeige das Häkchen, wenn Text vorhanden ist
-      this.showCheckmark = textarea.value.trim().length > 0;
+      this.showCheckmark = textarea.value.length > 0;
     }
   }
-
+  
   // Funktion, um die Eingabe zu stoppen
  
+  http = inject(HttpClient);
 
   formData = {
     name: '',
@@ -66,14 +68,44 @@ export class ContactComponent {
   confirmationVisible = false; // Zustand für die Bestätigungsmeldung
 
 
-  onSubmit(form: any) {
-    if (form.valid) {
-      // Hier kannst du die Logik zum Senden des Formulars hinzufügen
 
-      // Zeige die Bestätigungsmeldung an
-      this.showConfirmation();
+
+  post = {
+    endPoint: 'https://hasan-korkmaz.de/sendmail.php', 
+    body: (payload: any) => JSON.stringify(payload),
+    options: {
+      headers: {
+        'Content-Type': 'text/plain',
+        responseType: 'text',
+      },
+    },
+  };
+
+
+
+
+  
+  onSubmit(form: NgForm) {
+    if (form.valid) {
+      // Überprüfen, ob alle Felder einen Wert haben, bevor sie gesendet werden
+      if (this.formData.name && this.formData.email && this.formData.message) {
+        this.http.post(this.post.endPoint, this.post.body(this.formData))
+          .subscribe({
+            next: (response) => {
+              form.reset(); // Formular zurücksetzen
+            },
+            error: (error) => {
+              console.error(error);
+            },
+            complete: () => this.showConfirmation(),
+          });
+      } else {
+        console.error('Alle Felder müssen ausgefüllt sein');
+      }
     }
   }
+  
+  
 
   showConfirmation() {
     this.confirmationVisible = true;

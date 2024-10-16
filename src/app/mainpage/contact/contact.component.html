@@ -23,7 +23,7 @@
                 minlength="2"
                 (input)="autoResize($event)">
               </textarea>
-              <img *ngIf="formData.name.trim().length > 0" src="/assets/img-contact/check(1).png" class="checkmark" (click)="validateInput(name)" alt="Checkmark">
+              <img *ngIf="formData.name && formData.name.trim().length > 0" src="/assets/img-contact/check(1).png" class="checkmark" (click)="validateInput(name)" alt="Checkmark">
               <div *ngIf="name.invalid && nameChecked" class="error">
                 <small *ngIf="name.errors?.['required']">{{ 'NAME_REQUIRED' | translate }}</small>
                 <small *ngIf="name.errors?.['minlength']">{{ 'NAME_MINLENGTH' | translate }}</small>
@@ -45,7 +45,7 @@
                 email 
                 (input)="autoResize($event)">
               </textarea>
-              <img *ngIf="formData.email.trim().length > 0" src="/assets/img-contact/check(1).png" class="checkmark" (click)="validateInput(email)" alt="Checkmark">
+              <img *ngIf="formData.email && formData.email.trim().length > 0" src="/assets/img-contact/check(1).png" class="checkmark" (click)="validateInput(email)" alt="Checkmark">
               <div *ngIf="email.invalid && emailChecked" class="error">
                 <small *ngIf="email.errors?.['required']">{{ 'EMAIL_REQUIRED' | translate }}</small>
                 <small *ngIf="email.errors?.['email']">{{ 'EMAIL_INVALID' | translate }}</small>
@@ -67,7 +67,7 @@
                 minlength="10"
                 (input)="autoResize($event)">
               </textarea>
-              <img *ngIf="formData.message.trim().length > 0" src="/assets/img-contact/check(1).png" class="checkmark" (click)="validateInput(message)" alt="Checkmark">
+              <img *ngIf="formData.message && formData.message.trim().length > 0" src="/assets/img-contact/check(1).png" class="checkmark" (click)="validateInput(message)" alt="Checkmark">
               <div *ngIf="message.invalid && messageChecked" class="error">
                 <small *ngIf="message.errors?.['required']">{{ 'MESSAGE_REQUIRED' | translate }}</small>
                 <small *ngIf="message.errors?.['minlength']">{{ 'MESSAGE_MINLENGTH' | translate }}</small>
