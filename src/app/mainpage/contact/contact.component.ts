@@ -19,25 +19,25 @@ export class ContactComponent {
 
   translate = inject(TranslationService);
 
-  showCheckmark: boolean = false; // Zustand für die Sichtbarkeit des Häkchens
-  isInputStopped: boolean = false; // Zustand, ob die Eingabe gestoppt wurde
+  showCheckmark: boolean = false; 
+  isInputStopped: boolean = false; 
 
-  // Funktion, um das textarea automatisch zu vergrößern
+  
   autoResize(event: Event): void {
     const textarea = event.target as HTMLTextAreaElement;
     if (textarea && textarea.value) {
-      // Nur die Höhe zurücksetzen, wenn die Zeilenumbruchgrenze erreicht ist
+      
       if (textarea.scrollHeight > textarea.offsetHeight) {
-        textarea.style.height = 'auto'; // Setze Höhe auf 'auto', um Neuberechnung zu ermöglichen
-        textarea.style.height = textarea.scrollHeight + 'px'; // Setze Höhe auf die Scrollhöhe
+        textarea.style.height = 'auto'; 
+        textarea.style.height = textarea.scrollHeight + 'px'; 
       }
   
-      // Zeige das Häkchen, wenn Text vorhanden ist
+      
       this.showCheckmark = textarea.value.length > 0;
     }
   }
   
-  // Funktion, um die Eingabe zu stoppen
+  
  
   http = inject(HttpClient);
 
@@ -48,7 +48,7 @@ export class ContactComponent {
     privacyAccepted: false,
   };
 
-  // Zustände, um zu prüfen, ob die Felder validiert wurden
+  
   nameChecked = false;
   emailChecked = false;
   messageChecked = false;
@@ -65,7 +65,7 @@ export class ContactComponent {
     }
   }
 
-  confirmationVisible = false; // Zustand für die Bestätigungsmeldung
+  confirmationVisible = false; 
 
 
 
@@ -87,12 +87,12 @@ export class ContactComponent {
   
   onSubmit(form: NgForm) {
     if (form.valid) {
-      // Überprüfen, ob alle Felder einen Wert haben, bevor sie gesendet werden
+     
       if (this.formData.name && this.formData.email && this.formData.message) {
         this.http.post(this.post.endPoint, this.post.body(this.formData))
           .subscribe({
             next: (response) => {
-              form.reset(); // Formular zurücksetzen
+              form.reset(); 
             },
             error: (error) => {
               console.error(error);
@@ -110,7 +110,7 @@ export class ContactComponent {
   showConfirmation() {
     this.confirmationVisible = true;
 
-    // Verstecke die Nachricht nach 3 Sekunden wieder
+    
     setTimeout(() => {
       this.confirmationVisible = false;
     }, 3000);

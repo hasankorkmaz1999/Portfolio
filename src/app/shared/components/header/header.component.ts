@@ -14,19 +14,19 @@ import { inject } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  isMenuOpen = false; // Menü ist standardmäßig geschlossen
+  isMenuOpen = false; 
  
 
   toggleMenu() {
-    this.isMenuOpen = !this.isMenuOpen; // Menü umschalten
+    this.isMenuOpen = !this.isMenuOpen; 
   }
 
   closeMenu() {
-    this.isMenuOpen = false; // Menü schließen, wenn auf Overlay geklickt wird
+    this.isMenuOpen = false; 
   }
 
   get currentLanguage() {
-    return this.translate.currentLanguage; // Greift auf die aktuelle Sprache aus dem Service zu
+    return this.translate.currentLanguage; 
   }
  
 

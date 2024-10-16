@@ -7,18 +7,18 @@ import { HeaderComponent } from '../shared/components/header/header.component';
   templateUrl: './legal-notice.component.html',
   styleUrls: ['./legal-notice.component.scss'],
   standalone: true,
-  imports: [RouterModule, HeaderComponent]  // RouterModule importieren
+  imports: [RouterModule, HeaderComponent] 
 })
 export class LegalNoticeComponent {
 
   constructor(private router: Router) { }
 
   ngAfterViewInit() {
-    // Scrollt automatisch nach oben
+    
     window.scrollTo(0, 0);
   }
 
   goBack() {
-    this.router.navigate(['/']); // Navigiert zur Startseite
+    this.router.navigate(['/']); 
   }
 }

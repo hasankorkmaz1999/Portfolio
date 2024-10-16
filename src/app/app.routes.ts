@@ -8,13 +8,13 @@ import { MainpageComponent } from './mainpage/mainpage.component';
 import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
 
 export const routes: Routes = [
-    { path: '', component: MainpageComponent },  // Startseite
+    { path: '', component: MainpageComponent }, 
     { path: 'about-me', component: AboutMeComponent },
     { path: 'skills', component: SkillSetComponent },
     { path: 'projects', component: ProjectsComponent },
     { path: 'contact', component: ContactComponent },
     { path: 'privacy-policy', component: PrivacyPolicyComponent },
-    { path: 'legal-notice', component: LegalNoticeComponent },  // Legal Notice Seite
+    { path: 'legal-notice', component: LegalNoticeComponent },  
     { path: '**', redirectTo: '/', pathMatch: 'full' }
   ];
   

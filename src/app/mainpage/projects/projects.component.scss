@@ -417,7 +417,12 @@ background-size: cover;
 .button-container {
     display: flex;
     justify-content: flex-start; /* Buttons werden von links ausgerichtet */
-    align-items: center; /* Vertikal zentrieren */
+    align-items: center;
+    
+    >a {
+        text-decoration: none;
+    }
+        /* Vertikal zentrieren */
 }
 
 
