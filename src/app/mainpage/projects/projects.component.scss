@@ -324,22 +324,25 @@ section {
 
 /* Modal-Inhalt */
 .modal-content {
-background-image: url('/assets/img-first/1Background.svg');
-background-repeat: no-repeat;
-background-size: cover;
-    margin: auto;
-   padding: 50px;
-    border: 1px solid #3DCFB6;
-    width:  90%;
-    max-width: 1420px;
    
-    height: 600px;
-    border-radius: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-image: url('/assets/img-first/1Background.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+        margin: auto;
+       padding: 50px;
+        border: 1px solid #3DCFB6;
+        width:  90%;
+        max-width: 1420px;
+       
+        height: 600px;
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+    }
 
-}
+    
 
 
 .contentinmodal {
@@ -536,6 +539,8 @@ background-size: cover;
         transform: translateX(10px); 
     }
 }
+
+
 
 
 
@@ -765,6 +770,7 @@ width: 80%;
 }
 
 
+
 @media (max-width: 590px) {
 
 
@@ -964,6 +970,7 @@ width: 65%;
     .button-name {
         flex-wrap: nowrap;
         padding: 5px;
+        width: 120px;
     }
 
     .button-container {
@@ -1166,11 +1173,5 @@ width: 65%;
     }
         
 }
-
-
-
-
-
-
 
 
