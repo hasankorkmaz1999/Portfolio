@@ -93,6 +93,9 @@ export class ContactComponent {
           .subscribe({
             next: (response) => {
               form.reset(); 
+              this.nameChecked = false;
+            this.emailChecked = false;
+            this.messageChecked = false;
             },
             error: (error) => {
               console.error(error);
