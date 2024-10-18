@@ -69,7 +69,40 @@
   "LOCATION": "Augsburg Germany",
   "LEGAL_NOTICE": "Legal Notice",
 
-   "FORM_SUBMITTED": "Your message has been sent successfully!"
+   "FORM_SUBMITTED": "Your message has been sent successfully!",
   
-}
+   
+    "LEGAL_NOTICE_TITLE": "Legal Notice",
+    "LEGAL_NOTICE_SECTION1_TITLE": "Information pursuant to § 5 TMG",
+    "LEGAL_NOTICE_PERSONAL_INFO": {
+      "NAME": "Hasan Korkmaz",
+      "PROFESSION": "Web Developer",
+      "LOCATION": "Augsburg, Germany"
+    },
+    "LEGAL_NOTICE_CONTACT": {
+      "TITLE": "Contact",
+      "PHONE": "Phone: +49 123 456789",
+      "EMAIL": "Email: hasan.k1999@outlook.de"
+    },
+    "LEGAL_NOTICE_DISCLAIMER": {
+      "TITLE": "Disclaimer",
+      "CONTENT": {
+        "SECTION_TITLE": "Liability for content",
+        "TEXT1": "As a service provider, we are responsible for our own content on these pages in accordance with § 7 Abs.1 of the German Telemedia Act (TMG). However, according to §§ 8 to 10 TMG, we as service providers are not obligated to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity.",
+        "TEXT2": "Obligations to remove or block the use of information according to general laws remain unaffected. However, liability in this regard is only possible from the point in time at which knowledge of a specific infringement is obtained. Upon becoming aware of such legal violations, we will remove the content immediately."
+      }
+    },
+    "LEGAL_NOTICE_LINKS": {
+      "TITLE": "Liability for links",
+      "TEXT1": "Our offer contains links to external websites of third parties, the contents of which we have no influence on. Therefore, we cannot assume any liability for these external contents. The respective provider or operator of the sites is always responsible for the contents of the linked sites. The linked sites were checked for possible legal violations at the time of linking. No unlawful content was discernible at the time of linking.",
+      "TEXT2": "A permanent control of the content of the linked sites is, however, not reasonable without specific indications of a legal violation. Upon becoming aware of legal violations, we will remove such links immediately."
+    },
+    "LEGAL_NOTICE_COPYRIGHT": {
+      "TITLE": "Copyright",
+      "TEXT1": "The contents and works on these pages created by the site operators are subject to German copyright law. The duplication, processing, distribution, and any kind of exploitation outside the limits of copyright law require the written consent of the respective author or creator. Downloads and copies of these pages are only permitted for private, non-commercial use.",
+      "TEXT2": "Insofar as the contents on this site were not created by the operator, the copyrights of third parties are respected. In particular, third-party content is identified as such. Should you nevertheless become aware of a copyright infringement, please inform us accordingly. Upon becoming aware of legal violations, we will remove such content immediately."
+    },
+    "LEGAL_NOTICE_BACK_BUTTON": "Back to Home"
+  }
+  
   

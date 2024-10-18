@@ -58,37 +58,51 @@
 
 // Language switch button 
 
-
 .lang-switch {
-    height: 28px;
-    width: 84px;
-    display: inline-flex;
-    border: 2px solid #3DCFB6; /* Rahmenfarbe */
-    border-radius: 30px;
-    overflow: hidden;
-  }
-  
-  .lang-button {
-    background-color: transparent;
-    border-radius: 30px;
-    
-    border: none;
-    flex: 1; /* Jeder Button nimmt die Hälfte des Containers ein */
-    text-align: center;
-    font-size: 0.8em; /* Verkleinere die Schriftgröße */
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-    line-height: 28px; /* Vertikales Zentrieren */
-  }
-  
- 
-  
-  .lang-button.active {
-    background-color: #3DCFB6; /* Grün für die aktive Sprache */
-    color: #000; /* Textfarbe für den aktiven Button */
-  }
-  
+  height: 28px;
+  width: 84px;
+  display: flex; /* Flexbox für die horizontale Ausrichtung */
+  border: 2px solid #3DCFB6; /* Rahmenfarbe */
+  border-radius: 30px; /* Nur der Container hat eine Rundung */
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+  background-color: transparent; /* Keine zusätzliche Hintergrundfarbe */
+}
+
+.lang-button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  flex: 1; /* Jeder Button nimmt gleich viel Platz ein */
+  text-align: center;
+  font-size: 0.8em;
+  color: #fff;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  line-height: 28px;
+  outline: none;
+  box-shadow: none;
+}
+
+/* Aktiver Button */
+.lang-button.active {
+  background-color: #3DCFB6; /* Grün für den aktiven Button */
+  color: #000; /* Textfarbe für den aktiven Button */
+}
+
+/* Entferne Umrandungen und Box-Schatten */
+.lang-button:focus,
+.lang-button:active {
+  outline: none;
+  box-shadow: none;
+}
+
+
+
 
   // Ende button
 

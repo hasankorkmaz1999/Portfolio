@@ -1,7 +1,5 @@
 <header class="header">
-
-    <div class="header-left">
-       
+  <div class="header-left">
     <!-- Hamburger Menü für mobile Ansicht -->
     <div class="hamburger" (click)="toggleMenu()">
       <span></span>
@@ -13,9 +11,9 @@
       <!-- Menü selbst, das `stopPropagation()` verwendet, damit Klicks innerhalb des Menüs es nicht schließen -->
       <div class="menu" (click)="$event.stopPropagation()">
         <div class="menu-pos">
-          <a href="#aboutme" (click)="toggleMenu()">{{ 'ABOUT_ME' | translate }}</a>
-          <a href="#skill" (click)="toggleMenu()">{{ 'SKILLS' | translate }}</a>
-          <a href="#projects" (click)="toggleMenu()">{{ 'PROJECTS' | translate }}</a>
+          <a routerLink="/" fragment="aboutme" (click)="closeMenu()">{{ 'ABOUT_ME' | translate }}</a>
+          <a routerLink="/" fragment="skill" (click)="closeMenu()">{{ 'SKILLS' | translate }}</a>
+          <a routerLink="/" fragment="projects" (click)="closeMenu()">{{ 'PROJECTS' | translate }}</a>
           <div class="lang-switch">
             <button class="lang-button" [class.active]="currentLanguage === 'en'" (click)="translate.switchLanguage('en')">EN</button>
             <button class="lang-button" [class.active]="currentLanguage === 'de'" (click)="translate.switchLanguage('de')">DE</button>
@@ -24,37 +22,19 @@
       </div>
     </div>
 
-
     <nav class="header-nav">
-      
       <div class="lang-switch">
         <button class="lang-button" [class.active]="currentLanguage === 'en'" (click)="translate.switchLanguage('en')">EN</button>
         <button class="lang-button" [class.active]="currentLanguage === 'de'" (click)="translate.switchLanguage('de')">DE</button>
       </div>
 
-
-
-
-        <a href="#aboutme">{{ 'ABOUT_ME' | translate }}</a>
-        <a href="#skill">{{ 'SKILLS' | translate }}</a>
-        <a href="#projects">{{ 'PROJECTS' | translate }}</a>
-      
+      <a routerLink="/" fragment="aboutme">{{ 'ABOUT_ME' | translate }}</a>
+      <a routerLink="/" fragment="skill">{{ 'SKILLS' | translate }}</a>
+      <a routerLink="/" fragment="projects">{{ 'PROJECTS' | translate }}</a>
     </nav>
 
     <div class="namelogo">
-        <img src="/assets/img-first/namelogo.png" alt="">
+      <img src="/assets/img-first/namelogo.png" alt="">
     </div>
-
-
-
   </div>
-
-
-  
-
-    
-  </header>
-
-
- 
-  
+</header>

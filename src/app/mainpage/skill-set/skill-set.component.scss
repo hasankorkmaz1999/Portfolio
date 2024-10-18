@@ -259,7 +259,7 @@ transition: 0.5s;
 
     .skill-set {
         background-image: url('/assets/img-skillset/19. Skill set Background.png');
-        height: 1500px;
+        height: 1600px;
     }
 
     .right-section {
@@ -296,13 +296,20 @@ transition: 0.5s;
         height: 950px;
         width: 600px;
     }
+
+    .skill-set {
+        background-image: url('/assets/img-skillset/19. Skill set Background.png');
+        height: 1600px;
+        margin-bottom: 170px;
+    }
+
 }
 
 @media (max-width: 645px) {
 
     .skill-set {
         background-image: url('/assets/img-skillset/19. Skill set Background.png');
-        height: 1500px;
+        height: 1600px;
         margin-bottom: 170px;
     }
 
@@ -365,7 +372,14 @@ transition: 0.5s;
 
 @media (max-width: 550px) {
 
-    
+    .skill-set {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        background-image: url('/assets/img-skillset/19. Skill set Background.png');
+        height: 1500px;
+        margin-bottom: 0px;
+    }
 
 .right-section {
     width: 400px;
@@ -479,9 +493,12 @@ transition: 0.5s;
     }
 
     .skill-set {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
         background-image: url('/assets/img-skillset/19. Skill set Background.png');
-        height: 2300px;
-        margin-bottom: 170px;
+        height: 1800px;
+        margin-bottom: 0px;
     }
 }
 
@@ -516,11 +533,7 @@ transition: 0.5s;
         justify-content: flex-start;
     }
 
-    .skill-set {
-        background-image: url('/assets/img-skillset/19. Skill set Background.png');
-        height: 2300px;
-        margin-bottom: 170px;
-    }
+    
 
     .skillsgrowth {
         height: 84px;

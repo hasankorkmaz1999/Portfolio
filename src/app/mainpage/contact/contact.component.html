@@ -21,7 +21,8 @@
                 placeholder="{{ 'NAME_PLACEHOLDER' | translate }}" 
                 required 
                 minlength="2"
-                (input)="autoResize($event)">
+                (input)="autoResize($event)"
+                (blur)="validateInput(name)">
               </textarea>
               <img *ngIf="formData.name && formData.name.trim().length > 0" src="/assets/img-contact/check(1).png" class="checkmark" (click)="validateInput(name)" alt="Checkmark">
               <div *ngIf="name.invalid && nameChecked" class="error">
@@ -43,7 +44,8 @@
                 placeholder="{{ 'EMAIL_PLACEHOLDER' | translate }}" 
                 required 
                 email 
-                (input)="autoResize($event)">
+                (input)="autoResize($event)"
+                (blur)="validateInput(email)">
               </textarea>
               <img *ngIf="formData.email && formData.email.trim().length > 0" src="/assets/img-contact/check(1).png" class="checkmark" (click)="validateInput(email)" alt="Checkmark">
               <div *ngIf="email.invalid && emailChecked" class="error">
@@ -65,7 +67,8 @@
                 placeholder="{{ 'MESSAGE_PLACEHOLDER' | translate }}" 
                 required 
                 minlength="10"
-                (input)="autoResize($event)">
+                (input)="autoResize($event)"
+                (blur)="validateInput(message)">
               </textarea>
               <img *ngIf="formData.message && formData.message.trim().length > 0" src="/assets/img-contact/check(1).png" class="checkmark" (click)="validateInput(message)" alt="Checkmark">
               <div *ngIf="message.invalid && messageChecked" class="error">

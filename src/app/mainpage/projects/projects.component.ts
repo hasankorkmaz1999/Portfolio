@@ -19,10 +19,10 @@ export class ProjectsComponent {
   isHoveredJoin: boolean = false;
   isHoveredPollo: boolean = false;
   isHoveredPortfolio: boolean = false;
-  isModalOpen: boolean = true;
+  isModalOpen: boolean = false;
 
  
-  activeProject: string | null = 'Join';
+  activeProject: string | null = null;
 
   
   projects: string[] = ['Join', 'El Pollo Loco', 'Portfolio'];
