@@ -60,38 +60,48 @@
 
 .lang-switch {
   height: 28px;
-  width: 84px;
+  width: 80px;
   display: flex; /* Flexbox für die horizontale Ausrichtung */
-  border: 2px solid #3DCFB6; /* Rahmenfarbe */
+  border: 1px solid #3DCFB6; /* Rahmenfarbe */
   border-radius: 30px; /* Nur der Container hat eine Rundung */
-  overflow: hidden;
-  padding: 0;
+  
+  padding-left: -20px;
   margin: 0;
+  outline: none;
   box-shadow: none;
-  background-color: transparent; /* Keine zusätzliche Hintergrundfarbe */
+  background-color: transparent;
+  transition: 0.3s ease-in-out; /* Keine zusätzliche Hintergrundfarbe */
+}
+
+.lang-switch:hover {
+  border: 1px solid #fff;
 }
 
 .lang-button {
   background-color: transparent;
   border: none;
   padding: 0;
-  margin: 0;
+  margin: -1px;
   flex: 1; /* Jeder Button nimmt gleich viel Platz ein */
   text-align: center;
   font-size: 0.8em;
-  color: #fff;
+  color: #3DCFB6;
   border-radius: 30px;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
-  line-height: 28px;
-  outline: none;
-  box-shadow: none;
+ 
+ 
+}
+
+.lang-button:hover {
+
 }
 
 /* Aktiver Button */
 .lang-button.active {
   background-color: #3DCFB6; /* Grün für den aktiven Button */
-  color: #000; /* Textfarbe für den aktiven Button */
+  color: #fff;
+  font-weight: 700;/* Textfarbe für den aktiven Button */
 }
 
 /* Entferne Umrandungen und Box-Schatten */
