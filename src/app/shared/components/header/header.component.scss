@@ -1,6 +1,9 @@
 .header {
  background-color: transparent;
- 
+ width: 100%; /* Verwende 100% der Breite */
+ max-width: 1920px; /* Optional: Maximalbreite, um es zu begrenzen */
+
+ margin: 0 auto; /* Zentriert den Inhalt horizontal */
 }
 
 .header-left {

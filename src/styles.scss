@@ -11,3 +11,25 @@ html {
     scroll-behavior: smooth;
   }
   
+
+  /* Gesamter Scrollbalken */
+::-webkit-scrollbar {
+  width: 12px; /* Breite des Scrollbalkens */
+}
+
+/* Hintergrund des Scrollbalkens (der "Track") */
+::-webkit-scrollbar-track {
+  background: #1C1C1C; /* Helles Grau als Hintergrund des Scrolltracks */
+}
+
+/* Scrollbar-Handle (der bewegliche Teil) */
+::-webkit-scrollbar-thumb {
+  background-color: #3DCFB6; /* Grün für den Scrollbar-Handle */
+  border-radius: 10px; /* Abgerundete Ecken */
+  border: 1px solid #656363; /* Weißer Rand um den Handle */
+}
+
+/* Bei Hover oder wenn der Scrollbalken aktiv ist */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #2AAE92; /* Etwas dunkleres Grün beim Hover */
+}

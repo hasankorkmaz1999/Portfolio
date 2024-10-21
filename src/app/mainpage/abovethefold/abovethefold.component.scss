@@ -1,10 +1,18 @@
+.oversection {
+  background-image: url('/assets/img-first/1Background.svg');
+  background-size: cover; /* Stellt sicher, dass das Hintergrundbild den gesamten Bildschirm einnimmt */
+  background-position: center;
+  background-repeat: no-repeat; /* Wiederholt das Bild nicht */
+}
+
+
+
 .abovethefold {
-    background-image: url('/assets/img-first/1Background.svg');
+   
     min-height: 100vh; /* Stellt sicher, dass es immer mindestens die Höhe des Viewports einnimmt */
     width: 100%; /* Verwende 100% der Breite */
     max-width: 1920px; /* Optional: Maximalbreite, um es zu begrenzen */
-    background-size: cover;
-    background-position: center;
+   
     margin: 0 auto; /* Zentriert den Inhalt horizontal */
     position: relative;
     scroll-behavior: smooth;
