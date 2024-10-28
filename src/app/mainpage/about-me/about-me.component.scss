@@ -12,13 +12,31 @@
     justify-content: space-around;
 }
 
-.profilpicture {
-    margin-top: 50px;
-    >img {
-        height: 500px;
-        width: 500px;
-        border-radius: 20px;
-    }
+.profil-picture-container {
+    position: relative;
+    width: max-content; /* Adjust to fit content */
+  }
+  
+  .profil-background {
+    position: absolute;
+    top:50px;   /* Adjusts how much the background shows above the image */
+    left: -20px; /* Adjusts how much the background shows to the left of the image */
+    height: 500px;
+    width: 500px;
+    background-image: url('/assets/img-aboutme/Capa_1(1).png'); /* Background image path */
+    background-size: cover;  /* Covers the full div */
+    background-position: center;
+    z-index: 0;
+    border-radius: 10px; /* Optional: Adds rounded corners to the background */
+  }
+
+.profil-picture {
+    margin-top: 70px;
+    height: 500px;
+    width: 500px;
+    border-radius: 20px;
+    position: relative;
+    z-index: 1;
 }
 
 .who_am_i {
@@ -112,7 +130,7 @@ margin-bottom: 20px;
         margin-top: 80px;
     }
 
-    .profilpicture {
+    .profil-picture {
         margin-top: 100px;
         >img {
             height: 450px;
@@ -120,11 +138,23 @@ margin-bottom: 20px;
             border-radius: 20px;
         }
     }
+
+    .profil-background {
+        position: absolute;
+        top:70px;   /* Adjusts how much the background shows above the image */
+        left: -20px; /* Adjusts how much the background shows to the left of the image */
+        height: 500px;
+        width: 500px;
+      
+      }
+    
+
+
 }
 
 
 
-@media (max-width: 550px) {
+@media (max-width: 570px) {
 .who_am_i {
     padding: 20px;
      height: 630px;
@@ -132,14 +162,23 @@ margin-bottom: 20px;
 
 }
 
-.profilpicture {
+.profil-picture {
     margin-top: 100px;
-    >img {
+   
         height: 350px;
         width: 350px;
         border-radius: 20px;
-    }
+  
 }
+
+.profil-background {
+    position: absolute;
+    top:80px;   /* Adjusts how much the background shows above the image */
+    left: -20px; /* Adjusts how much the background shows to the left of the image */
+    height: 350px;
+        width: 350px;
+  
+  }
 
 .about_me {
     flex-direction: column;
@@ -164,18 +203,25 @@ margin-bottom: 20px;
     
     }
     
-    .profilpicture {
+    .profil-picture {
         margin-top: 100px;
-        >img {
-            height: 300px;
-            width: 300px;
-            border-radius: 20px;
-        }
+        height: 280px;
+        width: 280px;
+        border-radius: 20px;
+      
     }
+
+    .profil-background {
+        position: absolute;
+        top:80px;   /* Adjusts how much the background shows above the image */
+        left: -20px; /* Adjusts how much the background shows to the left of the image */
+        height: 280px;
+            width: 280px;
+      }
     
 }
 
-@media (max-width: 360px) {
+@media (max-width: 370px) {
 
     .about_me {
         flex-direction: column;
@@ -196,13 +242,28 @@ margin-bottom: 20px;
   
     }
     
-    .profilpicture {
+    .profil-picture {
         margin-top: 100px;
-        >img {
-            height: 280px;
-            width: 280px;
+      
+            height: 260px;
+            width: 260px;
             border-radius: 20px;
-        }
+       
     }
+
+
+    .profil-background {
+        position: absolute;
+        top:80px;   /* Adjusts how much the background shows above the image */
+        left: -20px; /* Adjusts how much the background shows to the left of the image */
+        height: 260px;
+            width: 260px;
+      }
+
+      .profil-picture-container {
+        margin-left: 20px;
+      }
+
+    
     
 }
