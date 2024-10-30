@@ -8,7 +8,7 @@
     </div>
 
     <div class="menu-overlay" *ngIf="isMenuOpen" (click)="closeMenu()">
-      <!-- Menü selbst, das `stopPropagation()` verwendet, damit Klicks innerhalb des Menüs es nicht schließen -->
+   
       <div class="menu" (click)="$event.stopPropagation()">
         <div class="menu-pos">
           <a routerLink="/" fragment="aboutme" (click)="closeMenu()">{{ 'ABOUT_ME' | translate }}</a>
