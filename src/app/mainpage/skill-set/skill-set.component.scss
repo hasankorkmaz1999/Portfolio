@@ -2,7 +2,10 @@
     background-image: url('/assets/img-skillset/19. Skill set Background.png');
     background-size: cover; /* Stellt sicher, dass das Hintergrundbild den gesamten Bildschirm einnimmt */
     background-position: center;
-    background-repeat: no-repeat; /* Wiederholt das Bild nicht */
+    background-repeat: no-repeat;
+    height: auto; /* Wiederholt das Bild nicht */
+    padding-top: 50px;
+    padding-bottom: 150px;
   }
   
   
@@ -10,7 +13,7 @@
 
 .skill-set {
 
-    height: 900px;
+
   width: 100%; /* Verwende 100% anstelle einer festen Breite */
   max-width: 1920px; /* Optional, um eine maximale Breite festzulegen */
  
@@ -258,17 +261,14 @@ transition: 0.5s;
 @media (max-width: 1210px) {
     .comp-section {
         width: 1920px;
-        height: 1200px;
+        height: auto;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
     }
 
-    .skill-set {
-      
-        height: 1600px;
-    }
+   
 
     .right-section {
         height: 650px;
@@ -305,21 +305,13 @@ transition: 0.5s;
         width: 600px;
     }
 
-    .skill-set {
-        
-        height: 1600px;
-        margin-bottom: 170px;
-    }
+   
 
 }
 
 @media (max-width: 645px) {
 
-    .skill-set {
-    
-        height: 1600px;
-        margin-bottom: 170px;
-    }
+  
 
 
     .skills {
@@ -378,15 +370,14 @@ transition: 0.5s;
 
 
 
-@media (max-width: 550px) {
+@media (max-width: 570px) {
 
     .skill-set {
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
       
-        height: 1500px;
-        margin-bottom: 0px;
+      
     }
 
 .right-section {
@@ -500,14 +491,7 @@ transition: 0.5s;
         justify-content: flex-start;
     }
 
-    .skill-set {
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-       
-        height: 1800px;
-        margin-bottom: 0px;
-    }
+   
 }
 
 

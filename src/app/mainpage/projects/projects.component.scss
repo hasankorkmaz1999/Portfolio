@@ -1,6 +1,8 @@
 section {
     background-color: #1C1C1C;
-    height: 900px;
+    height: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
     width: 100%; /* Verwende 100% anstelle einer festen Breite */
     max-width: 1920px; /* Optional, um eine maximale Breite festzulegen */
    
@@ -50,10 +52,58 @@ section {
     width: 500px;
 }
 
+.crm {
+    padding: 10px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 800px;
+    transition: 125ms;
+    border-top: 2px solid #3DCFB6; /* Obere Border */
+    
+    border-left: none; /* Keine linke Border */
+    border-right: none; /* Keine rechte Border */
+   /* Notwendig für das Positionieren des Bildes */
+}
+
+.crm:hover {
+    background-color: rgb(39, 68, 63);
+    cursor: pointer; /* Stelle sicher, dass die Farbe korrekt ist */
+}
+
+.crmer {
+      display: flex;
+    align-items: center;
+
+    > p {
+        font-family: "Fira Code", monospace;
+        font-size: 24px;
+        color: white;
+    }
+
+    > img {
+        margin-left: 10px;
+        opacity: 0; /* Bild ist standardmäßig unsichtbar */
+        transition: opacity 0.3s ease; /* Sanfter Übergang beim Einblenden */
+    }
+}
+
+.crm:hover .crmer > img {
+    opacity: 1; /* Bild wird sichtbar beim Hover auf .join */
+}
+
+.mdesign {
+    height: 28px;
+    width: 28px;
+    filter: invert(45%) sepia(48%) saturate(338%) hue-rotate(129deg);
+}
+
+
+
 
 .join {
     padding: 10px;
-    margin-top: 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -234,7 +284,7 @@ section {
     display: flex;
     flex-direction: row;  /* Flexbox für horizontale Ausrichtung */
     justify-content: space-between; /* Optional: Abstand zwischen den beiden Containern */
-    align-items: flex-start; /* Optional: Vertikale Ausrichtung */
+    align-items: center; /* Optional: Vertikale Ausrichtung */
    /* Stelle sicher, dass die Breite 100% beträgt */
 }
 
@@ -245,6 +295,8 @@ section {
 }
 
 .img-projects {
+    height: 400px;
+   position: relative;
     display: flex;
     flex-direction: column; /* Bilder sollen untereinander angeordnet werden */
   /* Optional: Steuere die Breite des Containers */
@@ -255,23 +307,27 @@ section {
 
 .joinimg {
   position: absolute;
-  margin-top: 30px;
+ top: 80px;
     transition: opacity 0.3s ease; /* Sanfter Übergang */
 }
 
 
 .polloimg {
    position: absolute;
-   margin-top: 100px;
+   top: 180px;
     transition: opacity 0.3s ease; /* Sanfter Übergang */
 }
 
 
-
+.crm-wrapper {
+    position: absolute;
+  top: -20px;
+}
 
 
 .portfolio-wrapper {
-   margin-top: 40px;
+  position: absolute;
+  top: 280px;
 }
 
 .portfolio-background {
@@ -279,14 +335,42 @@ section {
     background-size: cover;
     background-position: bottom right;
     position: absolute;
+    left: 25px;
+    top: 30px;
     height: 182px; /* Höhe des Hintergrundbildes */
     width: 290px;  /* Breite des Hintergrundbildes */
     border-radius: 16px;
     opacity: 0; /* Unsichtbar, bis es sichtbar gemacht wird */
     transition: opacity 0.3s ease; /* Sanfter Übergang */
     z-index: 1;
-    margin-top: 160px;
-    margin-left: 26px;
+   
+    
+}
+
+.crm-background {
+    background-image: url('/assets/img-projects/Capa_1.png');
+    background-size: cover;
+    background-position: bottom right;
+    position: absolute;
+    left: 25px;
+    top: 30px;
+    height: 182px; /* Höhe des Hintergrundbildes */
+    width: 290px;  /* Breite des Hintergrundbildes */
+    border-radius: 16px;
+    opacity: 0; /* Unsichtbar, bis es sichtbar gemacht wird */
+    transition: opacity 0.3s ease; /* Sanfter Übergang */
+    z-index: 1;
+}
+
+.crmimg {
+    position: relative;
+    border: 1px solid rgb(78, 77, 77);
+    height: 192px;
+    width: 296px;
+    z-index: 2;
+    border-radius: 16px;
+    object-position: center;
+    transition: opacity 0.3s ease;
 }
 
 .portfolioimg {
@@ -294,14 +378,19 @@ section {
     border: 1px solid rgb(78, 77, 77);
     height: 192px;
     width: 296px;
+    
     z-index: 2;
     border-radius: 16px;
     transition: opacity 0.3s ease;
-    margin-top: 130px;
+   
 }
 
 /* Wenn das portfolioimg sichtbar ist, wird auch das Hintergrundbild eingeblendet */
 .portfolio-wrapper.is-visible .portfolio-background {
+    opacity: 1; /* Hintergrundbild wird eingeblendet */
+}
+
+.crm-wrapper.is-visible .crm-background {
     opacity: 1; /* Hintergrundbild wird eingeblendet */
 }
 
@@ -328,16 +417,16 @@ section {
     background-repeat: no-repeat;
     background-size: cover;
     margin: auto;
-    padding: 50px;
+    padding: 30px;
     border: 1px solid #3DCFB6;
     width:  90%;
     max-width: 1420px;
-    height: 600px;
+    height: 650px;
     border-radius: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
-   
+   position: relative;
     }
 
     
@@ -374,7 +463,7 @@ section {
         font-size: 64px;
         color: white;
         font-weight: 700;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         white-space: nowrap;
     }
 
@@ -385,7 +474,7 @@ section {
         color: #3DCFB6;
         font-weight: 700;
         white-space: wrap;
-        margin-bottom: 30px;
+        margin-bottom: 10px;
     }
 
     >span {
@@ -397,17 +486,37 @@ section {
     }
 }
 
+.lang-left {
+    display: flex;
+    align-items: center;
+   
+
+    >p {
+        font-family: "Karla", sans-serif;
+        font-size: 16px;
+        margin-right: 20px;
+        font-weight: 400;
+        color: white;
+        white-space: nowrap;
+     }
+
+     >img {
+        margin-right: 5px;
+     }
+}
+
 
 .images-lang {
     display: flex;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 20px;
      >p {
         font-family: "Karla", sans-serif;
         font-size: 16px;
         margin-right: 20px;
         font-weight: 400;
         color: white;
+        white-space: nowrap;
      }
 
      >img {
@@ -489,7 +598,9 @@ section {
 .close {
    margin-bottom: 70px;
     color: #aaa;
-    float: right;
+    position: absolute;
+    top: 20px;
+    right: 30px;
     font-size: 48px;
     font-weight: bold;
     cursor: pointer;
@@ -504,6 +615,9 @@ section {
 }
 
 .next-project {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -624,14 +738,14 @@ section {
        }
 
        .modal-content {
-        height: 500px;
+        height: 550px;
         width: 85%;
        }
        
 }
 
 
-@media (max-width: 1125px) {
+@media (max-width: 1225px) {
     .right-section {
 
         display: flex;
@@ -691,14 +805,14 @@ section {
 }
 
 
-@media (max-width: 980px) {
+@media (max-width: 1080px) {
 .modal-content {
     position: relative;
    display: flex;
-   justify-content: center;
-   align-items: center;
-    height: 950px;
-    width: 60%;
+   justify-content: flex-start;
+   align-items: flex-start;
+    height: auto;
+    width: 70%;
 }
 
 .contentinmodal {
@@ -706,13 +820,14 @@ section {
     align-items: center;
     justify-content: space-around;
     flex-direction: column-reverse;
-    margin: auto;
+    padding-bottom: 60px;
+    padding-top: 20px;
    
    
    
     width: 100%;
    
-    height: 800px;
+    height: auto;
 }
 
 
@@ -727,8 +842,8 @@ section {
 
 .close {
     position: absolute;
-    top: 20px;
-    right: 30px;
+    top: 10px;
+    right: 15px;
    
 }
 
@@ -749,56 +864,49 @@ section {
 
 
 @media (max-width: 710px) {
-    .modal-content{
-width: 80%;
+    .images-lang {
+        flex-wrap: wrap;
     }
-
-    .close {
-        position: absolute;
-        top: 20px;
-        right: 30px;
-       
-    }
-    
-    .next-project {
-        position: absolute;
-        bottom: 30px;
-        right: 20px;
-    }
-}
-
-
-
-@media (max-width: 590px) {
-
-
-
-    .modal-content{
-       
-width: 75%;
-    }
-
     .right-section {
         >img {
             margin-bottom: 10px;
             width: 470px;
-            height: 309px;
-            margin-top: 0px;
+            height: 269px;
+            margin-top: 30px;
         }
     }
+
+   
+
+    .modal-content{
+       
+        width: 75%;
+            }
+
+    
+}
+
+
+
+@media (max-width: 620px) {
+
+
+
+   
+
+    
 }
 
 @media (max-width: 590px) {
-    .modal-content{
-width: 75%;
-
-    }
-
+   
+.contentinmodal {
+    padding-top: 40px;
+}
     .right-section {
         >img {
             margin-bottom: 10px;
             width: 370px;
-            height: 259px;
+            height: 219px;
             margin-top: 0px;
         }
     }
@@ -819,7 +927,7 @@ width: 75%;
 
 }
 
-@media (max-width: 490px) {
+@media (max-width: 640px) {
 
     .left-modal {
         
@@ -866,24 +974,18 @@ width: 75%;
        }
 
 
-       .images-lang {
-        width: 300px;
-        flex-wrap: wrap;
-       }
+      
 }
 
 
 @media (max-width: 458px) {
-    .modal-content{
-width: 65%;
-
-    } 
+    
 
     .right-section {
         >img {
             margin-bottom: 10px;
             width: 320px;
-            height: 259px;
+           
             margin-top: 0px;
         }
     }
@@ -898,12 +1000,7 @@ width: 65%;
     }
 
 
-    .close {
-        position: absolute;
-        top: 20px;
-        right: 30px;
-       
-    }
+   
 
     .button-name {
         flex-wrap: nowrap;
@@ -928,11 +1025,12 @@ width: 65%;
     .right-section {
         >img {
             width: 300px;
-            height: 239px;
+           
         }
     }
 
     .button-name {
+        margin-right: 10px;
         flex-wrap: nowrap;
         padding: 5px;
     }
@@ -945,12 +1043,9 @@ width: 65%;
 
 @media (max-width: 360px) {
 
-    .modal-content{
-        width: 62%;
-        
-            } 
+  
     .left-modal {
-        width: 270px;
+        width: 250px;
         >h3 {
             width: 220px;
             white-space: wrap;
@@ -960,8 +1055,8 @@ width: 65%;
 
     .right-section {
         >img {
-            width: 270px;
-            height: 239px;
+            width: 250px;
+           
         }
     }
 
@@ -973,8 +1068,19 @@ width: 65%;
 
     .button-container {
         width: 300px;
+        justify-content: flex-start;
+    }
+
+    .images-lang {
+        p {
+            margin-right: 5px;
+        }
     }
 }
+
+
+
+
 
 
 
@@ -990,13 +1096,13 @@ width: 65%;
 
 
 @media (max-width: 1360px) {
-    .join, .el-pollo-loco, .portfolio {
+    .join, .el-pollo-loco, .portfolio, .crm {
     width: 600px;
     }
 }
 
 @media (max-width: 1210px) {
-    .join, .el-pollo-loco, .portfolio {
+    .join, .el-pollo-loco, .portfolio, .crm {
     width: 700px;
     }
 
@@ -1017,7 +1123,7 @@ width: 65%;
 
     section {
         background-color: #1C1C1C;
-        height: 700px;
+     
         width: 100%; /* Verwende 100% anstelle einer festen Breite */
         max-width: 1920px; /* Optional, um eine maximale Breite festzulegen */
        
@@ -1033,7 +1139,7 @@ width: 65%;
 }
 
 @media (max-width: 820px) {
-    .join, .el-pollo-loco, .portfolio {
+    .join, .el-pollo-loco, .portfolio, .crm {
         width: 530px;
         }
 
@@ -1045,30 +1151,18 @@ width: 65%;
             }
         }
 
-        section {
-            background-color: #1C1C1C;
-            height: 900px;
-        }
+
 }
 
-@media (max-width: 655px) {
 
-    section {
-        background-color: #1C1C1C;
-        height: 900px;
-    }
-}
 
 
 @media (max-width: 605px) {
 
-    section {
-        background-color: #1C1C1C;
-        height: 800px;
-    }
+  
 
 
-    .join, .el-pollo-loco, .portfolio {
+    .join, .el-pollo-loco, .portfolio, .crm {
         padding-left: 0px;
         width: 330px;
         height: 100px;
@@ -1080,7 +1174,7 @@ width: 65%;
       
         }
 
-        .joiner, .pollo, .port  {
+        .joiner, .pollo, .port, .crmer  {
             display: flex;
             align-items: center;
         
@@ -1132,7 +1226,7 @@ width: 65%;
 
 
 @media (max-width: 435px) {
-    .join, .el-pollo-loco, .portfolio {
+    .join, .el-pollo-loco, .portfolio , .crm {
         padding-left: 0px;
         width: 250px;
         height: 100px;
@@ -1165,71 +1259,67 @@ width: 65%;
         }
     }
 
-    section {
-        background-color: #1C1C1C;
-        height: 800px;
-    }
+  
         
 }
 
+@media (max-height: 1020px) and (max-width: 1080px) {
 
-@media (max-height: 1062px) {
-    .modal-content {
-        height: 520px; /* Begrenze die Höhe auf 90% der Viewport-Höhe */
-        overflow-y: scroll;
-        overflow-x: hidden; 
-        position: relative;/* Scrollen aktivieren, wenn der Inhalt zu groß ist */
+.modal-content{
+    overflow-x: hidden;
+    max-height: 80vh;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+   
+}
+
+
+ .right-section {
+
+    img {
+       height: 150px;
+       width: 300px; 
+       margin-top: 20px;
+    }
+ }
+
+ .contentinmodal {
+    padding-bottom: 20px;
+    padding-top: 25px;
+    align-items: flex-start;
+    justify-content: flex-start;
+ }
+
+ .left-modal {
+    h1 {
+        font-size: 36px;
     }
 
-    .next-project {
-        position: absolute;
-        bottom: -175px;
+    h2 {
+        font-size: 36px;
     }
+ }
 
-    .close {
-        position: absolute;
-        top: 1px;
-    }
+ .next-project {
+   
+    height: 20px;
+    width: 200px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+ }
 
-    .button-container {
-        height: 50px;
+}
 
-       
-    }
 
-    .button-name {
-        margin-top: 10px;
-      padding: 10px;
-      font-size: 16px;
-      width: 110px;
-      white-space: nowrap;
-    }
-
+@media (max-height: 1020px) and (max-width: 410px) { 
     .right-section {
-        >img {
-            height: 200px;
-            margin-bottom: 0;
+
+        img {
+           height: 150px;
+           width: 250px; 
+           margin-top: 20px;
         }
-    }
-
-    .contentinmodal {
-        height: 700px;
-    }
-
-    .left-modal {
-        >h3 {
-            margin-bottom: 10px;
-        }
-        >h2 {
-            margin-bottom: 10px;
-        }
-    }
-
-    .images-lang {
-        margin-top: 10px;
-    }
-
-    h3 {
-        margin-bottom: 10px;
-    }
+     }
 }

@@ -15,7 +15,7 @@ export class ProjectsComponent {
 
   translate = inject(TranslationService);
 
-
+  isHoveredCRM: boolean = false;
   isHoveredJoin: boolean = false;
   isHoveredPollo: boolean = false;
   isHoveredPortfolio: boolean = false;
@@ -25,8 +25,17 @@ export class ProjectsComponent {
   activeProject: string | null = null;
 
   
-  projects: string[] = ['Join', 'El Pollo Loco', 'Portfolio'];
+  projects: string[] = ['Join', 'El Pollo Loco', 'Portfolio', 'CRM'];
   currentProjectIndex: number = 0; 
+
+
+  onMouseEnterCRM() {
+    this.isHoveredCRM = true;
+  }
+  
+  onMouseLeaveCRM() {
+    this.isHoveredCRM = false;
+  }
 
   
   onMouseEnterJoin() {

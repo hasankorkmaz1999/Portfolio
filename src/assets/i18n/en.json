@@ -29,6 +29,10 @@
     "FEATURED_PROJECTS": "Featured Projects",
     "EXPLORE_WORK": "Explore a selection of my work here - Interact with projects to see my skills in action.",
 
+    "CRM_DESCRIPTION": "What is this project about?",
+    "CRM_DETAILS": "CRM system for easy management of customers, users, and events. Create and edit customer profiles, plan events with participant lists, and organize tasks for a structured workflow – all in an intuitive interface.",
+    
+
     "JOIN_DESCRIPTION": "What is this project about?",
     "JOIN_DETAILS": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
     

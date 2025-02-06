@@ -29,6 +29,11 @@
     "FEATURED_PROJECTS": "Ausgewählte Projekte",
     "EXPLORE_WORK": "Entdecke hier eine Auswahl meiner Arbeit - Interagiere mit den Projekten, um meine Fähigkeiten in Aktion zu sehen.",
 
+    "CRM_DESCRIPTION": "Worum geht es bei diesem Projekt?",
+    "CRM_DETAILS": "CRM-System für die einfache Verwaltung von Kunden, Nutzern und Events. Erstelle und bearbeite Kundenprofile, plane Events mit Teilnehmerlisten und organisiere Aufgaben für eine strukturierte Arbeitsweise – alles in einer intuitiven Oberfläche.",
+    
+
+
     "JOIN_DESCRIPTION": "Worum geht es bei diesem Projekt?",
     "JOIN_DETAILS": "Task-Manager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-Drop-Funktionen, weise Benutzer und Kategorien zu.",
     

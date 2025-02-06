@@ -1,179 +1,336 @@
 <section>
-
-    <div class="featured-projects">
-        <h2>Portfolio</h2>
-        <h1>{{ 'FEATURED_PROJECTS' | translate }}</h1>
+  <div class="featured-projects">
+    <h2>Portfolio</h2>
+    <h1>{{ "FEATURED_PROJECTS" | translate }}</h1>
     <span class="spanne">
-        {{ 'EXPLORE_WORK' | translate }}
+      {{ "EXPLORE_WORK" | translate }}
     </span>
 
-        <div class="projects-div">
-            <!-- All Projects -->
-            <div class="all-projects">
-                <div class="join" (mouseenter)="onMouseEnterJoin()" (mouseleave)="onMouseLeaveJoin()" (click)="openModal('Join')">
-                    <div class="joiner">
-                        <p>Join</p>
-                        <img src="/assets/img-projects/arrow_outward.png" alt="">
-                    </div>
-                    <div class="languages">
-                        <span>JavaScript</span> <span class="separator">|</span>
-                        <span>HTML</span> <span class="separator">|</span>
-                        <span>CSS</span> <span class="separator">|</span>
-                        <span>Firebase</span>
-                    </div>
-                </div>
-
-                <div class="el-pollo-loco" (mouseenter)="onMouseEnterPollo()" (mouseleave)="onMouseLeavePollo()" (click)="openModal('El Pollo Loco')">
-                    <div class="pollo">
-                        <p>El Pollo Loco</p>
-                        <img src="/assets/img-projects/arrow_outward.png" alt="">
-                    </div>
-                    <div class="languages">
-                        <span>HTML</span> <span class="separator">|</span>
-                        <span>CSS</span> <span class="separator">|</span>
-                        <span>JavaScript</span>
-                    </div>
-                </div>
-
-                <div class="portfolio" (mouseenter)="onMouseEnterPortfolio()" (mouseleave)="onMouseLeavePortfolio()" (click)="openModal('Portfolio')">
-                    <div class="port">
-                        <p>Portfolio</p>
-                        <img src="/assets/img-projects/arrow_outward.png" alt="">
-                    </div>
-                    <div class="languages">
-                        <span>Angular</span> <span class="separator">|</span>
-                        <span>HTML</span> <span class="separator">|</span>
-                        <span>SCSS</span> <span class="separator">|</span>
-                        <span>TypeScript</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Img Projects -->
-            <div class="img-projects">
-                <img class="joinimg" src="/assets/img-projects/join.png" alt="" [ngStyle]="{ 'opacity': isHoveredJoin ? '1' : '0' }">
-                <img class="polloimg" src="/assets/img-projects/elpolloloco.png" alt="" [ngStyle]="{ 'opacity': isHoveredPollo ? '1' : '0' }">
-                <div class="portfolio-wrapper" [ngClass]="{ 'is-visible': isHoveredPortfolio }">
-                    <div class="portfolio-background"></div>
-                    <img class="portfolioimg" src="/assets/img-projects/rsz_1portfoliopopup.png" alt="" [ngStyle]="{ 'opacity': isHoveredPortfolio ? '1' : '0' }">
-                </div>
-            </div>
+    <div class="projects-div">
+      <!-- All Projects -->
+      <div class="all-projects">
+        <div
+          class="crm"
+          (mouseenter)="onMouseEnterCRM()"
+          (mouseleave)="onMouseLeaveCRM()"
+          (click)="openModal('CRM')"
+        >
+          <div class="crmer">
+            <p>CRM</p>
+            <img src="/assets/img-projects/arrow_outward.png" alt="" />
+          </div>
+          <div class="languages">
+            <span>TypeScript</span> <span class="separator">|</span>
+            <span>HTML</span> <span class="separator">|</span>
+            <span>SCSS (Material Design)</span> <span class="separator">|</span>
+            <span>Firebase</span>
+          </div>
         </div>
+
+        <div
+          class="join"
+          (mouseenter)="onMouseEnterJoin()"
+          (mouseleave)="onMouseLeaveJoin()"
+          (click)="openModal('Join')"
+        >
+          <div class="joiner">
+            <p>Join</p>
+            <img src="/assets/img-projects/arrow_outward.png" alt="" />
+          </div>
+          <div class="languages">
+            <span>JavaScript</span> <span class="separator">|</span>
+            <span>HTML</span> <span class="separator">|</span> <span>CSS</span>
+            <span class="separator">|</span>
+            <span>Firebase</span>
+          </div>
+        </div>
+
+        <div
+          class="el-pollo-loco"
+          (mouseenter)="onMouseEnterPollo()"
+          (mouseleave)="onMouseLeavePollo()"
+          (click)="openModal('El Pollo Loco')"
+        >
+          <div class="pollo">
+            <p>El Pollo Loco</p>
+            <img src="/assets/img-projects/arrow_outward.png" alt="" />
+          </div>
+          <div class="languages">
+            <span>HTML</span> <span class="separator">|</span> <span>CSS</span>
+            <span class="separator">|</span>
+            <span>JavaScript</span>
+          </div>
+        </div>
+
+        <div
+          class="portfolio"
+          (mouseenter)="onMouseEnterPortfolio()"
+          (mouseleave)="onMouseLeavePortfolio()"
+          (click)="openModal('Portfolio')"
+        >
+          <div class="port">
+            <p>Portfolio</p>
+            <img src="/assets/img-projects/arrow_outward.png" alt="" />
+          </div>
+          <div class="languages">
+            <span>Angular</span> <span class="separator">|</span>
+            <span>HTML</span> <span class="separator">|</span>
+            <span>SCSS</span> <span class="separator">|</span>
+            <span>TypeScript</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Img Projects -->
+      <div class="img-projects">
+        <img
+          class="joinimg"
+          src="/assets/img-projects/join.png"
+          alt=""
+          [ngStyle]="{ opacity: isHoveredJoin ? '1' : '0' }"
+        />
+        <img
+          class="polloimg"
+          src="/assets/img-projects/elpolloloco.png"
+          alt=""
+          [ngStyle]="{ opacity: isHoveredPollo ? '1' : '0' }"
+        />
+        <div
+          class="portfolio-wrapper"
+          [ngClass]="{ 'is-visible': isHoveredPortfolio }"
+        >
+          <div class="portfolio-background"></div>
+          <img
+            class="portfolioimg"
+            src="/assets/img-projects/rsz_1portfoliopopup.png"
+            alt=""
+            [ngStyle]="{ opacity: isHoveredPortfolio ? '1' : '0' }"
+          />
+        </div>
+
+        <div class="crm-wrapper" [ngClass]="{ 'is-visible': isHoveredCRM }">
+          <div class="crm-background"></div>
+          <img
+            class="crmimg"
+            src="/assets/img-projects/crmnew.png"
+            alt=""
+            [ngStyle]="{ opacity: isHoveredCRM ? '1' : '0' }"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modales Popup -->
+  <div
+    *ngIf="isModalOpen"
+    class="modal"
+    (click)="closeModalOnBackground($event)"
+  >
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <div class="contentinmodal">
+        <!-- Modal-Inhalt für CRM -->
+        <div *ngIf="activeProject === 'CRM'" class="left-modal">
+          <h1>01</h1>
+          <h2>CRM</h2>
+          <h3>{{ "CRM_DESCRIPTION" | translate }}</h3>
+          <span>{{ "CRM_DETAILS" | translate }}</span>
+
+          <div class="images-lang">
+            <img src="/assets/img-projects/Property 1=Angular(1).png" alt="" />
+            <p>Angular</p>
+            <img
+              src="/assets/img-projects/Property 1=TypeScript(1).png"
+              alt=""
+            />
+            <p>TypeScript</p>
+            <div class="lang-left">
+              <img
+                src="/assets/img-projects/Property 1=Firebase(1).png"
+                alt=""
+              />
+              <p>Firebase</p>
+              <img
+                class="mdesign"
+                src="/assets/img-skillset/Property 1=Material Design.png"
+                alt=""
+              />
+              <p>Material Design</p>
+            </div>
+          </div>
+
+          <div class="button-container">
+            <a href="https://github.com/hasankorkmaz1999/CRM" target="_blank">
+              <button class="button-name">
+                GitHub
+                <img src="/assets/img-projects/arrow_outward(1).png" alt="" />
+              </button>
+            </a>
+
+            <a href="https://crm.hasan-korkmaz.de" target="_blank">
+              <button class="button-name">
+                Live Test
+                <img src="/assets/img-projects/arrow_outward(1).png" alt="" />
+              </button>
+            </a>
+          </div>
+        </div>
+
+        <!-- Modal-Inhalt für Join -->
+        <div *ngIf="activeProject === 'Join'" class="left-modal">
+          <h1>02</h1>
+          <h2>Join</h2>
+          <h3>{{ "JOIN_DESCRIPTION" | translate }}</h3>
+          <span>{{ "JOIN_DETAILS" | translate }}</span>
+
+          <div class="images-lang">
+            <img
+              src="/assets/img-projects/Property 1=Javascript(1).png"
+              alt=""
+            />
+            <p>JavaScript</p>
+            <img src="/assets/img-projects/Property 1=HTML(1).png" alt="" />
+            <p>HTML</p>
+            <div class="lang-left">
+              <img src="/assets/img-projects/Property 1=CSS(1).png" alt="" />
+              <p>CSS</p>
+              <img
+                src="/assets/img-projects/Property 1=Firebase(1).png"
+                alt=""
+              />
+              <p>Firebase</p>
+            </div>
+          </div>
+
+          <div class="button-container">
+            <a
+              href="https://github.com/hasankorkmaz1999/Join-board"
+              target="_blank"
+            >
+              <button class="button-name">
+                GitHub
+                <img src="/assets/img-projects/arrow_outward(1).png" alt="" />
+              </button>
+            </a>
+            <a href="https://join.hasan-korkmaz.de" target="_blank">
+              <button class="button-name">
+                Live Test
+                <img src="/assets/img-projects/arrow_outward(1).png" alt="" />
+              </button>
+            </a>
+          </div>
+        </div>
+
+        <!-- Modal-Inhalt für El Pollo Loco -->
+        <div *ngIf="activeProject === 'El Pollo Loco'" class="left-modal">
+          <h1>03</h1>
+          <h2>El Pollo Loco</h2>
+          <h3>{{ "POLLO_DESCRIPTION" | translate }}</h3>
+          <span>{{ "POLLO_DETAILS" | translate }}</span>
+
+          <div class="images-lang">
+            <img
+              src="/assets/img-projects/Property 1=Javascript(1).png"
+              alt=""
+            />
+            <p>JavaScript</p>
+            <img src="/assets/img-projects/Property 1=HTML(1).png" alt="" />
+            <p>HTML</p>
+            <img src="/assets/img-projects/Property 1=CSS(1).png" alt="" />
+            <p>CSS</p>
+          </div>
+
+          <div class="button-container">
+            <a
+              href="https://github.com/hasankorkmaz1999/El-Pollo-Loco"
+              target="_blank"
+            >
+              <button class="button-name">
+                GitHub
+                <img src="/assets/img-projects/arrow_outward(1).png" alt="" />
+              </button>
+            </a>
+            <a href="https://el-pollo-loco.hasan-korkmaz.de" target="_blank">
+              <button class="button-name">
+                Live Test
+                <img src="/assets/img-projects/arrow_outward(1).png" alt="" />
+              </button>
+            </a>
+          </div>
+        </div>
+
+        <!-- Modal-Inhalt für Portfolio -->
+        <div *ngIf="activeProject === 'Portfolio'" class="left-modal">
+          <h1>04</h1>
+          <h2>Portfolio</h2>
+          <h3>{{ "PORTFOLIO_DESCRIPTION" | translate }}</h3>
+          <span>{{ "PORTFOLIO_DETAILS" | translate }}</span>
+
+          <div class="images-lang">
+            <img src="/assets/img-projects/Property 1=Angular(1).png" alt="" />
+            <p>Angular</p>
+            <img src="/assets/img-projects/Property 1=HTML(1).png" alt="" />
+            <p>HTML</p>
+            <div class="lang-left">
+              <img src="/assets/img-projects/Property 1=CSS(1).png" alt="" />
+              <p>SCSS</p>
+              <img
+                src="/assets/img-projects/Property 1=TypeScript(1).png"
+                alt=""
+              />
+              <p>TypeScript</p>
+            </div>
+          </div>
+
+          <div class="button-container">
+            <a
+              href="https://github.com/hasankorkmaz1999/Portfolio"
+              target="_blank"
+            >
+              <button class="button-name">
+                GitHub
+                <img src="/assets/img-projects/arrow_outward(1).png" alt="" />
+              </button>
+            </a>
+          </div>
+        </div>
+
+        <!-- Dynamisches Bild basierend auf dem aktiven Projekt -->
+        <div class="right-section">
+          <img
+            *ngIf="activeProject === 'Join'"
+            src="/assets/img-projects/join-popup.jpg"
+            alt=""
+          />
+          <img
+            *ngIf="activeProject === 'El Pollo Loco'"
+            src="/assets/img-projects/el-pollo-loco-popup.jpg"
+            alt=""
+          />
+          <img
+            class="portimg"
+            *ngIf="activeProject === 'Portfolio'"
+            src="/assets/img-projects/portfoliopopup.png"
+            alt=""
+          />
+          <img
+            class="crmimg"
+            *ngIf="activeProject === 'CRM'"
+            src="/assets/img-projects/crmnew.png"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <span class="close" (click)="closeModal()">&times;</span>
+      <div class="next-project" (click)="nextProject()">
+        <span>{{ "NEXT_PROJECT" | translate }}</span>
+        <img src="/assets/img-projects/arrows(1).png" alt="" />
+      </div>
+
+      
     </div>
 
-
-
-    <!-- Modales Popup -->
-    <div  *ngIf="isModalOpen" class="modal" (click)="closeModalOnBackground($event)">
-        <div class="modal-content" (click)="$event.stopPropagation()">
-  
-            <div class="contentinmodal">
-            <!-- Modal-Inhalt für Join -->
-            <div *ngIf="activeProject === 'Join'" class="left-modal">
-                <h1>01</h1>
-                <h2>Join</h2>
-                <h3>{{ 'JOIN_DESCRIPTION' | translate }}</h3>
-                <span>{{ 'JOIN_DETAILS' | translate }}</span>
-
-
-                <div class="images-lang">
-                    <img src="/assets/img-projects/Property 1=Javascript(1).png" alt="">
-                    <p>JavaScript</p>
-                    <img src="/assets/img-projects/Property 1=HTML(1).png" alt="">
-                    <p>HTML</p>
-                    <img src="/assets/img-projects/Property 1=CSS(1).png" alt="">
-                    <p>CSS</p>
-                    <img src="/assets/img-projects/Property 1=Firebase(1).png" alt="">
-                    <p>Firebase</p>
-                </div>
-      
-                <div class="button-container">
-                    <a href="https://github.com/hasankorkmaz1999/Join-board" target="_blank">
-                        <button class="button-name">GitHub 
-                            <img src="/assets/img-projects/arrow_outward(1).png" alt="">
-                        </button>
-                    </a>
-                    <a href="https://join.hasan-korkmaz.de" target="_blank">
-                        <button class="button-name">Live Test 
-                            <img src="/assets/img-projects/arrow_outward(1).png" alt="">
-                        </button>
-                    </a>
-                </div>
-                
-            </div>
-  
-            <!-- Modal-Inhalt für El Pollo Loco -->
-            <div *ngIf="activeProject === 'El Pollo Loco'" class="left-modal">
-                <h1>02</h1>
-                <h2>El Pollo Loco</h2>
-                  <h3>{{ 'POLLO_DESCRIPTION' | translate }}</h3>
-                  <span>{{ 'POLLO_DETAILS' | translate }}</span>
-
-
-                <div class="images-lang">
-                    <img src="/assets/img-projects/Property 1=Javascript(1).png" alt="">
-                    <p>JavaScript</p>
-                    <img src="/assets/img-projects/Property 1=HTML(1).png" alt="">
-                    <p>HTML</p>
-                    <img src="/assets/img-projects/Property 1=CSS(1).png" alt="">
-                    <p>CSS</p>
-                </div>
-      
-                <div class="button-container">
-                    <a href="https://github.com/hasankorkmaz1999/El-Pollo-Loco" target="_blank">
-                    <button class="button-name">GitHub <img src="/assets/img-projects/arrow_outward(1).png" alt=""></button>
-                    </a>
-                    <a href="https://el-pollo-loco.hasan-korkmaz.de" target="_blank">
-                        <button class="button-name">Live Test 
-                            <img src="/assets/img-projects/arrow_outward(1).png" alt="">
-                        </button>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Modal-Inhalt für Portfolio -->
-            <div *ngIf="activeProject === 'Portfolio'" class="left-modal">
-                <h1>03</h1>
-                <h2>Portfolio</h2>
-                <h3>{{ 'PORTFOLIO_DESCRIPTION' | translate }}</h3>
-                <span>{{ 'PORTFOLIO_DETAILS' | translate }}</span>
-
-
-                 <div class="images-lang">
-                    <img src="/assets/img-projects/Property 1=Angular(1).png" alt="">
-                    <p>Angular</p>
-                    <img src="/assets/img-projects/Property 1=HTML(1).png" alt="">
-                    <p>HTML</p>
-                    <img src="/assets/img-projects/Property 1=CSS(1).png" alt="">
-                    <p>SCSS</p>
-                    <img src="/assets/img-projects/Property 1=TypeScript(1).png" alt="">
-                    <p>TypeScript</p>
-                </div>
-      
-                <div class="button-container">
-                    <a href="https://github.com/hasankorkmaz1999/Portfolio" target="_blank">
-                        <button class="button-name">GitHub <img src="/assets/img-projects/arrow_outward(1).png" alt=""></button>
-                     </a>
-               
-                </div>
-            </div>
-  
-            <!-- Dynamisches Bild basierend auf dem aktiven Projekt -->
-            <div class="right-section">
-                <span class="close" (click)="closeModal()">&times;</span>
-                <img *ngIf="activeProject === 'Join'" src="/assets/img-projects/join-popup.jpg" alt="">
-                <img *ngIf="activeProject === 'El Pollo Loco'" src="/assets/img-projects/el-pollo-loco-popup.jpg" alt="">
-                <img class="portimg" *ngIf="activeProject === 'Portfolio'" src="/assets/img-projects/portfoliopopup.png" alt="">
-
-                <div class="next-project" (click)="nextProject()">
-                    <span>{{ 'NEXT_PROJECT' | translate }}</span>
-                   <img src="/assets/img-projects/arrows(1).png" alt="">
-                  </div>
-
-
-            </div>
-        </div>
-    </div>
-</div>
-
+   
+  </div>
 </section>
